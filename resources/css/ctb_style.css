@@ -1,0 +1,1710 @@
+@charset "UTF-8";
+@import "genesis_icons.css";
+@import "genesis_fonts.css";
+@import "rc_slider.css";
+
+/* Reset */
+a,abbr,acronym,address,applet,article,aside,audio,
+b,big,blockquote,body,
+canvas,caption,center,cite,code,
+dd,del,details,dfn,div,dl,dt,
+em,embed,
+fieldset,figcaption,figure,footer,form,
+h1,h2,h3,h4,h5,h6,header,hgroup,html,
+i,iframe,img,ins,
+kbd,label,legend,li,
+mark,menu,nav,
+object,ol,output,p,pre,q,ruby,
+s,samp,section,small,span,strike,strong,summary,
+table,tbody,td,tfoot,th,thead,time,tr,tt,
+u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
+table{border-collapse:collapse;border-spacing:0}
+html{margin:0;padding:0;height:100%;font-size:62.5%;-webkit-text-size-adjust:100%;-webkit-font-feature-settings:none;font-feature-settings:none;-webkit-font-variant-ligatures:none;font-variant-ligatures:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+body{margin:0;padding:0;font-family:HyundaiTextReg,sans-serif;font-size:16px;font-size:1.6rem;line-height:1.4;color:#1c1b1b;}
+*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}
+img{max-width:100%}
+a,img{vertical-align:top}
+a{text-decoration:none;color:#121212}
+a:hover{color:#454545}
+
+/* total width */
+.scrollbar::-webkit-scrollbar {background-color:transparent;width:10px;}
+/* background of the scrollbar except button or resizer */
+.scrollbar::-webkit-scrollbar-track {background-color:transparent}
+.scrollbar::-webkit-scrollbar-track:hover {background-color:transparent}
+/* scrollbar itself */
+.scrollbar::-webkit-scrollbar-thumb {background-color:#fff;border-radius:16px;border:2px solid transparent;}
+.scrollbar::-webkit-scrollbar-thumb:hover {background-color:#fff;border:2px solid transparent;}
+/* set button(top and bottom of the scrollbar) */
+.scrollbar::-webkit-scrollbar-button {display:none}
+
+/* total width */
+.scrollbar_dark::-webkit-scrollbar {background-color:transparent;width:10px;}
+/* background of the scrollbar except button or resizer */
+.scrollbar_dark::-webkit-scrollbar-track {background-color:transparent}
+.scrollbar_dark::-webkit-scrollbar-track:hover {background-color:transparent}
+/* scrollbar itself */
+.scrollbar_dark::-webkit-scrollbar-thumb {background-color:#bbb;border-radius:16px;border:2px solid transparent;}
+.scrollbar_dark::-webkit-scrollbar-thumb:hover {background-color:#bbb;border:2px solid transparent;}
+/* set button(top and bottom of the scrollbar) */
+.scrollbar_dark::-webkit-scrollbar-button {display:none}
+
+
+
+.ctb_button {display:inline-block;border:2px solid #121212;background-color:#fff;color:#121212;line-height:1;padding:2rem 5rem;box-sizing:border-box;font-family:HyundaiHeadMedium,sans-serif;font-size:1.6rem;transition:color .3s,background-color .3s;position:relative;cursor:pointer;}
+/* .ctb_button:hover {color:#00819e;border-color:#00819e;} */
+.ctb_button.p2rem {padding:2rem;}
+.ctb_button.primary {border:2px solid #121212;background-color:#121212;color:#fff;}
+.ctb_button.disabled,
+.ctb_button.disabled:hover {border-color:#ccc;background-color:#f2f2f2;color:#767676;cursor:default;}
+.ctb_button.disabled:before,
+.ctb_button.disabled:after {display:none !important;}
+.ctb_button.primary {position:relative;}
+.ctb_button:before {content:"";display:block;position:absolute;top:-2px;left:calc(25% - .9rem);opacity:0;height:100%;transition:opacity .2s ease-in-out,left .2s ease-in-out;width:50%;background:url(../img/arrow-cta.svg) no-repeat 50%;z-index:2;}
+.ctb_button:hover:before {transition-delay: .3s;left:25%;opacity:1;}
+.ctb_button:after {content:"";position:absolute;display:block;top:-2px;left:-2px;height:calc(100% + 4px);width:0;transition:width .3s ease-in .1s,left .3s ease-in .1s;background:#121212;z-index:1;}
+.ctb_button:hover:after {width:calc(100% + 4px);}
+
+.ctb_button.text:hover {border-color:transparent;}
+.ctb_button.text:before,
+.ctb_button.text:after {display:none;}
+
+/* Header */
+.ctb_header {background-color:#000;display:flex;justify-content:space-between;position:fixed;top:0;left:0;width:100%;height:8rem;box-sizing:border-box;border-bottom:1px solid rgba(0,0,0,.1);z-index:90;transition:background-color .3s,top .3s;}
+.ctb_header.myhome {border-bottom:0 none;}
+.ctb_header.myhome.fixed {background-color:#fff;border-bottom:1px solid rgba(0,0,0,.1);}
+.ctb_header.myhome.hide {top:-8rem;}
+.ctb_header.myhome.active {background-color:#121212;}
+.ctb_header.myhome.active .mh_logo a,
+.ctb_header.myhome.active .mh_burger {color:#fff;}
+.ctb_header_wrap {width:100%;max-width:1387px!important;margin:0 auto!important;display:flex;border-left:1px solid rgba(0,0,0,.1);border-right:1px solid rgba(0,0,0,.1);}
+.ctb_header.myhome .ctb_header_wrap {border-left:0 none;border-right:0 none;}
+.ctb_header_wrap.full {max-width:100% !important;border-left:0 none;border-right:0 none;}
+.ctb_header_wrap.no_border {border:0 none;}
+.ctb_header .header_btn {width:8rem;height:8rem;flex:0 0 8rem;line-height:8rem;text-align:center;font-size:2rem;cursor:pointer;}
+.ctb_header .header_btn.icon-arrow {border-right:1px solid rgba(0,0,0,.1);}
+.ctb_header .header_btn.icon-arrow:before {display:inline-block;transform:rotate(180deg);}
+
+.ctb_header .ctb_logo {color:#121212;display:inline-flex;padding:0 2.5rem;align-items:center;flex:0 0 20rem;}
+.ctb_header .ctb_logo a {display:inline-block;width:18rem;}
+.ctb_header .ctb_logo a img {width:100%;height:auto;}
+.ctb_header .ctb_logo span {display:inline-block;vertical-align:middle;padding-left:10px;font-family:HyundaiHeadBold, sans-serif;}
+.ctb_header .ctb_logo_m {display:none;}
+.ctb_header .ctb_nav {flex:1}
+.ctb_header .ctb_nav ul {display:flex;}
+.ctb_header .ctb_nav li {flex:1;border-left:1px solid rgba(0,0,0,.1);box-sizing:border-box;}
+.ctb_header .ctb_nav li a {display:block;height:8rem;line-height:8rem;text-align:center;font-family:HyundaiHeadMedium, sans-serif;font-size:1.5rem;box-sizing:border-box;}
+.ctb_header .ctb_nav li a.active {border-bottom:5px solid #121212;}
+
+.ctb_header .mh_logo {color:#121212;display:inline-flex;padding:0 2.5rem;align-items:center;flex:0 0 20rem;transition:color .3s;}
+.ctb_header .mh_logo a {display:inline-block;width:18rem;}
+.ctb_header .mh_logo a .icon-hyundai-logo-desktop {font-size:2.08rem;color:#fff;}
+.ctb_header .mh_logo a img {width:100%;height:auto;}
+.ctb_header .mh_logo span {display:inline-block;vertical-align:middle;padding-left:10px;font-family:HyundaiHeadBold, sans-serif;}
+.ctb_header .mh_nav {flex:1}
+.ctb_header .mh_nav ul {display:flex;}
+.ctb_header .mh_nav li {box-sizing:border-box;flex-wrap:wrap;}
+.ctb_header .mh_nav li a {display:block;height:8rem;line-height:8rem;text-align:center;font-family:HyundaiHeadMedium, sans-serif;font-size:1.5rem;box-sizing:border-box;padding:0 2rem;transition:color .3s;color:#fff;}
+.ctb_header .mh_nav li a.active {border-bottom:5px solid #545454;}
+.ctb_header.active .mh_nav li a {color:#fff;}
+.ctb_header.active .mh_nav li a.active {border-bottom:5px solid #fff;}
+.ctb_header.active .mh_user {color:#fff;}
+
+.ctb_header .mh_mnav {position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(255,255,255,0.99);display:none;}
+.ctb_header .mh_mnav .ctb_nav_close {position:absolute;top:2.8rem;right:2.8rem;height:2.7rem;cursor:pointer;font-size:2rem;color:#121212}
+.ctb_header .mh_mnav nav {display:flex;align-items: center;height:100vh;}
+.ctb_header .mh_mnav ul {display:flex;flex-direction:column;width:65%;margin-left:18%;max-height:100%;color:#121212;}
+.ctb_header .mh_mnav ul li {display:flex;height:100%;}
+.ctb_header .mh_mnav ul li a {display:inline-block;font-size:3.2rem;font-family:HyundaiHeadMedium,sans-serif;padding:1.5rem 0;}
+.ctb_header .mh_mnav ul li.ctb_nav_sub a {font-size:2.6rem;padding:1rem 0 1rem 1.5rem;}
+
+
+.ctb_header .mh_user {width:8rem;height:8rem;flex:0 0 8rem;line-height:8rem;text-align:center;align-items:center;font-size:2rem;cursor:pointer;display:block;transition:color .3s;}
+.ctb_header .mh_user .icon-login {display:inline-flex;line-height:8rem;color:#fff;}
+.ctb_header .mh_burger {width:6rem;height:6rem;flex:0 0 6rem;line-height:6rem;text-align:right;align-items:center;font-size:1.5rem;cursor:pointer;display:none;transition:color .3s;}
+.ctb_header .mh_burger .icon-burger {display:inline-flex;line-height:6rem;}
+
+.ctb_header .ctb_user_info {flex:1;text-align:right;}
+.ctb_header .ctb_user_info a {display:inline-block;width:8rem;height:8rem;line-height:8rem;text-align:center;font-size:2rem;vertical-align:middle;padding-right:1rem;font-weight:500;}
+
+.ctb_header_msg {position:fixed;top:8rem;line-height:8rem;left:0;right:0;height:8rem;background-color:#545454;z-index:95;}
+.ctb_header_msg_wrap {width:100%;max-width:1387px!important;margin:0 auto;padding:0 3rem 0 8rem;display:flex;justify-content:space-between;align-items:center;}
+.ctb_header_msg .header_msg {font-size:1.6rem;font-family:HyundaiTextMedium,sans-serif;color:#121212;}
+.ctb_header_msg .ctb_button {padding:1.5rem 3rem;cursor:pointer;}
+.ctb_header_msg .ctb_button + .ctb_button {margin-left:1rem;}
+
+.ctb_ctn_wrap {position:relative;width:100%;max-width:1387px!important;margin:0 auto!important;}
+.ctb_ctn_wrap.full {max-width:100%!important;}
+.ctb_ctn_wrap.with_left_info {padding:5rem;}
+.ctb_ctn_wrap.with_right_estimate {padding:5rem 6rem;}
+.ctb_ctn_wrap:after {content:"";display:block;clear:both;}
+.ctb_left_info {float:left;padding-right:5rem;width:350px;}
+.ctb_left_info_tt strong {display:block;font-size:3.6rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_left_info_car_tt {font-family:HyundaiHeadMedium,sans-serif;text-align:center;}
+.ctb_left_info_car_tt strong {display:block;font-size:6rem;}
+.ctb_left_info_car_tt span {display:block;font-size:1.6rem;}
+.ctb_left_info_car_img {text-align:center;padding-top:3rem;}
+.ctb_left_info_car_img img {max-width:100%;max-height:100%;}
+.ctb_right_ctn {float:left;width:calc(100% - 350px);}
+
+.ctb_car_estimate {float:right;width:35rem;}
+.ctb_car_estimate_wrap {background-color:#fff;padding:2.5rem;}
+.ctb_car_estimate_wrap p {text-align: left;}
+.ctb_car_estimate h3 {text-align:center;}
+.ctb_car_estimate h3 strong {display:block;font-family:HyundaiHeadMedium,sans-serif;font-size:3rem;}
+.ctb_car_estimate h3 span {display:block;font-family:HyundaiHeadReg,sans-serif;font-size:1.3rem;}
+.ctb_estimate_price_info {padding-top:1.5rem;}
+.side_step + .ctb_estimate_price_info {padding-top:0;}
+.side_step + .ctb_estimate_price_info .btn_gp {padding:0;}
+.ctb_estimate_price_info .price_gp {padding:1.5rem 0;}
+.ctb_estimate_price_info .price_gp.bottom_border {border-bottom:1px solid #CCCCCC;}
+.ctb_estimate_price_info .price_gp h4 {color:#1c1b1b;font-size:1.6rem;font-family:HyundaiHeadMedium,sans-serif;padding-bottom:.8rem;}
+.ctb_estimate_price_info .price_item {display:flex;justify-content:space-between;font-size:1.4rem;line-height:2.7rem;font-family:HyundaiHeadReg,sans-serif;align-items:center;}
+.ctb_estimate_price_info .price_item .price_item_tt {color:#999;}
+.ctb_estimate_price_info .price_item .price_item_ctn {color:#5d5d5d;}
+.ctb_estimate_price_info .price_item.total_price .price_item_tt {color:#1c1b1b;font-size:1.6rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_estimate_price_info .price_item.total_price .price_item_ctn {color:#1c1b1b;font-size:2rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_estimate_price_info .price_item.total_price .price_item_ctn span {display:inline-block;vertical-align:middle;}
+.ctb_estimate_price_info .price_item.total_price .price_item_ctn sup {font-size:1.3rem;padding-left:1px;}
+.ctb_estimate_price_info .price_gp .address_info span {display:block;font-size:1.4rem;font-family:HyundaiHeadReg,sans-serif;}
+.ctb_estimate_price_info .option_price li {font-size:1.4rem;font-family:HyundaiHeadReg,sans-serif;padding-left:.5rem;}
+.ctb_estimate_price_info .option_price li:before {content:"·";display:inline-block;padding-right:1.5rem;font-size:1.8rem;vertical-align:middle;}
+.ctb_estimate_price_info .option_price li span,
+.ctb_estimate_price_info .option_price li strong {display:inline-block;vertical-align:middle;}
+.ctb_estimate_price_info .option_price li strong {font-size:1.4rem;font-family:HyundaiHeadMedium,sans-serif;padding-left:.5rem;}
+.ctb_estimate_price_info .police_gp {padding:1.5rem 0;font-size:1.4rem;}
+.ctb_estimate_price_info .police_gp a {text-decoration:underline;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_estimate_price_info .police_gp .check_agree {display:block;margin-top:1.5rem;}
+.ctb_estimate_price_info .police_gp .check_agree .ctb_input_check {display:inline-block;margin-left:0;vertical-align:middle;}
+.ctb_estimate_price_info .police_gp .check_agree label {display:inline-block;vertical-align:middle;padding-left:.5rem;cursor:pointer;}
+.ctb_estimate_price_info .police_gp .check_agree a {display:block;padding-left:5rem;margin-top:-1rem;}
+.ctb_estimate_price_info .btn_gp {padding:1rem 0;}
+.ctb_estimate_price_info .btn_gp .ctb_button {margin-top:1rem;display:block;text-align:center;cursor:pointer;padding:1.5rem 5rem;border-color:#fff;transition:border-color 0.3s;}
+.ctb_estimate_price_info .btn_gp .ctb_button .icon_transh {display:inline-block;width:21px;height:21px;background:url(../img/icon_transh_b.svg) 0 0 no-repeat;background-size:100%;vertical-align:middle;margin-top:-4px;}
+.ctb_estimate_price_info .btn_gp .ctb_button.primary {background:#121212;color:#fff;border-color:#121212;}
+.ctb_estimate_price_info .btn_gp .ctb_button.primary:after {background:#000;}
+.ctb_estimate_price_info .btn_gp .icon-cart {display:inline-block;width:22px;height:22px;background:url(../img/icon_cart.svg) 0 0 no-repeat;background-size:100%;vertical-align:middle;transition:background-color 0.3s,border-color 0.3s;}
+.ctb_estimate_price_info .btn_gp .icon-cart.icon-w {background-image:url(../img/icon_cart_w.svg);}
+.ctb_estimate_price_info .ctb_text_button span {display:inline-block;margin-top:1rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_estimate_price_info .icon-calculator {display:inline-block;width:20px;height:20px;background:url(../img/icon_calculator.svg) 0 0 no-repeat;background-size:100%;vertical-align:middle;transition:background-color 0.3s,border-color 0.3s;margin-right:.5rem;}
+.ctb_estimate_price_info .ctb_text_button:hover .icon-calculator {background-image:url(../img/icon_calculator_o.svg);}
+.ctb_estimate_price_info .btn_gp .icon-doc {display:inline-block;width:22px;height:22px;background:url(../img/icon_doc.svg) 0 0 no-repeat;background-size:100%;vertical-align:middle;transition:background-color 0.3s,border-color 0.3s;}
+.ctb_estimate_price_info .btn_gp .ctb_button.primary.dark {background-color:#121212;border-color:#121212;color:#fff;}
+.ctb_estimate_price_info .btn_gp .ctb_button.primary.disabled {cursor:default;background-color:#e6e6e6;color:#c1c1c1;BORDER-COLOR:#E6E6E6;}
+.ctb_estimate_price_info .btn_gp .ctb_button.primary.disabled .icon-cart {opacity:0.25;filter:grayscale(1);}
+.ctb_estimate_price_info .btn_gp .ctb_button.primary.disabled:hover .icon-cart {background:url(../img/icon_cart.svg);}
+.ctb_estimate_price_info .btn_gp .ctb_button:hover .icon-doc {background-image:url(../img/icon_doc_h.svg);}
+.ctb_estimate_price_info .btn_gp .ctb_button.line {border-color:#121212;display:block;}
+.ctb_estimate_price_info .btn_gp .ctb_button.line:hover {border-color:#000;}
+.ctb_estimate_price_info .btn_gp .ctb_button.full {width:100%;}
+.ctb_estimate_price_info .btn_gp .ctb_button.mt0 {margin-top:0;}
+.ctb_estimate_price_info .btn_gp span {vertical-align:middle;padding-left:1rem;}
+.ctb_car_estimate_comment {margin-top:1rem;padding:2.5rem;background-color:#fff;}
+.ctb_car_estimate_comment strong {display:block;font-family:HyundaiHeadMedium,sans-serif;color:#1c1b1b;font-size:1.6rem;}
+.ctb_car_estimate_comment span {display:block;font-size:1.4rem;font-family:HyundaiHeadReg,sans-serif;padding-top:.5rem;}
+.ctb_estimate_price_info .price_item .icon-tooltip {display:inline-block;position:relative;background-color:transparent;border:none;outline:none;font-style:inherit;font-size:2rem;cursor:pointer;vertical-align:middle;}
+.ctb_estimate_price_info .price_item + h4 {padding-top:1rem;}
+.ctb_estimate_price_info .list_item {font-size:1.4rem;line-height:2.5rem;font-family:HyundaiHeadReg,sans-serif;}
+.ctb_estimate_price_info .list_item strong {font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_estimate_price_info .list_item:before {content:"ㆍ";}
+.ctb_estimate_price_info .text_item {font-size:1.4rem;line-height:2.5rem;font-family:HyundaiHeadReg,sans-serif;}
+
+.ctb_estimate_price_info .payment_method {border-top:1px solid #ccc;padding-top:1.5rem;padding-bottom:0;}
+.ctb_estimate_price_info .payment_method .payment_tab {display:flex;margin:0.5rem -2.5rem 0 -2.5rem;}
+.ctb_estimate_price_info .payment_method .tab_item {flex:1;text-align:center;height:7rem;line-height:7rem;background-color:#f7f7f7;font-family:hyundaiHeadMedium,sans-serif;font-size:1.5rem;color:#121212;cursor:pointer;}
+.ctb_estimate_price_info .payment_method .tab_item:hover {background-color:#f1f1f1;}
+.ctb_estimate_price_info .payment_method .tab_item + .tab_item {border-left:1px solid #ccc;}
+.ctb_estimate_price_info .payment_method .tab_item.active {border-bottom:3px solid #545454;}
+.ctb_estimate_price_info .payment_method .payment_tab_ctn {padding-top:1.5rem;}
+.ctb_estimate_price_info .payment_method .loan_desc {font-size:1.3rem;font-family:HyundaiHeadReg,sans-serif;line-height:1.5rem;padding-bottom:1rem;}
+
+.ctb_estimate_price_info .loan_status_box {padding:1rem 0;}
+.ctb_estimate_price_info .loan_status {display:inline-block;border:1px solid #545454;border-radius:2rem;font-size:1.5rem;font-family:HyundaiHeadMedium,sans-serif;padding:.5rem 2rem;}
+.ctb_estimate_price_info .loan_status.approved {background-color:#545454;}
+.ctb_estimate_price_info .loan_status.canceled {border-color:#d10000;}
+.ctb_estimate_price_info .loan_status_text {padding:0.5rem 0;font-size:1.5rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_estimate_price_info .loan_status_desc {padding: 10px; font: inherit; font-size: 1.4rem;}
+
+.side_step {padding:2rem 0 0 0;}
+.side_step ol {margin:0 auto;padding-left:6rem;}
+.side_step ol li h4 {position:relative;font-size:2rem;font-family:HyundaiHeadMedium, sans-serif;color:#aaa;}
+.side_step ol li h4:before {content:"";position:absolute;top:2px;left:-4rem;width:2.7rem;height:2.7rem;line-height:2.5rem;text-align:center;border:2px solid #e6dcd2;border-radius:50%;font-size:1.5rem;font-family:HyundaiHeadMedium, sans-serif;color:#1d3d63;}
+.side_step ol li:nth-child(1) h4:before {content:"1";}
+.side_step ol li:nth-child(2) h4:before {content:"2";}
+.side_step ol li:nth-child(3) h4:before {content:"3";}
+.side_step ol li:nth-child(4) h4:before {content:"4";}
+.side_step ol li:nth-child(5) h4:before {content:"5";}
+
+.side_step ol li p {margin:.5rem 0 1rem 0;font-size:1.5rem;border-left:3px solid #ddd;margin-left:-2.6rem;padding-left:2.5rem;padding-bottom:1rem;}
+.side_step ol li p span {display:block;color:#aaa;}
+.side_step ol li:last-child p {border-left:0 none;padding-left:3.2rem;}
+.side_step ol li.complete h4,
+.side_step ol li.active h4 {color:#121212;}
+.side_step ol li.complete p span,
+.side_step ol li.active p span {color:#555;}
+.side_step ol li.complete h4:before,
+.side_step ol li.active h4:before {background-color:#121212;color:#fff;border-color:#121212;}
+.side_step ol li.complete p {border-color:#121212;}
+.side_step ol li.complete:nth-child(1) h4:before,
+.side_step ol li.complete:nth-child(2) h4:before,
+.side_step ol li.complete:nth-child(3) h4:before,
+.side_step ol li.complete:nth-child(4) h4:before, 
+.side_step ol li.complete:nth-child(5) h4:before {font-family:iconfont!important;font-style:normal;font-weight:400!important;vertical-align:middle;content:"\f105"}
+
+.ctb_disclaimer {background-color:#e5e5e5;max-width:100%!important;padding:0;}
+.ctb_disclaimer_wrap {width:100%;max-width:1387px;margin:0 auto;overflow:auto;padding:0 7rem;box-sizing:border-box;}
+.ctb_disclaimer_wrap .disc_header {display:flex;justify-content: space-between;align-items: center;padding:2rem 0 0 0;border-bottom:2px solid #ddd;}
+.ctb_disclaimer_wrap .disc_header .copylight {font-family: HyundaiTextReg,sans-serif;font-size: 14px;padding:2rem 2rem 2rem 0;}
+.ctb_disclaimer_wrap .disc_header .disc_nav .disc_nav_item {font-family: HyundaiHeadReg,sans-serif;font-size: 14px;padding:1rem;color:#232323;}
+.ctb_disclaimer_wrap .disc_header .disc_nav .disc_nav_item:hover {color:#121212;}
+.ctb_disclaimer_wrap .disc_header .disc_nav .disc_nav_item:last-child {padding-right:0;}
+.ctb_disclaimer_wrap .disc_ctn {padding:2rem 0 1rem 0;}
+.ctb_disclaimer_wrap .disc_ctn h4 {font-size: 20px;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_disclaimer_wrap .disc_ctn p {font-family: HyundaiTextReg,sans-serif;font-size: 14px;padding:1rem 2rem 2rem 0;}
+.icon_top:before {content:"↑";font-size:1rem;font-size:2.4rem;margin-right:5px;}
+
+.ctb_footer {background-color:#fff;position:fixed;bottom:0;left:0;width:100%;height:8rem;box-sizing:border-box;border-top:1px solid rgba(0,0,0,.1);z-index:90;}
+.ctb_footer_wrap {width:100%;padding:0 1rem;max-width:1387px!important;margin:0 auto!important;display:flex;justify-content:space-between;}
+.ctb_footer_left {display:inline-flex;justify-content:start;align-items:center;height:8rem;}
+.ctb_footer_left a {display:inline-block;}
+.ctb_footer_left .ctb_footer_disc {color:gray;font-size:1.4rem;padding:1rem 2rem;cursor:pointer;}
+.ctb_footer_left .ctb_footer_disc .icon-arrow:before {display:inline-block;transform:rotate(270deg);font-size:1rem;vertical-align:middle;}
+.ctb_footer_left .ctb_footer_disc span {display:inline-block;padding-left:1rem;vertical-align:middle;}
+.ctb_footer_left .ctb_footer_chat {font-size:1.5rem;font-family:HyundaiHeadMedium, sans-serif;padding:1rem 2rem;cursor:pointer;}
+.ctb_footer_left .ctb_footer_chat .icon-contact:before {font-size:2.5rem;font-weight:900 !important;}
+.ctb_footer_left .ctb_footer_tyres {font-size:1.4rem;font-family:HyundaiTextReg,sans-serif;padding:1rem 2rem;cursor:pointer;color:#676767}
+.ctb_footer_left .ctb_footer_tyres svg {vertical-align:middle;margin-right:.8rem;}
+.ctb_footer_right {display:inline-flex;justify-content:end;align-items:center;height:8rem;}
+.ctb_footer_right .ctb_footer_price_more {padding:2rem;display:inline-block;vertical-align:middle;}
+.ctb_footer_right .ctb_footer_price_more .icon-arrow:before {display:inline-block;transform:rotate(270deg);font-size:1.6rem;vertical-align:middle;}
+.ctb_footer_right .ctb_footer_price {display:inline-block;padding:0 3rem 0 1rem;vertical-align:middle;}
+.ctb_footer_right .ctb_footer_price_edit {padding:2rem 2rem 2rem 0.5rem;display:inline-block;vertical-align:middle;}
+.ctb_footer_right .ctb_footer_price_edit .icon-pen {width:2rem;height:2rem;display:inline-block;background:url('../img/icon_pen.svg') 0 0 no-repeat;vertical-align:middle;}
+.ctb_footer_right .ctb_footer_price + .ctb_footer_price {padding-right:0;}
+.ctb_footer_right .ctb_footer_price strong {display:block;font-size:2.2rem;line-height:2.5rem;font-family:HyundaiHeadMedium, sans-serif;color:#121212;}
+.ctb_footer_right .ctb_footer_price span {display:block;font-size:1.4rem;line-height:1.5rem;}
+.ctb_footer_right .ctb_footer_price sup {display:inline-block;font-size:1.3rem;padding-left:.3rem;}
+.ctb_footer_right .ctb_button {padding:2rem;margin-left:2rem;}
+.ctb_footer_right .ctb_button.primary {display:inline-block;padding:2rem 3rem;min-width:20rem;text-align:center;}
+.ctb_footer_right .ctb_button.disabled {padding:2rem 3rem;min-width:20rem;text-align:center;}
+
+.ctb_container {padding-top:8rem;}
+/*.ctb_header.myhome + .ctb_container {padding-top:0;} */
+.ctb_container:after {content:"";display:block;clear:both;}
+.ctb_container.with_ctb_footer {padding-bottom:8rem;}
+.ctb_container.terms_condition {padding-top:0;}
+.terms_condition_wrap {margin:0 auto;max-width:1000px;}
+.terms_logo {padding:8rem 0 3rem 0;text-align:center;font-size:3.2rem;color:#121212;}
+.bg_ctb_step {background-color:#f5f5f5;}
+
+.mh_main_img_wrap {background:url('../img/bg_myhome.png') 50% 0 no-repeat;background-size:cover;min-height:60rem;}
+.mh_main_img_wrap.img2 {background-image:url('../img/bg_myhome2.png')}
+.mh_main_img_wrap.img3 {background-image:url('../img/bg_myhome3.png')}
+.mh_main_img {position:relative;max-width:1387px;margin:0 auto;padding:8rem 2rem 13rem 2rem;box-sizing:border-box;}
+.mh_main_img img {width:100%;}
+.mh_main_img strong {display:block;position:absolute;bottom: 1rem;left: 1.5rem;font-size:8rem;font-family:HyundaiHeadMedium, sans-serif;color:#fff;}
+
+.ctb_headline_head {background-color:#f5f5f5;}
+.ctb_headline_head.bg_white {background-color:#fff;}
+.ctb_headline_head_wrap {width:100%;padding:5rem;max-width:1387px!important;margin:0 auto!important;display:flex;align-items:center;box-sizing:border-box;}
+.ctb_headline_img {flex:1;}
+.ctb_headline_img .ctb_headline_car_tt {font-family:HyundaiHeadMedium, sans-serif;}
+.ctb_headline_img .ctb_headline_car_tt span {display:block;font-size:1.6rem;padding-left:.5rem;}
+.ctb_headline_img .ctb_headline_car_tt strong {display:block;font-size:7.5rem;line-height:8rem;padding-top:2rem;}
+.ctb_headline_img .ctb_headline_car_tt .ctb_personal_info {padding:2rem 1rem;line-height:3rem;}
+.ctb_headline_img .ctb_headline_car_tt .ctb_personal_info strong {font-size:2rem;line-height:3.5rem;padding-top:2rem;}
+.ctb_headline_img .ctb_headline_car_tt .ctb_personal_info span {font-family:HyundaiTextReg, sans-serif;padding-left:0;}
+.ctb_headline_img .ctb_headline_car_tt .ctb_personal_info span > strong {display:inline-block;font-size:1.6rem;font-family:HyundaiHeadMedium, sans-serif;line-height:2rem;padding:0;}
+.ctb_headline_img .ctb_headline_car_img {padding:2rem 0;}
+.ctb_headline_img .ctb_headline_car_step_wrap {width:47rem;text-align:center;}
+.ctb_headline_img .ctb_headline_car_step_wrap h4 {font-family:HyundaiHeadReg, sans-serif;}
+.ctb_headline_img .ctb_headline_car_step {padding-top:2rem;}
+.ctb_headline_img .ctb_headline_car_step ol {display:flex;justify-content:space-around;}
+.ctb_headline_img .ctb_headline_car_step ol li {display:inline-flex;position:relative;width:3rem;height:3rem;border:2px solid #e6dcd2;border-radius:50%;justify-content:center;align-items:center;font-family:HyundaiHeadMedium, sans-serif;color:#121212
+;}
+.ctb_headline_img .ctb_headline_car_step ol li:before {content:"";display:block;position:absolute;top:12px;height:2px;right:40px;width:65px;background-color:#e6dcd2;}
+.ctb_headline_img .ctb_headline_car_step ol li:first-child:before {display:none;}
+
+
+.ctb_headline_head_ctn {flex:1;align-items:center;justify-content:center;text-align:center;position:relative;}
+.ctb_headline_head_box {display:inline-flex;flex-wrap:wrap;justify-content:center;background-color:#fff;width:36rem;box-shadow:0 2rem 5rem rgba(0,0,0,.15);padding:5rem 3rem;text-align:center;}
+.ctb_headline_head_box .ctb_headline_logo {font-size:2rem;color:#121212;}
+.ctb_headline_head_box .ctb_headline_text {padding:3rem 1rem 3rem 1rem;}
+.ctb_headline_head_box .ctb_headline_text strong {display:block;font-size:5.2rem;font-family:HyundaiHeadMedium, sans-serif;}
+.ctb_headline_head_box .ctb_headline_text span {font-size:1.5rem;font-family:HyundaiHeadreg, sans-serif;}
+.ctb_headline_head_box .ctb_headline_btns {padding:0 2rem;width:100%;}
+.ctb_headline_head_box .ctb_headline_btns .ctb_button {display:block;margin-top:1rem;width:100%;}
+
+.ctb_headline_ctn {width:100%;max-width:1387px!important;margin:0 auto!important;padding:8rem 0;}
+.ctb_headline_ctn h3 {text-align:center;padding:0 0 5rem 0;font-size:3.5rem;font-family:HyundaiHeadMedium, sans-serif;}
+.ctb_headline_ctn ol {width:41rem;margin:0 auto;padding-left:4rem;}
+.ctb_headline_ctn ol li h4 {position:relative;font-size:2.5rem;font-family:HyundaiHeadMedium, sans-serif;}
+.ctb_headline_ctn ol li h4:before {content:"";position:absolute;top:2px;left:-4rem;width:3rem;height:3rem;line-height:3rem;text-align:center;border:2px solid #e6dcd2;border-radius:50%;font-size:1.6rem;font-family:HyundaiHeadMedium, sans-serif;color:#1d3d63;}
+.ctb_headline_ctn ol li:nth-child(1) h4:before {content:"1";}
+.ctb_headline_ctn ol li:nth-child(2) h4:before {content:"2";}
+.ctb_headline_ctn ol li:nth-child(3) h4:before {content:"3";}
+.ctb_headline_ctn ol li:nth-child(4) h4:before {content:"4";}
+.ctb_headline_ctn ol li:nth-child(5) h4:before {content:"5";}
+
+.ctb_headline_ctn ol li p {margin:1.5rem 0;font-size:1.5rem;border-left:3px solid #ddd;margin-left:-2.6rem;padding-left:3rem;padding-bottom:3rem;}
+.ctb_headline_ctn ol li:last-child p {border-left:0 none;padding-left:3.2rem;}
+.ctb_headline_ctn ol li.complete h4:before,
+.ctb_headline_ctn ol li.active h4:before {background-color:#121212;color:#fff;border-color:#121212;}
+.ctb_headline_ctn ol li.complete p,
+.ctb_headline_ctn ol li.active p {border-color:#121212;}
+.ctb_headline_ctn ol li.complete:nth-child(1) h4:before,
+.ctb_headline_ctn ol li.complete:nth-child(2) h4:before,
+.ctb_headline_ctn ol li.complete:nth-child(3) h4:before,
+.ctb_headline_ctn ol li.complete:nth-child(4) h4:before, 
+.ctb_headline_ctn ol li.complete:nth-child(5) h4:before {font-family:iconfont!important;font-style:normal;font-weight:400!important;vertical-align:middle;content:"\f105"}
+
+.ctb_headline_head_ctn .ctb_check_car_img {padding-top:10rem;}
+.ctb_headline_head_ctn .ctb_check_car_icon {position:absolute;top:2rem;left:2rem;width:80px;height:80px;background-color:#121212;border-radius:50%;}
+.ctb_headline_head_ctn .ctb_check_car_icon svg {width:80px;height:80px;}
+.ctb_headline_head_ctn .ctb_check_car_icon svg .check {fill:#fff;}
+
+/* Popup */
+.ctb_popup {position:fixed;top:0;left:0;right:0;bottom:0;background-color:#f5f5f5;z-index:90;display:none;}
+.ctb_popup.bg_white {background-color:#fff;}
+.ctb_popup.on {display:block;}
+.ctb_popup .ctb_popup_close {display:block;position:absolute;top:4rem;right:4rem;z-index:99;border:0 none;font-size:2rem;background:transparent;cursor:pointer;color:#1c1b1b;}
+.ctb_popup .ctb_popup_close:hover {opacity:.6;}
+.ctb_popup .ctb_popup_close:active {opacity:.8;}
+.ctb_popup .ctb_popup_content {padding:5rem 10rem;overflow:auto;height:100%;}
+.ctb_popup .ctb_pop_wrap {margin:0 auto;max-width:1100px;display:flex;}
+.ctb_popup .ctb_pop_wrap.full {max-width:100%;display:flex;}
+.ctb_popup .ctb_pop_ctn_left {flex:0 0 35rem;background-color:#fff;height:100vh;text-align:center;box-sizing:border-box;}
+.ctb_popup .ctb_pop_ctn_left .left_logo {padding-top:10rem;text-align:center;color:#121212;font-size:2rem;}
+.ctb_popup .ctb_pop_ctn_left .pop_nav {text-align:left;margin-top:15rem;}
+.ctb_popup .ctb_pop_ctn_left .pop_nav_item {position:relative;margin-top:3rem;margin-left:10rem;opacity:0.5;font-family:HyundaiHeadMedium, sans-serif;color:#121212;cursor:pointer;}
+.ctb_popup .ctb_pop_ctn_left .pop_nav_item span {position:relative;display:inline-block;padding:1rem;background-color:#fff;z-index:2;}
+.ctb_popup .ctb_pop_ctn_left .pop_nav_item:hover {opacity:1;}
+.ctb_popup .ctb_pop_ctn_left .pop_nav_item.active {opacity:1;}
+.ctb_popup .ctb_pop_ctn_left .pop_nav_item.active:after {content:"";display:block;position:absolute;top:2.1rem;width:9rem;right:0;height:2px;background-color:#121212;}
+.ctb_popup .ctb_pop_ctn_right {flex:1;height:100vh;padding:5rem;box-sizing:border-box;overflow:auto;}
+
+/* Popup - Confirm */
+.ctb_popup.confirm {background-color:#fff;}
+.ctb_popup.confirm .ctb_pop_wrap {justify-content:center;align-items:center;height:100vh;font-family:HyundaiHeadMedium, sans-serif;font-size:2rem;}
+.ctb_popup.confirm .ctb_pop_confirm {display:flex;}
+.ctb_popup.confirm .confirm_left {padding:0 2rem;}
+.ctb_popup.confirm .confirm_left img {max-width:100%; transform:scale(1.1); -webkit-transform:scale(1.1); -moz-transform:scale(1.1); -o-transform:scale(1.1);}
+.ctb_popup.confirm .confirm_left .confirm_tt {display:none;}
+.ctb_pop_confirm .confirm_car_tt {display:flex;align-items:flex-start;flex-direction:column;padding-bottom:4rem;}
+.ctb_pop_confirm .confirm_car_tt strong {font-size:3.2rem;}
+.ctb_pop_confirm .confirm_car_tt span {font-size:2rem;font-family:HyundaiHeadReg, sans-serif;}
+.ctb_pop_confirm .confirm_right {width:calc(100% - 120px); padding-left:0;}
+.ctb_pop_confirm .confirm_tt {font-size:3.2rem;padding-bottom:2rem;}
+.ctb_pop_confirm .confirm_btns {margin-top:10rem;}
+.ctb_pop_confirm .confirm_btns .ctb_button {cursor:pointer;margin-right:1rem;padding:1.5rem 5rem;}
+.ctb_pop_confirm .confirm_right .confirm_desc {font-family:HyundaiHeadReg, sans-serif;}
+
+@media only screen and (max-width:768px){
+    .ctb_popup.confirm .ctb_pop_confirm {flex-direction:column;}
+    .ctb_popup.confirm .ctb_popup_close {top:3rem;right:3rem;}
+    .ctb_popup.confirm .ctb_pop_wrap {height:100%;padding:6rem 4rem 10rem 4rem;overflow:auto;align-items:flex-start;}
+    .ctb_popup.confirm .confirm_left {display:flex;flex-direction:column-reverse;text-align:center;align-items:center;}
+    .ctb_popup.confirm .confirm_left .confirm_tt {display:block;font-size:2.8rem;}
+    .ctb_popup.confirm .confirm_left .img {max-width:90%;}
+    .ctb_pop_confirm .confirm_car_tt {align-items:center;padding-bottom:10rem;}
+    .ctb_pop_confirm .confirm_car_tt strong {font-size: 2.1rem;}
+    .ctb_pop_confirm .confirm_car_tt strong > span {display:none;}
+    .ctb_pop_confirm .confirm_car_tt span {font-size: 1.6rem;}
+    .ctb_pop_confirm .confirm_right {width:100%;padding:0;align-items:center;}
+    .ctb_pop_confirm .confirm_right .confirm_tt {display:none;}
+    .ctb_pop_confirm .confirm_btns {position:fixed;bottom:0;left:0;right:0;display:flex;margin-top:0;font-size:0;box-shadow:0 0 1rem rgba(0,0,0,.15);}
+    .ctb_pop_confirm .confirm_btns .ctb_button {flex:1;margin:0;text-align:center;border-color:#fff;padding:2.4rem 0;}
+    .ctb_pop_confirm .confirm_btns .ctb_button.primary {border-color:#121212;}
+}
+
+
+/* Dealer Search */
+.ctb_dealer_map {position:relative;width:100%;max-width:1387px!important;margin:0 auto!important;height:calc(100vh - 16rem);z-index:91;background-color:gray;}
+.ctb_dealer_search {position:absolute;top:9rem;left:0;bottom:5rem;width:46rem;background-color:#121212;color:#fff;z-index:92;}
+.ctb_dealer_info {position:absolute;top: 50%;left:0;width:46rem;background-color:#fff;color:#1c1b1b;z-index:2;transform:translateY(-50%);z-index:92;/* display: none; */}
+.ctb_dealer_info.on {display:block;}
+
+.ctb_dealer_search_form {padding:2.5rem;}
+.ctb_dealer_search_title {font-size:34px;line-height:45px;font-family:HyundaiHeadMedium;margin-bottom:2rem;}
+.ctb_dealer_search_form_item {font-size:0;}
+.ctb_dealer_search_form_item input {outline:0;border-style:solid;border-color:hsla(0,0%,100%,.5);background-color:#121212;font-size:16px;color:#fff;padding:0 2rem 0 2rem;;height:5rem;line-height:5rem;box-sizing:border-box;width:calc(100% - 100px)}
+.ctb_dealer_search_form_item input::-webkit-input-placeholder{font-family:HyundaiHeadLight;opacity:.7;-webkit-transition:opacity .2s ease-in-out;transition:opacity .2s ease-in-out;color:hsla(0,0%,100%,.3)}
+.ctb_dealer_search_form_item input::-moz-placeholder{font-family:HyundaiHeadLight;opacity:.7;-webkit-transition:opacity .2s ease-in-out;transition:opacity .2s ease-in-out;color:hsla(0,0%,100%,.3)}
+.ctb_dealer_search_form_item input::-ms-input-placeholder{font-family:HyundaiHeadLight;opacity:.7;-webkit-transition:opacity .2s ease-in-out;transition:opacity .2s ease-in-out;color:hsla(0,0%,100%,.3)}
+.ctb_dealer_search_form_item input::placeholder{font-family:HyundaiHeadLight;opacity:.7;-webkit-transition:opacity .2s ease-in-out;transition:opacity .2s ease-in-out;color:hsla(0,0%,100%,.3)}
+.ctb_dealer_search_form_item button {width:90px;background-color:#fff;height:50px;font-size:16px;border:0 none;margin-left:10px;cursor:pointer;}
+.ctb_dealer_search_form_item button:hover {opacity:.6;}
+.ctb_dealer_search_form_item button:active {opacity:.8;}
+
+.ctb_dealer_search_list {overflow:auto;height:calc(100% - 16.5rem);padding:0 1rem 2.5rem 2.5rem;margin-right:1rem;}
+.ctb_dealer_search_item {display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.2);padding:2rem 0;color:#fff;cursor:pointer;position:relative;}
+.ctb_dealer_search_item:hover,
+.ctb_dealer_search_item.active {background-color:#fff;color:#121212;font-weight:600;}
+.ctb_dealer_search_item .ctb_search_dealer_location {display:inline-flex;flex:0 0 100px;justify-content:flex-start;flex-direction: column;font-size:24px;line-height:28px;font-family:HyundaiHeadMedium;}
+.ctb_dealer_search_item .ctb_search_dealer_location strong {font-size:1.4rem;display:block;text-align:center;padding-top:6px;}
+.ctb_dealer_search_item .ctb_search_dealer_location span {font-size:1.2rem;display:block;text-align:center;font-family:HyundaiHeadReg;}
+.ctb_dealer_search_item .ctb_search_dealer_info {flex:1;font-size:13px;font-weight:400;}
+.ctb_search_dealer_info .ctb_search_dealer_name {font-size:18px;font-family:HyundaiHeadReg;margin-bottom:1rem;}
+
+/* Doty */
+.ctb_dealer_search_item .ctb_doty_logo {background:url(../img/doty_white_2024.png) 0 0 no-repeat; background-size: 85px; position: absolute; width: 88px; height: 43px; right: 5px; bottom: 7px;}
+.ctb_dealer_search_item:hover .ctb_doty_logo,
+.ctb_dealer_search_item.active .ctb_doty_logo {background:url(../img/doty_blue_2024.png) 0 0 no-repeat; background-size: 85px;}
+.ctb_dealer_info .ctb_doty_logo {background:url(../img/doty_blue_2024.png) 0 0 no-repeat; background-size: 95px; position: absolute; width: 100px; height: 43px; right: 5px; bottom: 7px;}
+
+.doty_popup {position:absolute; top: 20px; right:20px; z-index: 1000;}
+.doty_popup .popup_wrapper {width: 450px; border: 1px solid #ddd; background-color: #fff; padding: 2.5rem 3.5rem; cursor: default; box-shadow: 0 0.4rem 0.8rem 0 rgb(0 0 0 / 50%);}
+.doty_popup .popup_wrapper.top {top:auto;bottom:30px;}
+.doty_popup .popup_wrapper.right {right:auto;left:0;}
+.doty_popup .popup_wrapper .icon-close {position:absolute;top:1rem;right:1rem;font-size:1.3rem;color:#1c1b1b;font-family:HyundaiTextReg, sans-serif;cursor:pointer;background-color:#fff;border: none;}
+.doty_popup .popup_content {font-size:1.1rem;line-height:1.7rem;text-align:center;cursor:text;overflow:auto;}
+.doty_popup .doty_img {background: url(../img/doty_blue_2024.png) no-repeat; width: 100%; width: 230px; height: 100px; background-size: 100%; display: inline-block;}
+.doty_popup .doty_txt .title {font-size:1.7rem;line-height:1.9rem;text-align:center;cursor:text;font-weight: bold; margin: 15px 0 10px 0;}
+.doty_popup .doty_txt .desc {font-size:1.4rem;line-height:1.9rem;text-align:left;color:#000;}
+@media only screen and (max-width:1024px) {.doty_popup {top: 120px;} .doty_popup .doty_img {width: 200px; height:90px;}}
+@media only screen and (max-width:320px) {.doty_popup {top: 120px;} .doty_popup .doty_img {width: 200px; height:90px;}}
+
+.ctb_dealer_info_item {display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.2);padding:2rem 0;cursor:pointer;}
+.ctb_dealer_info_item .ctb_info_dealer_location {display:inline-flex;flex:0 0 100px;justify-content:flex-start;flex-direction: column;font-size:24px;line-height:28px;font-family:HyundaiHeadMedium;}
+.ctb_dealer_info_item .ctb_info_dealer_location strong {font-size:1.4rem;display:block;text-align:center;padding-top:6px;}
+.ctb_dealer_info_item .ctb_info_dealer_location span {font-size:1.2rem;display:block;text-align:center;font-family:HyundaiHeadReg;}
+.ctb_dealer_info_item .ctb_info_dealer_info {flex:1;font-size:13px;font-weight:400;}
+.ctb_info_dealer_info .ctb_info_dealer_name strong {display:block;font-size:2.4rem;font-family:HyundaiHeadMedium;margin-bottom:.5rem;color:#121212;}
+.ctb_info_dealer_info .ctb_info_dealer_name span {display:block;font-size:1.4rem;}
+.ctb_info_dealer_info .ctb_info_dealer_item a {display:inline-block;font-size:18px;font-family:HyundaiHeadMedium;margin:1rem 0 2rem 0;text-decoration:underline;}
+.ctb_info_dealer_info .ctb_info_dealer_item span {display:block;font-size:1.4rem;font-family:HyundaiHeadReg;color:#767676;}
+.ctb_info_dealer_info .ctb_info_dealer_item strong {display:block;font-size:1.4rem;font-family:HyundaiHeadReg;margin-bottom: 0.1rem;}
+
+
+/* Car Info */
+.ctb_car_info {float:left;width:calc(100% - 35rem);}
+.ctb_car_info.ctb_byv {width:calc(100% - 41rem);}
+.ctb_car_info:after {content:"";display:block;clear:both;}
+.ctb_car_info_gp {float:left;padding:0 0 50px 0;width:100%;}
+.ctb_car_info_gp.w50 {width:50%;}
+.ctb_car_info_tt,
+.ctb_car_info_gp h3 {display:flex;justify-content:space-between;margin-bottom:1rem;align-items:center;}
+.ctb_car_info_tt strong,
+.ctb_car_info_gp h3 strong {font-size:1.8rem;line-height:4rem;font-family:HyundaiHeadMedium;}
+.ctb_car_info.ctb_byv .ctb_car_info_tt strong,
+.ctb_car_info.ctb_byv .ctb_car_info_gp h3 strong {font-size:2.2rem;}
+.ctb_car_info_gp h3 strong small {display:block;font-size:1.5rem;font-family:HyundaiHeadreg, sans-serif;line-height:1;}
+.ctb_car_info_tt .ctb_button.modify {border:0 transparent;background-color:transparent;font-size:1.8rem;margin-top:0;padding:1rem 0;line-height:1;height:auto;color:#b7b7b7;}
+.ctb_car_info_tt .ctb_button.modify:hover {color:#121212;}
+.ctb_car_info_tt .ctb_button.modify:before,
+.ctb_car_info_tt .ctb_button.modify:after {display:none;}
+.ctb_car_info_tt .ctb_button.modify img {display:inline-block;width:20px;height:20px;vertical-align:middle;}
+.ctb_car_info_tt .ctb_button.modify span {display:inline-block;vertical-align:middle;padding-left:1rem;}
+
+.ctb_car_info_gp h3 .ctb_button {padding:0 3rem;line-height:3.6rem;height:4rem;margin-top:1rem;}
+
+.ctb_car_info_360view:after {content:"";display:block;clear:both;}
+.ctb_car_info_360view_item {float:left;width:25%;padding-bottom:10px;padding-right:10px;min-width:230px;box-sizing:border-box;}
+.ctb_car_info_360view_item .img_360 {background-color:#fff;width:220px;height:220px;cursor:pointer;}
+.ctb_car_info_360view_item .img_360 img {max-width:100%;max-height:100%;}
+
+.ctb_car_info_inex_item .img_inex img {width:70px;height:70px;display:inline-block;vertical-align:middle;}
+.ctb_car_info_inex_item .img_inex span {display:inline-block;vertical-align:middle;line-height:25px;padding-left:1.5rem;font-family:HyundaiHeadReg;}
+
+.ctb_car_info_tab ul {border-bottom:1px solid #aaa;margin-bottom:1.5rem;}
+.ctb_car_info_tab ul:after {content:"";display:block;clear:both;}
+.ctb_car_info_tab li {float:left;padding-right:2rem;margin-bottom:-1px;}
+.ctb_car_info_tab li a {display:block;padding:1rem 0;font-size:1.5rem;font-family:HyundaiHeadMedium, sans-serif;border-bottom:3px solid transparent;}
+.ctb_car_info_tab li a.active {border-bottom:3px solid #121212;}
+
+.ctb_car_info_acc_item {margin-top:2rem;display:flex;background-color:#fff;align-items:center;}
+.ctb_car_info_acc_item .img_acc {flex: 0 0 100px;}
+.ctb_car_info_acc_item .img_acc img {width: 100px;height: 100px;}
+.ctb_car_info_acc_item .info_acc_area {flex:1;display:inline-flex;flex-direction:column;width: calc(100% - 100px);box-sizing: border-box;}
+.ctb_car_info_acc_item .info_acc_gp {flex:1;display:inline-flex;}
+.ctb_car_info_acc_item .info_acc {flex:1;padding-left:1.5rem;width: calc(100% - 460px);align-items: center;display: inline-flex;}
+.ctb_car_info_acc_item .info_acc strong {display:block;font-family:HyundaiHeadMedium;font-size:14px;padding: 0;line-height:16px;width: calc(100% - 15px);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.ctb_car_info_acc_item .info_acc span {display:block;font-family:HyundaiHeadReg;font-size:13px;max-width:450px;line-height:16px;}
+.ctb_car_info_acc_item .info_acc_desc {display:inline-flex;flex:1;}
+.ctb_car_info_acc_item .info_acc_desc span {display:block;font-family:HyundaiHeadReg;font-size:13px;line-height:16px;padding: 10px 30px 0 2px;overflow:hidden;margin: 10px 12px 0 12px;white-space:nowrap;text-overflow: ellipsis;border-top: 1px solid #ddd;width:100%;}
+.ctb_car_info_acc_item .price_acc {display:flex;padding-right:1.5rem;align-items:center;flex: 0 0 350px;justify-content: flex-end;}
+.ctb_car_info_acc_item .price_acc strong {display:inline-block;margin-right:1.5rem;font-size:14px;}
+.ctb_car_info_acc_item .price_acc a {display:block;position:relative;width:40px;height:40px;line-height:40px;text-align:center;background-color:#EFEFEF;color:#121212;transition:box-shadow .3s ease-in-out,fill .3s;box-shadow:inset 0 0 0 #121212;cursor:pointer;}
+.ctb_car_info_acc_item .price_acc a:hover {box-shadow:inset 5rem 0 0 #121212;color:#fff;}
+.ctb_car_info_acc_item .price_acc a .icon_info {vertical-align:middle;top:50%;position:absolute;margin-top:-8px;left:50%;margin-left:-1px;fill:#121212}
+.ctb_car_info_acc_item .price_acc a:hover .icon_info {fill:#fff;}
+.ctb_car_info_acc_item .price_acc .number_count {margin-right:1rem;}
+.ctb_car_info_acc_item .price_acc .number_count button {display:inline-block;border:0 none;background-color:#efefef;width:40px;height:40px;line-height:40px;text-align:center;font-family:HyundaiHeadMedium;font-size:3rem;cursor:pointer;vertical-align:middle;color:#121212;transition:background-color 0.3s;}
+.ctb_car_info_acc_item .price_acc .number_count button:hover {background-color:#121212;color:#fff;}
+.ctb_car_info_acc_item .price_acc .number_count span {display:inline-block;height:40px;line-height:40px;font-size:1.4rem;font-family:HyundaiHeadMedium;padding:0 1rem;vertical-align:middle;}
+.ctb_car_info_acc_item .ctb_input_check span img {width: 20px;height: 20px;margin-top: 8px;margin-left: 8px;}
+
+.ctb_car_info_byv_item {margin-top:1.5rem;display:flex;background-color:#fff;align-items:center;}
+.ctb_car_info_byv_item .img_item {flex:0 0 94px;}
+.ctb_car_info_byv_item .img_item img {max-width:100%;max-height:100%;}
+.ctb_car_info_byv_item .info_item {flex:1;padding-left:1.5rem;}
+.ctb_car_info_byv_item .info_item strong {display:block;font-family:HyundaiHeadMedium;font-size:1.8rem;line-height:16px;}
+.ctb_car_info_byv_item .info_item span {display:block;font-family:HyundaiHeadMedium;font-size:1.6rem;line-height:16px;padding-top:.5rem;}
+.ctb_car_info_byv_item .price_item {display:flex;padding-right:1.5rem;align-items:center;}
+.ctb_car_info_byv_item .price_item strong {display:inline-block;margin-right:1.5rem;font-size:1.8rem;}
+.ctb_car_info_byv_item .price_item .btn_transh {border:0 none;background-color:transparent;cursor:pointer;padding:0;margin:0 1rem 0 0;}
+.ctb_car_info_byv_item .price_item .btn_transh img {width:21px;height:21px;}
+
+.ctb_car_info_btm_area {float:left;width:100%;}
+.ctb_car_info_btm_area:after {content:"";display:block;clear:both;}
+.ctb_car_tech_data h3 {display:flex;justify-content:space-between;margin-bottom:1rem;align-items:center;}
+.ctb_car_tech_data h3 strong {font-size:3.4rem;line-height:1.5;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_car_tech_gp {display:flex;justify-content:space-around;align-items:center;padding-bottom:5rem;}
+.ctb_car_tech_item .ctb_car_tech_info {display:flex;justify-content:center;align-items:center;}
+.ctb_car_tech_item .ctb_car_tech_info.two_info {justify-content:space-around;}
+.ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_icon {padding-right:1rem;}
+.ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_text {font-family:HyundaiTextReg,sans-serif;font-size:1.6rem;line-height:2.7rem;}
+
+.ctb_car_fitting_acc:after {content:"";display:block;clear:both;}
+.ctb_car_fitting_acc_item {float:left;width:31%;margin:2rem 2.3% 2rem 0;background-color:#fff;}
+.ctb_car_fitting_acc_item .ctb_fitting_img {width:100%;height:170px;}
+.ctb_car_fitting_acc_item .ctb_fitting_img img {width:100%;max-height:100%;object-fit: cover;}
+.ctb_car_fitting_acc_item .ctb_fitting_info {display:flex;padding:2rem 1rem 2rem 2rem;height:13rem;box-sizing:border-box;}
+.ctb_car_fitting_acc_item .info_acc {flex:1;padding-right:1rem;box-sizing:border-box;}
+.ctb_car_fitting_acc_item .info_acc strong {display:block;font-family:HyundaiHeadMedium;font-size:14px;padding:0 0 1rem 0;line-height:16px;}
+.ctb_car_fitting_acc_item .info_acc span {display:block;font-family:HyundaiHeadReg;font-size:14px;}
+.ctb_car_fitting_acc_item .price_acc {flex:0 0 4rem;align-items:center;}
+.ctb_car_fitting_acc_item .price_acc strong {display:inline-block;margin-right:1.5rem;font-size:14px;}
+.ctb_car_fitting_acc_item .price_acc a {display:block;position:relative;width:40px;height:40px;line-height:40px;margin-bottom:1rem;text-align:center;background-color:#EFEFEF;color:#121212;transition:box-shadow .3s ease-in-out,fill .3s;box-shadow:inset 0 0 0 #121212;cursor:pointer;}
+.ctb_car_fitting_acc_item .price_acc a:hover {box-shadow:inset 5rem 0 0 #121212;color:#fff;}
+.ctb_car_fitting_acc_item .price_acc a .icon_info {vertical-align:middle;top:50%;position:absolute;margin-top:-8px;left:50%;margin-left:-1px;fill:#121212}
+.ctb_car_fitting_acc_item .price_acc a:hover .icon_info {fill:#fff;}
+
+.ctb_car_fitting_acc_item .ctb_fitting_info .addtional-text {padding-top: 15px; position: relative;}
+.ctb_car_fitting_acc_item .ctb_fitting_info .addtional-desc {left: 0; position: absolute; display: inline-block; font-size: 1.1rem; color: #8e8e8e; top: 2px;}
+
+.ctb_car_fitting_acc .price_acc .ctb_input_check {margin-left:0;}
+
+.ctb_input_check {width:40px;height:40px;cursor:pointer;margin-left:1.5rem;background-color:#fff;}
+.ctb_input_check input {display:none;}
+.ctb_input_check span {display:block;position:relative;width:40px;height:40px;box-sizing:border-box;border:.2rem solid #121212;transition:box-shadow .3s ease-in-out,border .3s;box-shadow:inset 0 0 0 #121212;overflow:hidden;}
+.ctb_input_check span .icon_check {position:absolute;top:-1px;left:-1px;}
+.ctb_input_check input:checked + span {border-color:#121212;box-shadow:inset 5rem 0 0 #121212;}
+
+/*2023.09.11*/
+.ctb_input_check span {border-color:#898989;}
+.ctb_input_check span:hover {border-color:#545454;}
+.ctb_input_check span.valid_err {border-color:#e24d31;}
+/*2023.09.11*/
+
+.ctb_text_button{display:inline-block;position:relative;padding:0;background-color:transparent;border:none;outline:none;font-style:inherit;cursor:pointer;}
+.ctb_text_button span {font-family:HyundaiHeadMedium,sans-serif;font-size:1.5rem;display:block;text-align:right;padding-right:5rem;position:relative;color:#121212;margin-bottom:2rem;margin-top:.6rem;}
+.ctb_text_button:hover span {color:#000;}
+.icon_arrow:after,
+.icon_arrow:before{content:"";display:block;position:absolute;background-color:#121212;height:2px;width:10px;transition:bottom .3s linear .3s,transform .3s linear;}
+.icon_arrow:after,
+.icon_arrow:before{top:50%;margin-top:-2px}
+.icon_arrow.on:before{transform:rotate(-45deg)!important}
+.icon_arrow.on:after{transform:rotate(225deg)!important}
+.icon_arrow:after,
+.icon_arrow:before{transform:rotate(45deg);right:calc(2rem + 6px)}
+.icon_arrow:after{transform:rotate(135deg);right:32px;right:2rem}
+
+.ctb_car_info_detail_item {position:relative;border-bottom:2px solid #e8e6e4;}
+.ctb_car_info_detail_item:first-child {border-top:2px solid #e8e6e4;}
+.ctb_car_info_detail_item .detail_item_tt {position:relative;font-size:2rem;line-height:1.3;padding:3rem 7rem 3rem 3rem;font-family:HyundaiHeadMedium;cursor:pointer;transition:background-color .3s;color:#121212;}
+.ctb_car_info_detail_item .detail_item_tt:hover,
+.ctb_car_info_detail_item .detail_item_tt.on {background-color:#fff;}
+.ctb_car_info_detail_item .detail_item_ctn {height:0;overflow:hidden;transition:height .3s;background-color:#fff;box-sizing:border-box;}
+.ctb_car_info_detail_item .detail_item_tt.on + .detail_item_ctn {height:auto;overflow:auto;}
+
+.ctb_car_info_detail_item .detail_item_ctn_table {padding:1rem 8% 6rem;box-sizing:border-box;}
+.ctb_car_info_detail_item .detail_item_ctn_table table {border-collapse:collapse;border-spacing:0;}
+.ctb_car_info_detail_item .detail_item_ctn_table table .table_row {border-top:.1rem solid #d8d8d8;}
+.ctb_car_info_detail_item .detail_item_ctn_table table .table_row:first-child {border:unset;}
+.ctb_car_info_detail_item .detail_item_ctn_table table .table_row:only-child {border-top:0 none;}
+.ctb_car_info_detail_item .detail_item_ctn_table table .table_row th,
+.ctb_car_info_detail_item .detail_item_ctn_table table .table_row td {padding-top:2.25rem;padding-bottom:2.1rem;}
+.ctb_car_info_detail_item .detail_item_ctn_table table .table_title {vertical-align:top;min-width:320px;min-width:20rem;max-width:480px;max-width:30rem;font-family:HyundaiHeadMedium,sans-serif;font-size:25.6px;font-size:1.6rem;line-height:43.2px;line-height:2.7rem;text-align:left;}
+.ctb_car_info_detail_item .detail_item_ctn_table table .table_content {padding-left:8%;width:100%;font-family:HyundaiTextReg,sans-serif;font-size:25.6px;font-size:1.6rem;line-height:43.2px;line-height:2.7rem;}
+.ctb_car_info_detail_item .detail_item_ctn_table table .table_content span {display:block;}
+
+.ctb_car_spec_info {clear:both;display:flex;justify-content:space-between;}
+.ctb_car_spec_info .ctb_car_spec_item {background-color:#fff;width:172px;text-align:center;}
+.ctb_car_spec_info .ctb_car_spec_item .spec_info {padding:5px 0;}
+.ctb_car_spec_info .ctb_car_spec_item .spec_info span {display:block;font-family:HyundaiHeadReg,sans-serif;font-size:1.4rem;padding:5px 0;}
+.ctb_car_spec_info .ctb_car_spec_item .spec_info strong {display:block;font-family:HyundaiHeadMedium,sans-serif;font-size:1.4rem;color:#121212;padding:5px 0;}
+
+
+.view360_box {margin:5% 15%;position:relative;}
+.view360_tt {font-family:HyundaiHeadMedium,sans-serif;}
+.view360_tt .view360_super_title {font-size:1.6rem;}
+.view360_tt .view360_car_name {font-size:5rem;line-height:4.6rem;}
+
+.c-rotation-3d{margin:0 5%;-ms-touch-action:none;touch-action:none;position:relative;padding-bottom:45.3%;cursor:none;-webkit-transition:opacity .3s ease-in-out;transition:opacity .3s ease-in-out}
+.c-rotation-3d.is-fallback{cursor:default;margin:0}
+.c-rotation-3d.is-loading-images,.c-rotation-3d.is-status-loading{opacity:.5;pointer-events:none}
+.c-rotation-3d .rotation-3d__image{position:absolute;display:block;visibility:hidden;top:0;width:100%}
+.c-rotation-3d .rotation-3d__image.is-active{visibility:visible}
+.c-rotation-3d .rotation-3d__360-indicator-container{position:absolute;bottom:-44.8px;bottom:-2.8rem;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;z-index:-1}@media (min-width:768px){.c-rotation-3d .rotation-3d__360-indicator-container{bottom:-4.8rem}}@media (min-width:1024px){.c-rotation-3d .rotation-3d__360-indicator-container{bottom:-4.8rem}}
+.c-rotation-3d .rotation-3d__360-circle{width:84%}
+.c-rotation-3d .rotation-3d__360-indicator-wrapper{position:absolute;left:50%;bottom:7.5%;-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0)}@media (min-width:768px){.c-rotation-3d .rotation-3d__360-indicator-wrapper{bottom:12.5%}}
+
+.ctb_form_wrap {padding:0 0 50px 0;box-sizing:border-box;}
+/*terms_condition_wrap */
+.ctb_form_wrap > h3 {padding:3rem 0 3rem 2rem;}
+.ctb_form_wrap > h3 strong {display:block;font-size:5rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_form_wrap > h3 span {display:block;font-size:1.6rem;font-family:HyundaiHeadReg,sans-serif;}
+.ctb_form {margin:0 auto 0 auto;}
+.ctb_form:after {content:"";display:block;clear:both;}
+.ctb_form h3 {float:left;width:100%;font-family:HyundaiHeadBold,sans-serif;margin:4rem 0 2rem 0;font-size:32px;line-height:30px;padding:0 20px;}
+.ctb_form h4 {font-family:HyundaiHeadMedium,sans-serif;margin:3rem 0 1rem 0;font-size:1.8rem;line-height:30px;}
+.ctb_form_item {float:left;width:100%;box-sizing:border-box;padding:10px 20px 20px 20px;position:relative;}
+.ctb_form_item.ctb_form_radio_gp {padding-top:5px;}
+.ctb_form_item .ctb_form_radio input[type="radio"] {display:none;}
+.ctb_form_item .ctb_form_radio {display:inline-block;cursor:pointer;}
+.ctb_form_item .ctb_form_radio span {display:inline-block;vertical-align:middle;padding-right:2rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_form_item .ctb_form_radio span:before {content:"";display:inline-block;width:21px;height:21px;border:2px solid rgba(0,0,0,0.1);border-radius:50%;vertical-align:middle;margin-right:1rem;margin-top:-1px;}
+.ctb_form_item .ctb_form_radio input[type="radio"]:checked + span {color:#121212;}
+.ctb_form_item .ctb_form_radio input[type="radio"]:checked + span:before {background-color:#121212;box-shadow:inset 0 0 0 3px #fff;transition:background-color .3s,box-shadow .3s;}
+
+
+.ctb_form_item .ctn_location_list {position:absolute;top:53px;left:2rem;right:2rem;background-color:#fff;border:2px solid rgba(0,0,0,0.2);z-index:1;max-height:200px;overflow:auto;}
+.ctb_form_item .ctn_location_list li {padding:1rem;font-family:HyundaiHeadMedium,sans-serif;font-size:1.4rem;color:#555;}
+.ctb_form_item .ctn_location_list li:hover {background-color:#f2f2f2;cursor:pointer;}
+.ctb_form_item .ctn_location_list li:before {font-family:iconfont!important;font-style:normal;font-weight:600!important;vertical-align:middle;content:"\f11a";font-size:1.6rem;}
+
+.ctb_form_item .ctn_select_list {position:absolute;top:53px;left:2rem;right:2rem;background-color:#fff;border:2px solid rgba(0,0,0,0.2);z-index:1;max-height:200px;overflow:auto;}
+.ctb_form_item .ctn_select_list li {padding:1rem 1rem 1rem 1.5rem;font-family:HyundaiHeadMedium,sans-serif;font-size:1.4rem;color:#555;}
+.ctb_form_item .ctn_select_list li:hover {background-color:#f2f2f2;cursor:pointer;}
+
+
+.ctb_form_item.w50 {width:50%;}
+.ctb_form_item label {display:block;font-size:14px;font-family:HyundaiHeadMedium,sans-serif;padding:14px 0 5px 0;}
+.ctb_form_item input,
+.ctb_form_item select {border:2px solid rgba(0,0,0,0.1);padding:0 15px;background-color:transparent;box-sizing:border-box;width:100%;height:45px;font-size:14px;font-family:HyundaiHeadMedium,sans-serif;outline:0;}
+.ctb_form_item input:focus,
+.ctb_form_item select:focus {border-color:#121212;transition:border-color .5s;}
+.ctb_form_item input.readonly {color:#898787;border:2px solid rgba(0,0,0,0.1);}
+.ctb_form_item input.readonly:focus {border:2px solid rgba(0,0,0,0.1);cursor:default;}
+.ctb_form_item label.ctn_form_label {position:absolute;top:0.9rem;color:#767676;left:3.7rem;transition:all 0.3s;pointer-events:none;}
+.ctb_form_item label.ctn_form_label strong {color:#de3112;}
+.ctb_form_item label.ctb_form_radio {position:relative;}
+.ctb_form_item label.ctb_form_radio strong {color:#de3112;position:absolute;top:5px;right:5px;}
+.ctb_form_item .mail_check {content:"";position:absolute;top:22px;right:35px;width:22px;height:22px;border:2px solid #121212;padding:0;border-radius:50%;line-height:24px;text-align:center;cursor:pointer;text-align:center;color:#121212;background-color:transparent;}
+.ctb_form_item .mail_check .icon-check {line-height:21px;}
+.ctb_form_item input:focus + label.ctn_form_label,
+.ctb_form_item input.focus + label.ctn_form_label,
+.ctb_form_item select:focus + label.ctn_form_label,
+.ctb_form_item select.focus + label.ctn_form_label {font-size:13px;top:0;padding:2px 15px;background-color:#fff;margin-left:-15px;}
+.ctb_form_item.check_policy {padding-left:.5rem;padding-top:0;}
+.bg_ctb_step .ctb_form_item input:focus + label.ctn_form_label,
+.bg_ctb_step .ctb_form_item input.focus + label.ctn_form_label,
+.bg_ctb_step .ctb_form_item select:focus + label.ctn_form_label,
+.bg_ctb_step .ctb_form_item select.focus + label.ctn_form_label {background-color:#f5f5f5;}
+.bg_gray .ctb_form_item input:focus + label.ctn_form_label,
+.bg_gray .ctb_form_item input.focus + label.ctn_form_label,
+.bg_gray .ctb_form_item select:focus + label.ctn_form_label,
+.bg_gray .ctb_form_item select.focus + label.ctn_form_label {background-color:#f5f5f5;}
+
+/*2023.09.11*/
+.ctb_form_item .ctb_form_radio span:before {border-radius: 50%; width:23px; height: 23px;}
+.ctb_form_item .ctb_form_radio input[type="radio"]:checked + span:before {background-color: #545454; border-color: #545454;}
+
+.ctb_form_item .ctb_form_radio span:before,
+.ctb_form_item textarea,
+.ctb_form_item input,
+.ctb_form_item select {border-color:#898989;}
+
+.ctb_form_item textarea:hover,
+.ctb_form_item input:hover, 
+.ctb_form_item input:focus, 
+.ctb_form_item .ctb_form_radio:hover span:before,
+.ctb_form_item select:hover {border-color:#545454;}
+
+.ctb_form_item.valid_err .ctb_form_radio span:before,
+.ctb_form_item .valid_err {border-color:#e24d31;}
+.ctb_form_item .valid_err_msg {color: #e24d31; position: absolute; padding-top: 2px; font-size: 14px;}
+.ctb_form_item input[readonly]:hover, .ctb_form_item input[disabled]:hover {border-color:#898989;}
+/*2023.09.11*/
+
+/* modfy for editable filed */
+.ctb_form_item input:not(:read-only) , .ctb_form_item select:not(:read-only) {background-color:#fff;}
+.ctb_form_item input:focus:not(:read-only) + label.ctn_form_label, 
+.ctb_form_item input.focus:not(:read-only) + label.ctn_form_label, 
+.ctb_form_item select:focus:not(:read-only) + label.ctn_form_label, 
+.ctb_form_item select.focus:not(:read-only) + label.ctn_form_label {background: linear-gradient(#f5f5f5, #fff);}
+.ctb_form_item input:not(:read-only):-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px #fff inset;}
+
+.ctb_form_btns {float:left;width:100%;padding:30px 20px;display:flex;justify-content:space-between;}
+.ctb_form_btns .ctb_form_button {background-color:#CCCCCC;border:none;outline:none;font-style:inherit;cursor:pointer;color:#fff;font-family:HyundaiHeadMedium,sans-serif;font-size:21px;height:48px;text-align:center;min-width:150px;}
+.ctb_form_btns .ctb_form_button:hover {background-color:#aaa;}
+.ctb_form_btns .ctb_form_button.primary {background-color:#121212;min-width:calc(100% - 160px);}
+.ctb_form_btns .ctb_form_button.primary:hover {background-color:#004489;}
+.ctb_form_btns.right {justify-content:flex-end;}
+
+.ctb_option_info_wrap {display:flex;height:100%;align-items:center;background-color:#fff;}
+.ctb_option_info_wrap .option_img {flex:0 0 50%;overflow:hidden;background-size:cover;height:100%;}
+.ctb_option_info_wrap .option_info_ctn {padding:0 10rem;font-size:1.8rem;}
+.ctb_option_info_wrap .option_info_ctn .option_tt {font-size:35px;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_option_info_wrap .option_info_ctn .option_desc {padding:2rem 0;max-width:600px;font-size:1.6rem;}
+.ctb_option_info_wrap .option_info_ctn .option_pn {font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_option_info_wrap .option_info_ctn .option_btn {padding-top:2rem;}
+.ctb_option_info_wrap .option_info_ctn .option_btn .ctb_button {height:52px;line-height:50px;padding:0 4rem;}
+
+
+.ctb_delivery_option_item {float:left;width:50%;}
+.ctb_delivery_option_item:nth-child(2n+1) {padding-right:2rem;}
+.ctb_delivery_option_item:nth-child(2n+2) {padding-left:2rem;}
+.ctb_form_item label.ctb_delivery_option_box {background-color:#fff;padding:3rem 2rem;box-sizing:border-box;cursor:pointer;}
+.ctb_delivery_option_box .ctb_delivery_op_tt {border-bottom:2px solid #ddd;display:flex;padding-bottom:2rem;}
+.ctb_delivery_option_box .ctb_delivery_op_tt .ctb_delivery_op_tt_left {flex:1;}
+.ctb_delivery_option_box .ctb_delivery_op_tt .ctb_delivery_op_tt_left strong {display:block;font-family:HyundaiHeadMedium,sans-serif;font-size:2.5rem;}
+.ctb_delivery_option_box .ctb_delivery_op_tt .ctb_delivery_op_tt_left span {display:block;font-size:1.6rem;color:#767676;}
+.ctb_delivery_option_box .ctb_delivery_op_tt .ctb_delivery_op_tt_checkbox {display:inline-flex;align-items:center;}
+.ctb_delivery_option_box .icon-tooltip {display:inline-block;position:relative;background-color:transparent;border:none;outline:none;font-style:inherit;font-size:2rem;cursor:pointer;vertical-align:middle;color:#676767;}
+.ctb_delivery_option_box .icon-tooltip:hover {color:#121212;}
+.ctb_delivery_option_box .icon-tooltip:hover > .ctb_tooltip {display:block;}
+.ctb_delivery_option_box .delivery_op_detail {padding:2rem 0 0 0;}
+.ctb_delivery_option_box .delivery_op_detail h5 {font-family:HyundaiHeadMedium,sans-serif;font-size:2rem;padding:1rem 0;}
+.ctb_delivery_option_box .delivery_op_detail strong {display:block;font-family:HyundaiHeadMedium,sans-serif;font-size:1.8rem;line-height:2.5rem;}
+.ctb_delivery_option_box .delivery_op_detail span {display:block;font-size:1.5rem;line-height:2.5rem;}
+.ctb_form_item label.ctb_delivery_option_box.readonly {opacity:0.5;cursor:default;filter:grayscale(1);}
+.ctb_form_item label.ctb_delivery_option_box.readonly .ctb_input_check {cursor:default;}
+.icon_trash {display:inline-block;width:21px;height:21px;background:url(../img/icon_transh_b.svg) 0 0 no-repeat;background-size:100%;vertical-align:middle;margin-top:-4px;cursor:pointer}
+
+.ctb_policy .ctb_policy_text {font-size:1.5rem;line-height:2.5rem;font-family:HyundaiTextReg,sans-serif;}
+
+.ctb_form_item label.ctb_check_policy {display:flex;}
+.ctb_form_item.check_policy label.ctb_check_policy {display:flex;align-items: center;}
+.ctb_check_policy .ctb_input_check {flex:0 0 40px;}
+.ctb_check_policy .ctb_policy_text {flex:1;padding:0 0 0 2rem;}
+
+.ctb_form_item.terms_buttons {text-align:right;}
+.ctb_form_item.terms_buttons .ctb_button {padding-left:8rem;padding-right:8rem;}
+
+.ctb_byv_ctn_tt {display:flex;padding-bottom:5rem;justify-content:space-between;align-items:center;}
+.ctb_byv_ctn_tt h2 {font-size:3.6rem;font-family:HyundaiHeadMedium,sans-serif;}
+.btn_page_link {position:relative;font-size:1.8rem;font-family:HyundaiHeadMedium,sans-serif;margin-left:2rem;padding-left:1.6rem;}
+.btn_page_link:before {position:absolute;left:0;top:-2px;font-family:iconfont!important;font-style:normal;font-weight:600!important;vertical-align:middle;content:"\f10a";margin-right:.5rem;transition:font-size 0.1s;font-size:2rem;}
+.btn_page_link:hover:before {content:"\f10b";font-size:2.2rem;}
+
+.ctb_byv_head {background-color:#f5f5f5;}
+.ctb_byv_head.bg_white {background-color:#fff;}
+/* 20230501 */
+.ctb_byv_head_wrap {width:100%;padding:0 0 5rem 0;max-width:1387px!important;margin:0 auto!important;display:flex;align-items:center;box-sizing:border-box;text-align:center;position:relative;}
+/* //20230501 */
+.ctb_byv_img {flex:1;position:relative;}
+.ctb_byv_img .ctb_byv_car_tt {font-family:HyundaiHeadMedium, sans-serif;}
+.ctb_byv_img .ctb_byv_car_tt span {display:block;font-size:1.6rem;padding-left:.5rem;}
+.ctb_byv_img .ctb_byv_car_tt strong {display:block;font-size:7.5rem;line-height:8rem;padding-top:2rem;}
+.ctb_byv_img .ctb_byv_car_tt .ctb_personal_info {padding:2rem 1rem;line-height:3rem;}
+.ctb_byv_img .ctb_byv_car_tt .ctb_personal_info strong {font-size:2rem;line-height:3.5rem;padding-top:2rem;}
+.ctb_byv_img .ctb_byv_car_tt .ctb_personal_info span {font-family:HyundaiTextReg, sans-serif;padding-left:0;}
+.ctb_byv_img .ctb_byv_car_tt .ctb_personal_info span > strong {display:inline-block;font-size:1.6rem;font-family:HyundaiHeadMedium, sans-serif;line-height:2rem;padding:0;}
+.ctb_byv_img .ctb_byv_car_img {padding:2rem 0;}
+
+.ctb_byv_car_step_wrap {width:47rem;text-align:center;margin:0 auto;}
+.ctb_byv_car_step_wrap h4 {font-family:HyundaiHeadReg, sans-serif;}
+.ctb_byv_car_step {padding-top:2rem;}
+.ctb_byv_car_step ol {display:flex;justify-content:space-around;}
+.ctb_byv_car_step ol li {display:inline-flex;position:relative;width:3rem;height:3rem;border:2px solid #e6dcd2;border-radius:50%;justify-content:center;align-items:center;font-family:HyundaiHeadMedium, sans-serif;color:#121212
+;color:#121212;}
+
+.ctb_byv_car_step ol li:nth-child(1):before {content:"1";}
+.ctb_byv_car_step ol li:nth-child(2):before {content:"2";}
+.ctb_byv_car_step ol li:nth-child(3):before {content:"3";}
+.ctb_byv_car_step ol li:nth-child(4):before {content:"4";}
+.ctb_byv_car_step ol li.active {border-color:#121212;}
+.ctb_byv_car_step ol li.complete {background-color:#121212;color:#fff;border-color:#121212;}
+.ctb_byv_car_step ol li.active:after,
+.ctb_byv_car_step ol li.complete:after {background-color:#121212;}
+.ctb_byv_car_step ol li.complete:nth-child(1):before,
+.ctb_byv_car_step ol li.complete:nth-child(2):before,
+.ctb_byv_car_step ol li.complete:nth-child(3):before,
+.ctb_byv_car_step ol li.complete:nth-child(4):before {font-family:iconfont!important;font-style:normal;font-weight:400!important;vertical-align:middle;content:"\f105"}
+.ctb_byv_car_step ol li:after {content:"";display:block;position:absolute;top:12px;height:2px;right:40px;width:65px;background-color:#e6dcd2;}
+.ctb_byv_car_step ol li:first-child:after {display:none;}
+
+
+.ctb_byv_img .ctb_byv_car_step.type2 ol li:after {right:25px;width:91px;}
+.ctb_byv_img .ctb_byv_car_step ol li div.step-tooltip {display:none;}
+.ctb_byv_img .ctb_byv_car_step ol li:hover div.step-tooltip {position: absolute;z-index: 9999;margin-bottom: 75px;white-space: nowrap;background-color: #121212;color:white;padding: 10px;display:block;}
+
+.ctb_byv_aside {position:absolute;top:50%;left:-6rem;width:6rem;transform:translateY(-50%);}
+.ctb_byv_aside .btn_interior {width:6rem;height:6rem;cursor:pointer;position:relative;}
+.ctb_byv_aside .btn_interior:hover:after {content:"Open 360˚ interior view";display:block;position:absolute;left:7rem;top:1rem;padding:1rem;background-color:#fff;white-space:nowrap;font-family:HyundaiHeadMedium, sans-serif;font-size:1.4rem;}
+.ctb_byv_aside .btn_full_img {width:6rem;height:6rem;text-align:center;line-height:6rem;border:2px solid #ccc;box-sizing:border-box;cursor:pointer;}
+.ctb_byv_aside .btn_full_img img {width:20px;height:56px;vertical-align:middle;}
+.ctb_byv_aside .btn_full_img:hover {border-color:#121212;}
+
+.mh_links {text-align:center;padding:3rem 0;}
+.mh_links .btn_page_link {margin:0 2rem;}
+.mh_ctn_wrap {position:relative;text-align:center;padding:5rem 0;max-width:1387px!important;margin:0 auto;}
+.mh_ctn_wrap.full {max-width:100%!important;}
+.mh_ctn_wrap h3 {font-size:5rem;font-family:HyundaiHeadMedium, sans-serif;color:#121212;padding-bottom:2rem;}
+
+.mh_ctn_wrap.overview_img_01 {max-width:100%!important;}
+.mh_ctn_wrap.overview_img_01 img {width:100%;}
+
+
+.mh_ctn_wrap.overview_img_02 {max-width:100%!important;margin-bottom:10rem;}
+.mh_ctn_wrap.overview_img_02 img {width:100%;}
+.mh_overview_img_text_box {position:absolute;bottom:0;left:50%;margin-left:20rem;margin-bottom:-3rem;width:41rem;padding:4rem 7rem;background-color:#121212;color:#fff;}
+.mh_overview_img_text {padding-bottom:3rem;font-size:1.4rem;line-height:2.5rem;}
+.mh_overview_img_text_box .ctb_button {display:block;}
+
+.mh_myorder .myorder_car_info {padding:0 0 2rem 0;font-size:1.5rem;font-family:HyundaiHeadReg, sans-serif;}
+.mh_myorder .myorder_step_wrap {overflow:auto;}
+.mh_myorder .myorder_step {display:flex;align-items:center;justify-content:center;width:1387px;}
+.mh_myorder .myorder_step .step_item {flex:1;position:relative;}
+.mh_myorder .myorder_step .step_item.step2 .step_item_base {width:64px;height:64px;border-radius:50%;background-color:#121212;margin:0 auto;}
+.mh_myorder .myorder_step .step_item.step2 .step_item_base img {width:36px;height:36px;margin-top:15px;}
+.mh_myorder .myorder_step .step_item.step5 .step_item_base {width:64px;height:64px;margin:0 auto;}
+.mh_myorder .myorder_step .step_item.step5 .step_item_base span {position:absolute;top:28px;left:0;width:100%;text-align:center;font-family:HyundaiHeadReg, sans-serif;font-size:2.4rem;color:#121212;}
+.mh_myorder .myorder_step .step_item .step_item_detail {position:absolute;top:80px;text-align:center;width:100%;}
+.mh_myorder .myorder_step .step_item .step_item_detail strong {display:block;font-family:HyundaiHeadMedium, sans-serif;font-size:2.2rem;}
+.mh_myorder .myorder_step .step_item.step5 .step_item_detail strong {font-size:2rem;}
+.mh_myorder .myorder_step .step_item .step_item_detail strong .icon-tooltip {cursor:pointer;}
+.mh_myorder .myorder_step .step_item .step_item_detail strong .icon-tooltip:hover {color:#121212;}
+.mh_myorder .myorder_step .step_item .step_item_detail span {display:block;color:#555;}
+.mh_myorder .myorder_step .step_item.step1 {flex:0 0 550px;}
+.mh_myorder .myorder_step .step_item.step1 img {width:70%;margin-top:35px;}
+.mh_myorder .myorder_step .step_item.step3 .step_item_base, 
+.mh_myorder .myorder_step .step_item.step4 .step_item_base {width:36px;height:36px;border:2px solid #121212;border-radius:50%;margin:0 auto;line-height:34px;font-family:HyundaiHeadMedium, sans-serif;font-size:1.6rem;color:#999;}
+.mh_myorder .myorder_step .step_item.step3 .step_item_detail, 
+.mh_myorder .myorder_step .step_item.step4 .step_item_detail {top:-40px;}
+.mh_myorder .myorder_step .step_item:after {content:"";position:absolute;top:50%;left:150px;width:115px;height:1px;border-radius:5px;background-color:#999;}
+.mh_myorder .myorder_step .step_item.step1:after {left:450px;width:155px;height:3px;margin-top:-1px;background-color:#121212;}
+.mh_myorder .myorder_step .step_item.step2:after {left:160px;width:110px;}
+.mh_myorder .myorder_step .step_item.step5:after {display:none;}
+
+.icon-tooltip {position:relative;}
+.icon-tooltip .ctb_tooltip {position:absolute;top:30px;right:0;border:1px solid #ddd;background-color:#fff;padding:2.5rem 3.5rem;cursor:default;box-shadow:0 0.4rem 0.8rem 0 rgb(0 0 0 / 50%);z-index:15;display:none;}
+.icon-tooltip .ctb_tooltip.top {top:auto;bottom:30px;}
+.icon-tooltip .ctb_tooltip.right {right:auto;left:0;}
+.icon-tooltip .ctb_tooltip.active {display:block;}
+.icon-tooltip .ctb_tooltip .icon-close {position:absolute;top:1rem;right:1rem;font-size:1.3rem;color:#1c1b1b;font-family:HyundaiTextReg, sans-serif;cursor:pointer;}
+.icon-tooltip .ctb_tooltip .ctb_tooltip_msg {font-size:1.1rem;line-height:1.7rem;width:300px;text-align:left;cursor:text;max-height:170px;overflow:auto;}
+
+
+.mh_vehicles p {font-size:1.5rem;font-family:HyundaiHeadReg, sans-serif;}
+.mh_ctn_btm_btn .ctb_button {display:inline-block;margin-top:5rem;padding:2rem 8rem;}
+
+.mh_ctn_img_left {float:left;width:calc(100% - 40rem);position:relative;}
+
+.mh_ctn_campaign {background-color:#121212;color:#fff;font-family:HyundaiHeadMedium, sans-serif;font-size:1.8rem;position:absolute;top:0;left:20rem;padding:1rem 2rem;text-align:left;line-height:2.4rem;}
+.mh_ctn_campaign + img {margin-top:10rem;}
+
+.mh_ctn_float_wrap {padding-top:5rem;}
+.mh_ctn_float_wrap:after {content:"";display:block;clear:both;}
+.mh_ctn_wrap .ess_date_info {margin-top:-2.5rem;margin-left:-2.5rem;margin-right:-2.5rem;margin-bottom:2rem;padding:1.5rem 2rem;background-color:#121212;color:#fff;}
+.mh_ctn_wrap .ess_date_info li {font-size:1.4rem;font-family:HyundaiHeadReg,sans-serif;padding-left:.5rem;}
+.mh_ctn_wrap .ess_date_info li:before {content:"·";display:inline-block;padding-right:1.5rem;font-size:1.8rem;vertical-align:middle;}
+.mh_ctn_wrap .ess_date_info li span,
+.mh_ctn_wrap .ess_date_info li strong {display:inline-block;vertical-align:middle;}
+.mh_ctn_wrap .ess_date_info li strong {font-size:1.4rem;font-family:HyundaiHeadMedium,sans-serif;padding-left:.5rem;}
+.mh_ctn_wrap .ctb_car_estimate h3 {color:#1c1b1b;padding-bottom:.5rem;}
+.mh_ctn_wrap .ctb_car_estimate_wrap {background-color:#f7f7f7;text-align:left;}
+.mh_ctn_wrap .ctb_estimate_price_info .price_gp.total_price {padding-bottom:1.5rem;}
+.mh_ctn_wrap .ctb_estimate_price_info .price_gp.bottom_border {border-bottom:1px solid #ccc;}
+.mh_ctn_wrap .ctb_estimate_price_info .price_gp.top_border {border-top:1px solid #ccc;margin-top:1.5rem;padding-top:1rem;}
+.mh_ctn_wrap .ctb_estimate_price_info .price_gp {border-bottom:0 none;padding-bottom:0;}
+.mh_ctn_wrap .ctb_car_estimate_comment {background-color:#f7f7f7;text-align:left;}
+.mh_ctn_wrap .ctb_estimate_price_info .btn_gp {text-align:center;}
+.mh_ctn_wrap .ctb_estimate_price_info .btn_gp .ctb_button.text_btn {display:inline-block;background-color:transparent;border-color:transparent;padding:0 0.8rem;height:5.6rem;line-height:5.2rem;}
+.mh_ctn_wrap .ctb_estimate_price_info .btn_gp .ctb_button.text_btn:before,
+.mh_ctn_wrap .ctb_estimate_price_info .btn_gp .ctb_button.text_btn:after {display:none;}
+.mh_ctn_float_wrap .mh_ctn_btns {text-align:center;}
+
+.mh_side_dealer_info {background-color:#f7f7f7;margin-top:1rem;text-align:left;}
+.dealer_info_item {padding:0 2.5rem 1rem 2.5rem;}
+.dealer_info_item.btn_view_detail {position:relative;padding:1.5rem 2.5rem;cursor:pointer;cursor:pointer;transition:background-color 0.3s;}
+.dealer_info_item.btn_view_detail:hover {background-color:#121212;color:#fff;}
+.dealer_info_item.btn_view_detail:hover .dealer_info_tt,
+.dealer_info_item.btn_view_detail:hover .dealer_info_ctn {color:#fff;}
+.dealer_info_item.btn_view_detail .icon-arrow_open {position:absolute;top:2.7rem;right:3rem;transition:all .3s;}
+.dealer_info_item.btn_view_detail.active .icon-arrow_open {transform:rotate(180deg);} 
+.dealer_info_item.btn_view_detail.active + .dealer_info_detail {display:flex;} 
+.dealer_info_detail {display:none;flex-wrap:wrap;padding:1rem 2.5rem 0 2.5rem;}
+.dealer_info_detail .dealer_info_item {flex:0 0 100%;padding:0 0 1rem 0;line-height:2.5rem;}
+.dealer_info_detail .dealer_info_item.left_item {flex:0 0 60%;}
+.dealer_info_detail .dealer_info_item.right_item {flex:0 0 40%;}
+.dealer_info_detail .dealer_info_item .dealer_info_msg {display:block;font-family:HyundaiHeadMedium,sans-serif;font-size:1.4rem;}
+
+.dealer_info_item .dealer_info_tt {font-size:1.3rem;font-family:HyundaiHeadReg,sans-serif;color:#767676;}
+.dealer_info_item .dealer_info_ctn {display:block;font-family:HyundaiHeadMedium,sans-serif;font-size:1.6rem;color:#121212;}
+.dealer_info_item .dealer_info_sctn {display:block;font-family:HyundaiHeadReg,sans-serif;font-size:1.3rem;}
+
+.dealer_hour_item {display:flex;font-family:HyundaiHeadReg,sans-serif;font-size:1.3rem;line-height:2.5rem;}
+.dealer_hour_item.point {font-family:HyundaiHeadMedium,sans-serif;}
+.dealer_hour_tt {flex:0 0 60%;}
+.dealer_hour_ctn {flex:0 0 40%;}
+
+.dealer_info_btns {padding:0 2.5rem 2.5rem 2.5rem;}
+.dealer_info_btns .ctb_button {display:block;margin-top:1rem;text-align:center;cursor:pointer;}
+.dealer_info_btns .icon_transh {display:inline-block;width:21px;height:21px;background:url(../img/icon_transh_b.svg) 0 0 no-repeat;background-size:100%;vertical-align:middle;margin-top:-4px;margin-right:5px;}
+
+.ctb_loading {display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.2) url(../img/icon_loading.svg) 50% 50% no-repeat;z-index:9999;}
+.ctb_loading.no_bg {background-color:transparent;}
+.ctb_loading.on {display:block;}
+
+.mh_faq {max-width:700px;margin:0 auto;text-align:left;}
+.mh_faq_btn_area {text-align:right;}
+.mh_faq dt {position:relative;margin:0;padding:1.8rem 5rem 1.8rem 2rem;border-top:2px solid #e5e5e5;font-family:HyundaiHeadMedium,sans-serif;font-size:1.8rem;color:#121212;cursor:pointer;}
+.mh_faq dd {display:none;font-family:HyundaiHeadReg,sans-serif;margin:0;padding:1.5rem 3.5rem 3.5rem 3.5rem;background-color:#fbfaf9;font-size:1.4rem;line-height:2.4rem;}
+.mh_faq dd a {font-family:HyundaiHeadMedium,sans-serif;text-decoration:underline;}
+.mh_faq dt .btn_expand:after,
+.mh_faq dt .btn_expand:before{content:"";display:block;position:absolute;background-color:#121212;height:2px;width:10px;transition:bottom .3s linear .3s,transform .3s linear;}
+.mh_faq dt .btn_expand:after,
+.mh_faq dt .btn_expand:before{top:50%;margin-top:-2px}
+.mh_faq dt .btn_expand:after,
+.mh_faq dt .btn_expand:before{transform:rotate(45deg);right:calc(2rem + 6px)}
+.mh_faq dt .btn_expand:after{transform:rotate(135deg);right:32px;right:2rem}
+.mh_faq dt.on {background-color:#fbfaf9;}
+.mh_faq dt.on + dd {display:block;}
+.mh_faq dt.on + dd .btn_expand:before{transform:rotate(-45deg)!important}
+.mh_faq dt.on + dd .btn_expand:after{transform:rotate(225deg)!important}
+
+.mh_footer {background-color:#323232;text-align:center;color:#fff;}
+.mh_footer_wrap {max-width:1387px!important;margin:0 auto!important;padding:4rem 10rem;box-sizing:border-box;}
+.mh_footer_ctn {display:flex;justify-content: space-between;border-top:2px solid hsla(0,0%,100%,.1);}
+.mh_footer_ctn:first-child {border-top:0 none;}
+.mh_footer_logo {flex:0 0 200px;text-align:left;padding-top:1rem;box-sizing:border-box;}
+.mh_footer_logo i {font-size:3.6rem;}
+.mh_footer_links {flex:1;text-align:left;}
+.accordion_items {display:flex;}
+.accordion_items .accordion_item {flex:1;padding-right:2rem;}
+.accordion_header {padding:1.5rem .5rem 1.5rem 0;border-bottom:2px solid hsla(0,0%,100%,.1);font-size:15px;line-height:1.3;font-family:HyundaiTextMedium,sans-serif;}
+.accordion_items .accordion_header {position:relative;}
+.accordion_header>div:before,
+.accordion_items .accordion_header>div:after {
+    content: "";
+    display: none;
+    position: absolute;
+    -webkit-transition: bottom .3s linear .3s,-webkit-transform .3s linear;
+    transition: bottom .3s linear .3s,-webkit-transform .3s linear;
+    transition: bottom .3s linear .3s,transform .3s linear;
+    transition: bottom .3s linear .3s,transform .3s linear,-webkit-transform .3s linear;
+    background-color: #fff;
+    height: 2px;
+    top: 50%;
+    width: 12px;
+}
+.accordion_header>div:before {
+    transform: rotate(45deg);
+    right: 18px;
+    right: 1.8rem;
+}
+.accordion_header>div:after {
+    transform: rotate(135deg);
+    right: 10px;
+    right: 1rem;
+}
+.accordion_header.on>div:before {
+    transform: rotate(-45deg);
+    right: 18px;
+    right: 1.8rem;
+}
+.accordion_header.on>div:after {
+    transform: rotate(225deg);
+    right: 10px;
+    right: 1rem;
+}
+
+.accordion_content ul {padding:2rem 1rem 3rem 0;}
+.accordion_content li a {font-size:15px;line-height:1.3;color:#fff;text-decoration:none;font-family:HyundaiTextMedium,sans-serif;}
+.accordion_content li a:hover {text-decoration: underline;}
+.social_list {margin:4rem 0;display:flex;}
+.social_list li {flex:0 0 6rem;text-align:right;}
+.social_list li a {font-size:40px;color:#fff;display:inline-block;}
+.social_list li a span {display:none;}
+.mh_footer_copylight {margin:1rem 0 0 0;font-family:HyundaiTextMedium,sans-serif;font-size:1.4rem;}
+.mh_footer_ctn p {margin:4rem 0 11rem 0;text-align:left;font-size:1.4rem;font-family:HyundaiTextReg,sans-serif;}
+.mh_footer_ctn p i {font-style:italic;}
+.mh_footer_links2 ul {display:flex;padding-top:1rem;}
+.mh_footer_links2 li a {font-size:1.5rem;color:#fff;display:inline-block;margin-left:3rem;font-family:HyundaiTextMedium,sans-serif;}
+
+
+.ctb_pop_mysecurity h3 {float:left;width:100%;font-family:HyundaiHeadBold,sans-serif;margin:4rem 0 2rem 0;font-size:32px;padding:0 2rem;}
+.ctb_pop_mysecurity p {float:left;width:100%;font-family: HyundaiTextReg,sans-serif;font-size: 16px;padding:1rem 2rem;}
+.ctb_pop_mysecurity p a {color:#121212;}
+.ctb_pop_mysecurity .ctn_mysecurity {float:left;width:60%;padding:2rem 0 0 0;}
+.ctb_pop_mysecurity .ctn_mysecurity.right {width:40%;}
+.ctb_pop_mysecurity .ctn_mysecurity h4 {font-size: 20px;font-family:HyundaiHeadMedium,sans-serif;padding-left: 2rem;}
+.ctb_pop_mysecurity .ctn_mysecurity .btn_area {padding:0 2rem;}
+.ctb_pop_mysecurity .ctn_mysecurity .btn_area .ctb_button {width:100%;text-align:center;}
+.ctb_pop_mysecurity .ctn_mysecurity h5 {font-size:16px;font-family:HyundaiHeadMedium,sans-serif;padding:2rem 0 1rem 2rem;}
+.ctb_pop_mysecurity .ctn_mysecurity .right_ctn_area {background-color:#fff;padding:1rem 1rem 3rem 1rem;margin-top:1rem;}
+
+
+.ctb_pop_myNotification h3 {font-family:HyundaiHeadBold,sans-serif;margin:4rem 0 2rem 0;font-size:32px;padding:0 2rem;}
+.ctb_pop_myNotification p {font-family: HyundaiTextReg,sans-serif;font-size: 16px;padding:1rem 2rem;}
+.ctb_pop_myNotification h4 {font-size: 20px;font-family:HyundaiHeadMedium,sans-serif;color:#121212;margin-bottom:1rem;}
+.ctb_pop_myNotification .notifi_gp {padding:2rem;}
+.ctb_pop_myNotification .notifi_item {position:relative;background-color:#fff;margin-top:1px;padding:1.5rem;}
+.ctb_pop_myNotification .notifi_item .notifi_item_tt {font-size:15px;font-family:HyundaiHeadMedium,sans-serif;color:#121212;}
+.ctb_pop_myNotification .notifi_item .notifi_check {display:none;}
+.ctb_pop_myNotification .notifi_item .notifi_check + label {position:absolute;top: 1.5rem;right: 1.5rem;display:inline-block;border:2px solid #ddd;width: 6rem;height: 2.5rem;cursor:pointer;transition:all 0.3s;}
+.ctb_pop_myNotification .notifi_item .notifi_check + label span {position:absolute;top: 3px;left: 3px;display:inline-block;width: 1.6rem;height: 1.6rem;background-color:#121212;transition:all 0.3s;}
+.ctb_pop_myNotification .notifi_item .notifi_check:checked + label {background-color:#121212;border-color: #121212;}
+.ctb_pop_myNotification .notifi_item .notifi_check:checked + label span {left: 37px;background-color: #fff;}
+
+.ctb_pop_disclaimer {background-color:#fff;width:100%;height:100vh;overflow:auto;padding:0 7rem;box-sizing:border-box;}
+.ctb_pop_disclaimer .disc_header {display:flex;justify-content: space-between;align-items: center;padding:2rem 0 0 0;border-bottom:2px solid #ddd;}
+.ctb_pop_disclaimer .disc_header .copylight {font-family: HyundaiTextReg,sans-serif;font-size: 14px;padding:2rem 2rem 2rem 0;}
+.ctb_pop_disclaimer .disc_header .disc_nav .disc_nav_item {font-family: HyundaiHeadReg,sans-serif;font-size: 14px;padding:1rem;color:#767676;}
+.ctb_pop_disclaimer .disc_header .disc_nav .disc_nav_item:hover {color:#121212;}
+.ctb_pop_disclaimer .disc_header .disc_nav .disc_nav_item:last-child {padding-right:0;}
+.ctb_pop_disclaimer .disc_ctn {padding:3rem 1.5rem;}
+.ctb_pop_disclaimer .disc_ctn h4 {font-size: 20px;font-family:HyundaiHeadMedium,sans-serif;}
+.ctb_pop_disclaimer .disc_ctn p {font-family: HyundaiTextReg,sans-serif;font-size: 14px;padding:1rem 2rem 2rem 0;}
+
+.ctb_pop_pricing {width:100%;height:100vh;background-color:#fff;overflow:auto;}
+.ctb_pop_pricing:after {content:"";display:block;clear:both;}
+.ctb_pop_pricing .pricing_left,
+.ctb_pop_pricing .pricing_right {float:left;width:50%;padding:10rem 5rem 5rem 5rem;vertical-align:top;}
+.ctb_pop_pricing .pricing_left img {max-width:100%;}
+.ctb_pop_pricing .pricing_right {padding-right:10rem;}
+.ctb_pop_pricing .pricing_left .pricing_car_tt {font-family:HyundaiHeadBold,sans-serif;margin:0 0 2rem 0;font-size:32px;}
+.ctb_pop_pricing .ctb_car_pricing_info h3 {font-family:HyundaiHeadBold,sans-serif;margin:0 0 2rem 0;font-size:32px;}
+.ctb_pop_pricing .ctb_car_pricing_info h4 strong {display:block;font-family:HyundaiHeadMedium,sans-serif;font-size:18px;}
+.ctb_pop_pricing .ctb_car_pricing_info h4 span {display:block;font-family:HyundaiHeadReg,sans-serif;font-size:14px;}
+.ctb_pop_pricing .ctb_estimate_price_info .price_gp {border-bottom:0 none;}
+.ctb_pop_pricing .ctb_estimate_price_info .price_gp.total_price {border-bottom:2px solid #ddd;}
+.ctb_pop_pricing .ctb_estimate_price_info .price_item.total_price .price_item_tt {font-size:22px;}
+
+
+.ctb_pop_option {width:100%;height:100vh;background-color:#fff;overflow:auto;display:flex;align-items: center;}
+.ctb_pop_option:after {content:"";display:block;clear:both;}
+.ctb_pop_option .option_left {float:left;width:50%;padding:0;}
+.ctb_pop_option .option_right {float:left;width:50%;padding:10rem 5rem 5rem 5rem;vertical-align:top;}
+.ctb_pop_option .option_left img {width:100%;height:100vh;}
+.ctb_pop_option .option_right {padding-right:10rem;}
+.ctb_pop_option .option_right h3 strong {display:block;font-family:HyundaiHeadBold,sans-serif;font-size:32px;}
+.ctb_pop_option .option_right h3 span {display:block;font-family:HyundaiHeadReg,sans-serif;font-size:16px;color:#767676;}
+.ctb_pop_option .option_right p {display:block;font-family:HyundaiHeadReg,sans-serif;font-size:14px;padding-top:2rem;}
+.ctb_pop_option .option_right .pin_no {display:block;font-family:HyundaiHeadMedium,sans-serif;font-size:14px;padding:2rem 0;}
+
+.ctb_pop_question {width:100%;height:100vh;background-color:#fff;padding:0 12rem 3rem 12rem;box-sizing:border-box;overflow:auto;}
+.ctb_pop_question .question_wrap {padding:0 5rem;}
+.ctb_pop_question h3 {font-family:HyundaiHeadBold,sans-serif;margin:8rem 0 1rem 0;font-size:45px;}
+.ctb_pop_question h4 {font-family:HyundaiHeadBold,sans-serif;margin:2rem 0 0 0;font-size:32px;}
+.ctb_pop_question h5 {font-family:HyundaiHeadBold,sans-serif;margin:2rem 0 1rem 0;font-size:22px;}
+.ctb_pop_question p {font-family: HyundaiTextMedium,sans-serif;font-size: 16px;padding:2rem 0 1rem 0;}
+.ctb_pop_question textarea {width:100%;height:300px;font-family: HyundaiTextReg,sans-serif;font-size: 16px;padding:2rem;box-sizing:border-box;border-radius:0;border:2px solid #ddd;resize:none;}
+.ctb_pop_question .agree_privacy {font-size: 14px;color:#555;}
+.ctb_pop_question .agree_privacy a {text-decoration: underline;}
+.ctb_pop_question .btn_area {text-align:right;}
+.ctb_pop_question .ctb_button.primary {padding:2rem 10rem;}
+
+.ctb_pop_terms {width:100%;height:100vh;background-color:#fff;padding:0 12rem 3rem 12rem;box-sizing:border-box;overflow:auto;}
+.ctb_pop_terms .terms_wrap {padding:0 5rem;}
+.ctb_pop_terms h3 {font-family:HyundaiHeadBold,sans-serif;margin:8rem 0 1rem 0;font-size:45px;}
+.ctb_pop_terms h4 {font-family:HyundaiHeadBold,sans-serif;margin:2rem 0 0 0;font-size:32px;}
+.ctb_pop_terms p {font-family: HyundaiTextMedium,sans-serif;font-size: 16px;padding:2rem 0 1rem 0;}
+
+
+.ctb_pop_tyres {width:100%;height:85vh;background-color:#fff;box-sizing:border-box;margin:auto;}
+.ctb_pop_tyres .tyres_wrap {padding:0 5rem;}
+.ctb_pop_tyres h3 {font-family:HyundaiHeadBold,sans-serif;margin:8rem 0 1rem 0;font-size:45px;}
+.ctb_pop_tyres h4 {font-family:HyundaiHeadMedium,sans-serif;font-size: 2.2rem;line-height: 2.8rem;border-bottom: 1px solid #d8d8d8;margin-bottom: 1.5rem;}
+.ctb_pop_tyres .icon-tooltip {display:inline-block;position:relative;background-color:transparent;border:none;outline:none;font-style:inherit;font-size:2rem;cursor:pointer;vertical-align:middle;}
+.ctb_pop_tyres .tyres_item {width:fit-content;max-width:108rem;margin:6rem auto auto auto;}
+.ctb_pop_tyres .tyres_img img {width:24rem;border:1px solid #d8d8d8;margin-bottom:1.5rem;}
+.ctb_pop_tyres .tyres_info {width:24rem;font-family:HyundaiTextReg,sans-serif;}
+.ctb_pop_tyres .tyres_info a {font-family:HyundaiTextBold,sans-serif;color:#121212;margin-left:.5rem;}
+
+
+.ctb_pop_tyres p {font-family: HyundaiTextMedium,sans-serif;font-size: 16px;padding:2rem 0 1rem 0;}
+
+.ie_cookie {position:fixed;bottom:0;right:0;max-width:47.2rem;padding:5rem 7.7rem 5rem 8rem;background-color:#e4dcd3;opacity:0.95;max-height:100%;overflow-y:auto;box-sizing:border-box;}
+.ie_cookie .ie_cookie_tt {font-size:22px;line-height:28px;margin-bottom:1.5rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ie_cookie .ie_cookie_text {font-size:16px;line-height:27px;font-family:HyundaiTextReg,sans-serif;}
+.ie_cookie .ie_cookie_btns {margin-top:3rem;}
+.ie_cookie .ie_cookie_btns .mt15 {margin-top:1.5rem;}
+.ie_cookie .ie_cookie_btns .ctb_button {width:100%;border-color:#1c1c1c;padding:1.45rem 2rem;text-align:center;color:#1c1c1c;background-color:transparent;cursor:pointer;}
+.ie_cookie .ie_cookie_btns .ctb_button:after {background-color:#1c1c1c;}
+.ie_cookie .ie_cookie_btns .ctb_button.primary {background-color:#1c1c1c;color:#fff;}
+
+.view_pc_b {display:block !important;}
+.view_m_b {display:none !important;}
+.view_pc_ib {display:inline-block !important;}
+.view_m_ib {display:none !important;}
+.view_pc_f {display:flex !important;}
+.view_m_f {display:none !important;}
+.view_pc_if {display:inline-flex !important;}
+.view_m_if {display:none !important;}
+
+.cloudimage-inner-box canvas {padding: 0;width: 100% !important;height: auto!important;}
+
+.ctb_error {background-color:#e5e5e5;height:650px;display:flex;justify-content: center;align-items: center;}
+.ctb_error_wrap {max-width:800px;padding:0 20px;margin:0 auto;text-align:center;}
+.ctb_error_cont h1 {font-size:58px;font-family:HyundaiHeadMedium,sans-serif;margin:0.67em 0;}
+.ctb_error_cont .text {font-size:20px;font-family:HyundaiHeadReg,sans-serif;}
+.ctb_error_cont .ctb_error_button_wrap {margin-top:50px;}
+
+.ctb_byv_toggle {position:fixed;top:5.2rem;right:11rem;z-index:92;display:none;}
+.ctb_byv_toggle.fullscreen {display:block;}
+.ctb_byv_toggle .toggle_item {position:relative;}
+.ctb_byv_toggle .toggle_item input[type="checkbox"] {display:none;}
+.ctb_byv_toggle .toggle_item label {display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer;width:66px;height:36px;border-radius:17px;border:1px solid #ddd;background-color:#f1f1f1;box-sizing:border-box;}
+.ctb_byv_toggle .toggle_item label:before {content:"";display:block;width:30px;height:30px;border-radius:15px;position:absolute;top:2px;left:2px;background-color:#121212;transition:left .3s,background .3s;box-sizing:border-box;}
+.ctb_byv_toggle .toggle_item input[type="checkbox"]:checked + label:before {left:32px;}
+.ctb_byv_toggle .toggle_item label span {position:relative;flex:0 0 30px;width:30px;height:30px;z-index:93;background-size:18px 18px;background-position:50% 50%;background-repeat:no-repeat;font-size:0;overflow:hidden;}
+.ctb_byv_toggle .toggle_item label span.studio {background-image:url(../img/icon_studio_w.svg);}
+.ctb_byv_toggle .toggle_item label span.land {background-image:url(../img/icon_image.svg);}
+.ctb_byv_toggle .toggle_item input[type="checkbox"]:checked + label span.studio {background-image:url(../img/icon_studio.svg);}
+.ctb_byv_toggle .toggle_item input[type="checkbox"]:checked + label span.land {background-image:url(../img/icon_image_w.svg);}
+
+.ctb_byv_gly_full {position:absolute;top:0;right:0;width:4rem;height:4rem;z-index:20;text-align:center;line-height:4rem;cursor:pointer;z-index:89;background-color:rgba(244, 241, 241, 0.5);}
+/* 20230501 */
+.ctb_byv_gly_full.fullscreen {position:fixed;top:2rem;right:2rem;z-index:92;}
+.ctb_byv_gly_full img {width:25px;height:40px;margin:0 auto;}
+/* 20230501 */
+.ctb_byv_gly_full .full {display:block;}
+.ctb_byv_gly_full .close {display:none;}
+.ctb_byv_gly_full.fullscreen .full {display:none;}
+.ctb_byv_gly_full.fullscreen .close {display:block;width:28px;}
+
+/* 20230501 */
+.ctb_byv_toggle {position:fixed;top:1.7rem;right:8rem;z-index:92;display:none;}
+.ctb_byv_toggle.fullscreen {display:block;}
+.ctb_byv_toggle .toggle_item {position:relative;}
+.ctb_byv_toggle .toggle_item input[type="checkbox"] {display:none;}
+.ctb_byv_toggle .toggle_item label {display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer;width: 86px;height: 46px;border-radius: 25px;border: 1px solid #121212;background-color: #fff;box-sizing:border-box;}
+.ctb_byv_toggle .toggle_item label:before {content:"";display:block;width: 40px;height: 40px;border-radius: 20px;position:absolute;top: 2px;left: 3px;background-color:#545454;transition:left .3s,background .3s;box-sizing:border-box;}
+.ctb_byv_toggle .toggle_item input[type="checkbox"]:checked + label:before {left: 41px;}
+.ctb_byv_toggle .toggle_item label span {position:relative;flex: 0 0 38px;width: 40px;height: 40px;z-index:93;background-size: 20px 20px;background-position:50% 50%;background-repeat:no-repeat;font-size:0;overflow:hidden;transition:all .3s;}
+.ctb_byv_toggle .toggle_item label span.studio {background-image:url(../img/icon_studio_w.svg);opacity:1;}
+.ctb_byv_toggle .toggle_item label span.land {background-image:url(../img/icon_image.svg);opacity:.5;}
+.ctb_byv_toggle .toggle_item input[type="checkbox"]:checked + label span.studio {background-image:url(../img/icon_studio.svg);opacity:.5;}
+.ctb_byv_toggle .toggle_item input[type="checkbox"]:checked + label span.land {background-image:url(../img/icon_image_w.svg);opacity:1;}
+/* //20230501 */
+
+.ctb_byv_gly {width:100%;height:40rem;margin:0 auto 15rem auto;position:relative;display:none;}
+.ctb_byv_gly.exterior.active {display:block;}
+.ctb_byv_gly.interior.active {display:block;}
+.ctb_byv_gly .img-wrapper {width:100%;height:100%;margin-bottom:10rem;position: absolute;top:0;bottom:0;left:0;right:0;overflow:hidden;z-index:8;background-size:100% auto;background-repeat:no-repeat;background-position: center center;background-color:#f5f5f5;}
+.ctb_byv_gly .img-wrapper.active {z-index:10;}
+.ctb_byv_gly .img-wrapper.last-active {z-index:9;}
+.ctb_byv_gly.fullscreen .img-wrapper {background-size:contain;}
+
+.ctb_byv_gly_tab {position:absolute;bottom:14.5rem;left:0;right:0;z-index:20;text-align:center;font-size:0;}
+.ctb_byv_gly_tab.fullscreen {position:fixed;z-index:92;bottom:11rem;}
+.ctb_byv_gly_tab .ctb_gly_tab_item {display:inline-block;border:1px solid #ddd;padding:5px;transition:all .3s;background-color:rgba(244, 241, 241, 0.5);}
+.ctb_byv_gly_tab .ctb_gly_tab_item:first-child {border-radius:20px 0 0 20px;border-right:0 none;padding-right:2px;}
+.ctb_byv_gly_tab .ctb_gly_tab_item:last-child {border-radius:0 20px 20px 0;border-left:0 none;padding-left:2px;}
+.ctb_byv_gly_tab .ctb_gly_tab_item input[type="radio"] {display:none;}
+.ctb_byv_gly_tab .ctb_gly_tab_item input[type="radio"]:checked + label {background-color:#121212;color:#fff;}
+.ctb_byv_gly_tab .ctb_gly_tab_item label {display:inline-block;font-size:14px;font-weight:500;padding:3px 10px;color:#121212;cursor:pointer;border-radius:15px;font-family:HyundaiTextMedium,sans-serif;}
+.ctb_byv_gly_tab .ctb_gly_tab_item label:hover {background-color:#eaeaea;}
+
+/* 20230501 */
+.thumbs-container {width: 100%;position: absolute;left: 0;bottom:-15rem;z-index: 11;max-width:857px;}
+.thumbs-container .prev,
+.thumbs-container .next {width:4rem;height:8rem;text-align:center;cursor:pointer;box-sizing:border-box;}
+.thumbs-container .prev i,
+.thumbs-container .next i {vertical-align:middle;line-height:7.5rem;}
+.thumbs-container .prev i.icon-arrow:before,
+.thumbs-container .next i.icon-arrow:before {font-weight:600;font-size:24px;}
+.thumbs-container .prev { float:left;transform: rotate(180deg);}
+.thumbs-container .next { float:right;}
+.thumbs-container .prev:hover,
+.thumbs-container .next:hover {color: #121212;}
+.thumbs-container .thumbs {position: absolute;top:0;left:0;right:0;padding: 5px 0 0 0;margin: 0 4rem;overflow: hidden;white-space: nowrap;text-align: center;height: 100px;font-size:0;}
+.thumbs-container .thumb {position:relative;display: inline-block;width:150px;height:75px;background-size:100% auto;background-position: center center;background-repeat:no-repeat;cursor: pointer;box-sizing:border-box;margin:0 5px;transition:all .3s;}
+.thumbs-container .thumb.active {box-shadow:0px 4px 8px #888;}
+.thumbs-container .thumb.active:before {content:"";position:absolute;bottom:-10px;left:50%;margin-left:-10px;display:block;width:20px;height:20px;background:#545454 url(../img/icon_check.svg) 50% 50% no-repeat;background-size:16px 16px;box-shadow:0 2px 5px #aaa;}
+
+
+.ctb_byv_gly.fullscreen {position: fixed;top: 0;left: 0;width: 100%;height: 100%;margin: 0;padding: 0;overflow: hidden;z-index:91;background-color:#f5f5f5;}
+.ctb_byv_gly.fullscreen .img-wrapper {height:calc(100% - 16rem);}
+.ctb_byv_gly.fullscreen .thumbs-container {bottom:2.5rem;left: 50%;margin-left: -520px;max-width:1040px;}
+/* //20230501 */
+
+.text-center {text-align: center;}
+.ctb-box {text-align: center;margin-right:20px; width: 40rem; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+.ctb-box h3 {padding-bottom: 2rem; padding-top: 2rem;}
+.ctb-layout2 {display: flex; flex-direction: row; padding-bottom: 2rem;}
+.ctb-layout2-item-nf {text-align: center;}
+.ctb-layout2-item h3 {padding-bottom: 2rem; padding-top: 2rem;}
+.ctb-layout2-item {flex:50%; text-align: center;}
+.ctb-layout2-item h3 {padding-bottom: 2rem; padding-top: 2rem;}
+.not-found {color:#de3112;}
+.required-mark {color:#de3112;}
+.ctb_form_item textarea {width:100%;height:120px;font-family: HyundaiTextReg,sans-serif;font-size: 16px;padding:2rem;box-sizing:border-box;border-radius:0;border:2px solid #ddd;resize:none;}
+.icon-trash {display:inline-block;width:21px;height:21px;background:url(../img/icon_transh_b.svg) 0 0 no-repeat;background-size:100%;vertical-align:middle;margin-top:-4px;}
+
+.ctb_form_check_gp {display: flex;}
+.ctb_tradin {display: flex;}
+.ctb_tradin .ctb_tradin_text {font-size:1.5rem;line-height:2.5rem;font-family:HyundaiTextReg,sans-serif;margin-left: 5px;margin-top:8px;}
+.ctb_form_item label.ctb_check_tradein {display:flex;}
+/* For ExternalPage Popup*/
+.bg_white {background:#fff;}
+.bg_white50 {background:#f5f5f5;}
+.fl_left {float: left}
+.mh_ctn_pop_info {min-height:100px;}
+.mh_ctn_pop_info .ctb_car_estimate {position:absolute;top:50px;right:5%;}
+.ctb-layout2 .lazy-load-image-background img {max-height:380px;}
+
+.ctb-form-card {margin:10px 0px}
+.ctb-form-card-header {padding: 15px 15px 10px 15px;background-color: #fff;color: #000000;font-weight: bold;font-family: HyundaiTextReg,sans-serif;font-size: 18px;}
+.ctb-form-card-header:after {content:''; width:99%;border-top: solid 1px #ddd;display: block;position: relative;top: 14px;}
+.ctb-form-card-body {padding: 10px 15px;background-color: white;}
+.ctb-form-card-title {margin: 10px 0px;font-weight: bold;font-family: HyundaiTextReg,sans-serif;font-size: 17px;}
+
+.ctb_car_info.tech_info {width:100%;}
+.ctb_car_info.tech_info .ctb_byv_car_img {width: calc(100% - 20rem);margin: auto;}
+.ctb_car_info.tech_info .ctb_byv_aside {left: 1rem;}
+.ctb_car_info.tech_info .ctb_byv_head_wrap {padding:0;}
+.ctb_car_info.tech_info .price_item {display:none;}
+.ctb_car_info.tech_info .ctb_model_name {width: 100%; text-align: left;}
+.ctb_car_info.tech_info .ctb_model_name h3 {font-family: HyundaiHeadMedium,sans-serif;font-size: 5rem;}
+.ctb_car_info.tech_info .ctb_model_name div {font-family: HyundaiHeadMedium,sans-serif;font-size: 3.8rem;}
+
+/* Consent Area */
+.consent_area {display: grid;}
+.consent_area .ctb_form_item .ctb_form_radio div {margin-left:35px;}
+.consent_area .ctb_form_item .ctb_form_radio span {font-size: 17px; display: inline;}
+.consent_area .ctb_form_item .ctb_form_radio .icon-tooltip {top:10px; top: 5px; left: -10px;}
+.consent_area .ctb_form_item .ctb_form_radio span:before{position: absolute; left: 0;}
+.consent_area .icon-tooltip {padding-left: 10px; font-size: 16px; top: 5px;}
+.consent_area .processing_personal_data .header {font-size: 20px; font-weight:bold;}
+.consent_area .processing_personal_data .content_item:before {content: ''; background-color: #b8b8b8; width: 6px; height: 6px; border-radius: 50%; position: relative; left: -5px; display: inline-block;}
+.consent_area .processing_personal_data .content_item {padding: 8px 0 8px 6px;}
+.consent_area .processing_personal_data p {padding-top:5px;}
+.consent_area .processing_personal_data p:first-child {padding-top:0px;}
+.consent_area .ctb_consent_sctn_checkbox_gp {padding:0;}
+.consent_area .ctb_consent_sctn_checkbox_gp .ctb_input_check {position: absolute; top: 14px;} 
+.consent_area .ctb_consent_sctn_checkbox_gp .ctb_input_desc {padding-left:33px; display: inline-block;}
+.consent_area .ctb_consent_sctn_checkbox_gp .ctb_input_desc span {font-size: 1.8rem; cursor: pointer; font-family: HyundaiHeadReg,sans-serif;}
+.consent_area .ctb_consent_sctn_checkbox_gp .ctb_input_desc .icon-tooltip {padding-left:8px; top: 4px;}
+.consent_area .inline_checkbox_gp {border: solid 1px #ddd; display: inline-block; padding: 10px 15px; margin-left: 35px; width: 100%; background-color: #f6f6f6;}
+.consent_area .inline_checkbox_gp .ctb_consent_sctn_checkbox_gp {display: inline; width: fit-content; padding-left:20px;}
+.consent_area .inline_checkbox_gp .ctb_consent_sctn_checkbox_gp:first-child {padding-left:0;}
+.consent_area .ctb_tooltip {position: fixed; top: 30%; left: calc(50% - 240px); width: 500px; z-index: 20; max-height: calc(70% - 50px); overflow-y: auto; max-width: calc(100% - 40px); margin: 0 20px;}
+.consent_area .ctb_tooltip .ctb_tooltip_msg {width:100%; max-height: fit-content; padding: 5px;font-size: 14px;}
+.consent_area .ctb_policy p {font-size: 1.4rem; font-weight: normal; font-family: HyundaiTextReg,sans-serif;}
+.consent_area:has(.ctb_tooltip.active)::before{content: ''; position: fixed; width: 100%; height: 100%; background-color: #505050; left: 0; top: 0; z-index: 10; opacity: 0.5;}
+.consent_area .ctb_policy .ctb_input_check.clear-margrin-left {margin-left: 0;}
+.consent_area .ctb_policy .ctb_input_check.small {width:30px; height: 30px;} 
+.consent_area .ctb_policy .ctb_input_check span {width:30px; height: 30px;}
+.consent_area .ctb_policy .ctb_input_check {flex: 0;}
+.consent_area .ctb_policy .ctb_input_check span .icon_check {top: -6px; left: -6px;}
+.consent_area .icon-tooltip .icon-close {border: 0; background-color: #fff;}
+.consent_area .icon-tooltip:before {cursor: pointer;}
+
+
+
+.ctb_dialog {position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.3);z-index:90;display:none;}
+.ctb_dialog.on {display:block;}
+.ctb_dialog .ctb_dialog_wrap {position:fixed;top:50%;left:50%;max-width:1000px;max-height:90vh;transform:translate(-50%,-50%);background-color:#fff;padding:4rem 5rem;overflow:auto;}
+.ctb_dialog .ctb_dialog_wrap.finance_simulator {padding:3rem; width: 90%;}
+.ctb_dialog .ctb_dialog_close {text-align:right;}
+.ctb_tab {display:flex;border-bottom:1px solid #edf0f4;}
+.ctb_tab .ctb_tab_item {padding:1rem 3rem;margin-bottom:-2px;font-size:1.5rem;color:#121212;font-family:HyundaiHeadBold,sans-serif;cursor:pointer;}
+.ctb_tab .ctb_tab_item:hover {color:#000;}
+.ctb_tab .ctb_tab_item.active {border-bottom:3px solid #121212;}
+.ctb_tab .ctb_tab_item.active:hover {color:#121212;}
+.ctb_finance_head {padding:2rem 0;}
+.ctb_finance_head .ctb_finance_head_tt {font-size:2rem;font-family:HyundaiHeadBold,sans-serif;padding:1rem 0;}
+.ctb_finance_head .ctb_finance_head_txt {font-size:1.6rem;font-family:HyundaiHeadReg,sans-serif;}
+.ctb_finance_head + .finance_price_head {display:none;}
+
+.ctb_finance_ctn {display:flex;}
+.ctb_finance_ctn .ctb_finance_range {flex:1;padding:0 2rem 0 0;}
+.ctb_finance_ctn .ctb_range_item {padding-top:2.8rem;}
+.ctb_finance_ctn .ctb_range_item:first-child {padding-top:0;}
+.ctb_finance_ctn .ctb_range_item:after {content:"";display:block;clear:both;}
+.ctb_finance_ctn .ctb_range_item .ctb_range_tt {float:left;width:calc(100% - 170px);font-size:1.6rem;padding-bottom:1.5rem;font-family:HyundaiHeadBold,sans-serif;}
+.ctb_finance_ctn .ctb_range_item .ctb_range {float:left; width:calc(100% - 180px); padding: 0 15px 20px 15px;  margin-bottom: 15px;}
+.ctb_finance_ctn .ctb_range_item .ctb_range_input {float:right;width:170px;position:relative;padding:0 0 0 3rem;}
+.ctb_finance_ctn .ctb_range_item .ctb_range_input label {position:absolute;top:-.5rem;left:3.7rem;background-color:#fff;font-size:1rem;color:#aaa;padding:0 .5rem;}
+.ctb_finance_ctn .ctb_range_item .ctb_range_input input,
+.ctb_finance_ctn .ctb_range_item .ctb_range_input select {height:58px;border:2px solid #e5e5e5;width:100%;font-size:1.6rem;padding:0 1rem;font-family:HyundaiTextBold,sans-serif;}
+.finance_price_head {background-color:#000;color:#fff;text-align:right;padding:1.5rem 1rem;}
+.finance_price_head span {display:block;font-size:1.5rem;font-family:HyundaiTextReg,sans-serif;opacity:.9;}
+.finance_price_head strong {display:block;font-size:3.6rem;line-height:3.6rem;font-family:HyundaiTextBold,sans-serif;}
+.ctb_finance_ctn .ctb_finance_price {flex:0 0 250px;}
+.ctb_finance_ctn .ctb_finance_price .finance_price_head {background-color:#000;color:#fff;text-align:right;padding:1.5rem 1rem;}
+.ctb_finance_ctn .ctb_finance_price .finance_price_head span {display:block;font-size:1.5rem;font-family:HyundaiTextReg,sans-serif;opacity:.9;}
+.ctb_finance_ctn .ctb_finance_price .finance_price_head strong {display:block;font-size:3.6rem;line-height:3.6rem;font-family:HyundaiTextBold,sans-serif;}
+.ctb_finance_ctn .ctb_finance_price .finance_price_detail {background-color:#e5e5e5;padding:1rem;}
+.ctb_finance_ctn .ctb_finance_price .price_detail_item {display:flex;justify-content:space-between;font-size:1.3rem;font-family:HyundaiTextReg,sans-serif;line-height:2rem;}
+.ctb_finance_terms {padding:4rem 0 0 0;}
+.ctb_finance_terms .finance_terms_tt {font-size:1.6rem;padding-bottom:1rem;font-family:HyundaiHeadBold,sans-serif;}
+.ctb_finance_terms .finance_terms_txt {font-size:1.2rem;padding-bottom:2rem;font-family:HyundaiTextReg,sans-serif;color:#767676;}
+
+.ctb_dialog_foot {text-align:right;}
+.ctb_dialog_foot .ctb_button {padding:2rem 8rem;margin-left:2rem;}
+.ctb_range.deposit .rc-slider-mark-placement-top {top: -45px; position: absolute; left: -10px;}
+.ctb_finance_ctn .ctb_finance_price {min-width:300px;}
+
+/* Slider */
+.rc-slider-rail, .rc-slider-track {height: 12px;}				
+.rc-slider-handle {width: 22px; height: 22px;}					
+.rc-slider-dot {bottom: -10px; width: 15px; height: 15px; margin-top: -5px;}
+.rc-slider-track {background-color: #121212;}
+.rc-slider-mark-text {padding-top: 2px; font-size: 16px; font-family: 'HyundaiTextReg';} /*HyundaiTextMedium*/
+/* End of Slider */
+
+#hlive-minichat-root {display: none;}
+
+/* Tablet */
+@media only screen and (max-width:1024px){
+
+    .ctb_header_wrap,
+    .ctb_ctn_wrap,
+    .mh_ctn_wrap,
+    .ctb_footer_wrap,
+    .mh_main_img {max-width:100% !important;}
+    .mh_footer .mh_footer_wrap,
+    .mh_footer .mh_footer_wrap img {max-width:100% !important;}
+    .mh_overview_img_text_box {margin-left:3rem;}
+    .mh_main_img_wrap {min-height:auto !important;}
+    .mh_main_img strong {left:2rem;font-size:6rem;}
+    .ctb_popup .ctb_pop_ctn_left {flex:0 0 25rem;}
+    .ctb_popup .ctb_pop_ctn_left .pop_nav {margin-top:10rem;}
+    .ctb_popup .ctb_pop_ctn_left .pop_nav_item {margin-left:5rem;}
+    .ctb_pop_mysecurity .ctn_mysecurity {float:none;width:100%;}
+    .ctb_pop_mysecurity .ctn_mysecurity.right {width:100%;}
+    .ctb_pop_option .option_right {padding:10rem 3rem 5rem 4rem;padding-right:4rem;}
+    .ctb_pop_pricing .pricing_right {padding:10rem 3rem 5rem 4rem;padding-right:4rem;}
+    .ctb_pop_pricing .pricing_left {width:40%;}
+    .ctb_pop_pricing .pricing_right {width:60%;}
+    .ctb_header .ctb_logo a {width:16rem;}
+    .mh_footer {}
+
+}
+
+@media only screen and (max-width:900px){
+    .ctb_byv_head_wrap {margin:0 auto 2rem auto!important;}
+    .ctb_byv_gly_tab {bottom:6rem;}
+    .ctb_byv_gly {height:25rem;margin-bottom:2rem;}
+    .ctb_byv_gly_full.fullscreen {top:2rem;right:2rem;}
+    .ctb_byv_gly.fullscreen .img-wrapper {height:calc(100% - 8rem);}
+    .ctb_byv_gly .img-wrapper {margin-bottom:2rem;}
+    .ctb_byv_gly_tab.fullscreen {bottom:3rem;}
+
+    /* 20230501 */
+    .ctb_byv_toggle {top:1.8rem;right:8rem;}
+    .thumbs-container {bottom:-1.5rem;max-width:100%;box-sizing:border-box;}
+    .thumbs-container .thumbs {display:flex;margin:0;height:auto;}
+    .thumbs-container .thumb {flex:1;height:.5rem;background:#ddd!important;width:auto;margin:0 !important;border:1px solid #f5f5f5;}
+    .thumbs-container .thumb.active {background:#121212!important;border-color:#121212;box-shadow:none;}
+    .thumbs-container .thumb.active:before {display:none;}
+    /* //20230501 */
+
+    .ctb_byv_toggle {top:2.2rem;right:8rem;}
+
+    .thumbs-container {bottom:-1.5rem;}
+    .thumbs-container .thumbs {display:flex;}
+    .thumbs-container .thumb {flex:1;height:.5rem;background:#ddd!important;width:auto;margin-left:0 !important;border:1px solid #f5f5f5;}
+    .thumbs-container .thumb.active {background:#121212!important;border-color:#121212;}
+    .thumbs-container .prev {position:absolute;float:none;left:-2rem;bottom:10rem;background-color:rgba(244, 241, 241, 0.5);}
+    .thumbs-container .next {position:absolute;float:none;right:-2rem;bottom:10rem;background-color:rgba(244, 241, 241, 0.5);}
+
+    /* 20230501 */
+    .ctb_byv_gly.fullscreen .thumbs-container {left: 0;margin-left: 0;max-width: 100%;}
+    /* //20230501 */
+
+    .ctb_byv_gly.fullscreen .thumbs-container .prev {position:fixed;top:50%;left:0;bottom:auto;margin-top:-75px;background-color:rgba(244, 241, 241, 0.5);}
+    .ctb_byv_gly.fullscreen .thumbs-container .next {position:fixed;top:50%;right:0;bottom:auto;margin-top:-75px;background-color:rgba(244, 241, 241, 0.5);}
+
+}
+
+/* Tablet */
+@media only screen and (max-width:768px){
+
+    .view_pc_b {display:none !important;}
+    .view_m_b {display:block !important;}
+    .view_pc_ib {display:none !important;}
+    .view_m_ib {display:inline-block !important;}
+    .view_pc_f {display:none !important;}
+    .view_m_f {display:flex !important;}
+    .view_pc_if {display:none !important;}
+    .view_m_if {display:inline-flex !important;}
+
+    .ctb_header_wrap,
+    .ctb_ctn_wrap,
+    .mh_ctn_wrap,
+    .ctb_footer_wrap,
+    .mh_main_img {max-width:100% !important;}
+    .ctb_header.myhome .ctb_header_wrap {padding:0 8%;}
+    .ctb_header .mh_logo {padding:0;}
+    .ctb_header_wrap.active {background-color:#121212;color:#fff;}
+    .ctb_header_wrap.active .mh_logo a {color:#fff;}
+    .ctb_header_wrap.active .mh_burger {color:#fff;}
+    .ctb_header .ctb_logo {display:none;}
+    .ctb_header .ctb_logo_m {color:#121212;display:inline-flex;padding:0;align-items:center;flex:0 0 7rem;}
+    .ctb_header .ctb_logo_m a {display:inline-block;width:5rem;margin:0 auto;font-size:2.08rem;text-align:center;}
+    .ctb_header .ctb_nav {overflow-x:auto;}
+    .ctb_header .ctb_nav li {border:0 none;}
+    .ctb_header .ctb_nav li a {height:6rem;line-height:6rem;padding:0 1.5rem;white-space:nowrap;}
+    .ctb_header .mh_nav ul {display:none;}
+    .ctb_header {height:6rem;}
+    .mh_footer .mh_footer_wrap,
+    .mh_footer .mh_footer_wrap img {max-width:100% !important;}
+    .mh_overview_img_text_box {margin-left:-8rem;}
+    .mh_main_img {padding-bottom: 6rem;padding-top: 3rem;}
+    .mh_main_img_wrap {min-height:auto !important;}
+    .mh_main_img strong {left:2rem;font-size: 3rem;bottom:1rem;}
+    .mh_myorder .myorder_step {zoom:0.6;}
+    .ctb_pop_myNotification h3 {padding:0 4rem 0 0;margin-top:2rem;}
+    .ctb_pop_myNotification .notifi_gp {padding:2rem 0 2rem 0;}
+    .ctb_pop_myNotification p {padding:1rem 0;}
+    .ctb_popup .ctb_pop_ctn_left {display:none;}
+    .ctb_popup .ctb_pop_ctn_left .pop_nav {margin-top:10rem;}
+    .ctb_popup .ctb_pop_ctn_left .pop_nav_item {margin-left:5rem;}
+    .ctb_popup .ctb_pop_ctn_right {padding:2rem;}
+    .ctb_popup .ctb_pop_ctn_right .ctb_form h3 {margin-top:2rem;}
+    .ctb_popup .ctb_pop_ctn_right .ctb_pop_mysecurity h3 {margin-top:2rem;}
+    .ctb_pop_mysecurity .ctn_mysecurity {float:none;width:100%;}
+    .ctb_pop_mysecurity .ctn_mysecurity.right {width:100%;}
+    .ctb_form_item {padding:1rem 0 2rem 0;}
+    .ctb_form_item.w50 {width:100%;}
+    .ctb_pop_option .option_right {padding: 3rem 3rem 5rem 4rem;padding-right:4rem;width: 100%;}
+    .ctb_pop_pricing .pricing_right {padding:10rem 3rem 5rem 4rem;padding-right:4rem;}
+    .ctb_pop_pricing .pricing_left {width:100%;padding:5rem;}
+    .ctb_pop_pricing .pricing_right {width:100%;padding-top:0;}
+    .ctb_pop_question {padding:0 2rem 3rem 2rem;}
+    .ctb_pop_question .question_wrap {padding:0;}
+    .ctb_pop_question h3 {font-size: 3.2rem;margin-top: 2.8rem;}
+    .ctb_pop_question h4 {font-size:2rem;margin-top:1rem;}
+    .ctb_pop_question p {padding:1rem 0;}
+    .ctb_pop_terms {padding:0 2rem 3rem 2rem;}
+    .ctb_pop_terms .terms_wrap {padding:0;}
+    .ctb_pop_terms h3 {font-size: 3.2rem;margin-top: 2.8rem;}
+    .ctb_pop_terms h4 {font-size:2rem;margin-top:1rem;}
+    .ctb_pop_terms p {padding:1rem 0;}
+    .mh_links {display:flex;flex-direction: column;align-items: center;}
+    .mh_links .btn_page_link {width:18rem;text-align:left;margin:1rem 0;}
+    .mh_ctn_wrap h3 {font-size:3rem;padding-bottom:1rem;}
+    .mh_ctn_float_wrap {padding-top:2rem;}
+    .mh_ctn_img_left {float:none;width:100%;text-align:center;}
+    .mh_ctn_img_left img {max-width:70%;}
+    .ctb_car_estimate {float:none;width:90%;margin:0 auto;}
+    .mh_overview_img_text_box {position:relative;bottom:auto;left:auto;width:90%;margin:-4rem auto 0 auto;padding:3rem;}
+    .mh_ctn_btm_btn .ctb_button {padding:2rem 4rem;}
+    .ctb_header .mh_user {display:none;}
+    .ctb_header .mh_burger {display:block;}
+    .ctb_header .header_btn {width:6rem;height:6rem;line-height:6rem;flex:0 0 6rem;}
+    .ctb_container {padding-top:6rem;}
+    .ctb_container.with_ctb_footer {padding-top:6rem;padding-bottom:6rem;height: 100vh;box-sizing: border-box;overflow:auto;}
+    .ctb_dealer_map {height:calc(100vh - 12rem);}
+    .ctb_footer {height:6rem;}
+    .ctb_footer_left {height:6rem;}
+    .ctb_footer_right {height:6rem;}
+    .ctb_footer_right .ctb_button.primary,
+    .ctb_footer_right .ctb_button.disabled {min-width:15rem;height: 6rem;line-height: 6rem;padding: 0 2rem;border: 0 none;font-size: 1.5rem;}
+    .ctb_left_info {float:none;width:100%;text-align:center;}
+    .ctb_pop_option .option_left {width:100%;height: 50vh;overflow: hidden;}
+    .ctb_car_fitting_acc_item .ctb_fitting_img {height:100px;object-fit: cover;}
+
+    .ctb_dealer_search {top:0;bottom:auto;width:100%;}
+    .ctb_dealer_search_title {font-size:22px;margin-bottom:0;}
+    .ctb_dealer_search_form {padding:1rem 2rem 1.5rem;}
+    .ctb_dealer_search_form_item input {height:4rem;line-height:4rem;}
+    .ctb_dealer_search_form_item button {height:4rem;}
+    .ctb_dealer_search_list {position:fixed;bottom:8rem;overflow-x:auto;height:auto;padding:0 2rem;width:100%;box-sizing:border-box;display:flex;}
+    .ctb_dealer_search_item {flex:0 0 100%;margin-right:2rem;padding:2rem 2rem 2rem 0;background-color:#121212;}
+
+    .ctb_footer_wrap {padding:0;}
+    .ctb_footer_wrap {justify-content:flex-end;}
+    .ctb_footer_left {display:none;}
+    .ctb_footer_right {justify-content:space-between;width:100%;}
+    .ctb_footer_price_wrap {position:relative;}
+    .ctb_footer_price_more {position:absolute;top:0;left:0;right: -4rem;bottom: 0;text-align: right;}
+    .ctb_footer_price_more .icon-arrow {display:inline-block;margin-top:-8px;}
+
+    .ctb_ctn_wrap.with_left_info {padding:2rem;}
+    .ctb_left_info {padding-right:0;}
+    .ctb_left_info_car_tt strong {font-size:4rem;}
+    .ctb_left_info_car_img {padding-top:1rem;}
+    .ctb_left_info_car_img img {width:70%;}
+    .ctb_car_info {float:none;width:100%;}
+    .ctb_right_ctn {width:100%;float:none;}
+    
+    .ctb_dealer_info {
+    top: 0;
+    bottom: auto;
+    transform: translateY(0);}
+
+    .mh_ctn_pop_info .ctb_car_estimate {position:relative;top:auto;right:auto;}
+
+
+    .ctb_delivery_option {overflow-x:auto;white-space:nowrap;}
+    .ctb_delivery_option_item {display:inline-block;float:none;min-width:28rem;box-sizing:border-box;}
+    .ctb_delivery_option_item:nth-child(2n+1) {padding-right:1rem;}
+    .ctb_delivery_option_item:nth-child(2n+2) {padding-left:1rem;}
+
+    .ctb_car_info_tt, .ctb_car_info_gp h3 {flex-direction: column;text-align:center;}
+    .ctb_car_info.ctb_byv .ctb_car_info_gp h3 {text-align:left;flex-direction: row;}
+    .ctb_car_info_acc_item {position:relative;padding-bottom:6rem;}
+    .ctb_car_info_acc_item .price_acc {position:absolute;bottom:0;left:0;width:100%;padding:1rem 1rem 1rem 0;justify-content: flex-end;border-top: 1px solid #ddd;}
+    .ctb_car_info_acc_item .info_acc_desc span {padding-right:1rem;}
+    .ctb_car_info_tt .ctb_button.modify {padding:1rem 2rem;}
+    .ctb_car_info_tt .ctb_button.modify span {display:none;}
+    .ctb_ctn_wrap.with_right_estimate .ctb_car_estimate {width:100%;}
+
+    .ctb_car_info_tab ul {width:100%;overflow-x:auto;white-space:nowrap;margin-bottom:0;}
+    .ctb_car_info_tab ul li {float:none;display:inline-block;}
+    .ctb_car_fitting_acc_item {width:48%;margin:2rem 1% 0 1%;}
+
+    .ctb_headline_head_wrap {padding:2rem;flex-direction: column;}
+    .ctb_headline_img .ctb_headline_car_tt strong {font-size:4rem;line-height:1;}
+    .ctb_headline_img .ctb_headline_car_tt .ctb_personal_info {padding:1rem 0;}
+    .ctb_headline_img .ctb_headline_car_tt .ctb_personal_info strong {padding-top:0;}
+    .ctb_headline_head_ctn .ctb_check_car_img {padding-top:7rem;}
+    .ctb_headline_head_ctn .ctb_check_car_img img {width:80%;}
+    .ctb_headline_ctn {padding:2rem;}
+    .ctb_headline_ctn h3 {font-size:2.2rem;}
+    .ctb_headline_ctn ol li h4 {font-size:2rem;}
+
+    .ctb_ctn_wrap.with_right_estimate {padding:2rem;}
+    .ctb_byv_head_wrap {flex-direction: column;}
+    .ctb_car_info.ctb_byv {width:100%;}
+    .ctb_byv_img .ctb_byv_car_step_wrap {width:30rem;}
+    .ctb_byv_img .ctb_byv_car_step ol li:after {width:37px;right:32px;}
+    .ctb_byv_ctn_tt h2 {text-align:left;}
+    .ctb_byv_ctn_tt {flex-direction: column;}
+    .ctb_byv_ctn_tt_btns {display:flex;flex-direction: column;padding:2rem 0;}
+    .btn_page_link {margin:1rem 2rem;}
+    .ctb_footer_right .ctb_footer_price strong {font-size:1.6rem;}
+    .ctb_car_info_btm_area {float:none;}
+    .ctb_car_tech_gp {flex-direction: column;}
+    .ctb_car_info_byv_item .info_item strong {font-size:1.3rem;font-family:HyundaiHeadReg;}
+    .ctb_car_info_byv_item .info_item span {font-size:1.3rem;font-family:HyundaiHeadReg;}
+    .ctb_car_info_byv_item .price_item strong {font-size:1.3rem;padding-left:.8rem;margin-right:0;}
+    .ctb_byv_aside {left:-2rem;}
+
+    .ctb_car_info_detail_item .detail_item_tt {padding:2rem 5rem 2rem 2rem;font-size:1.8rem;}
+    .ctb_car_info_detail_item .detail_item_ctn_table {padding:1rem 2rem;}
+    .ctb_car_info_detail_item .detail_item_ctn_table table tr {display:block;}
+    .ctb_car_info_detail_item .detail_item_ctn_table table .table_title {display:block;padding:1rem 0;}
+    .ctb_car_info_detail_item .detail_item_ctn_table table .table_row th,
+     .ctb_car_info_detail_item .detail_item_ctn_table table .table_row td {display:block;padding:1rem 0;}
+    .ctb_car_info_detail_item .detail_item_ctn_table table td {display:block;}
+
+    .terms_condition_wrap {padding:0 2rem;}
+    .terms_logo {padding:5rem 0 2rem 0;font-size:2.8rem;}
+    .ctb_form_wrap > h3 {padding:1rem 0 2rem 0;}
+    .ctb_form_wrap > h3 strong {font-size:3.6rem;}
+    .ctb_form_wrap > h3 span {font-size:1.5rem;}
+    .ctb_form_item .ctn_location_list,
+    .ctb_form_item .ctn_select_list {left:0;right:0;}
+
+    .terms_condition_wrap .ctb_input_check {margin-left:0;}
+
+    .ctb_pop_disclaimer {padding:0 2rem;}
+    .ctb_pop_disclaimer .disc_header {flex-direction: column;}
+    .ctb_pop_disclaimer .disc_header .copylight {float:none;padding:1rem 6rem 1rem 0;}
+    .ctb_pop_disclaimer .disc_header .disc_nav {padding:1rem 0;}
+
+    .ctb_pop_tyres .tyres_wrap {padding:0 2rem;}
+    .ctb_pop_tyres h3 {font-size:3.1rem;}
+    .ctb_pop_tyres h4 {font-size:1.9rem;line-height:2.4rem;}
+    .ctb_pop_tyres .icon-tooltip {display:inline-block;position:relative;background-color:transparent;border:none;outline:none;font-style:inherit;font-size:2rem;cursor:pointer;vertical-align:middle;}
+    .ctb_pop_tyres .tyres_item {width:fit-content;max-width:108rem;margin:6rem auto auto auto;}
+    .ctb_pop_tyres .tyres_img img {width:24rem;border:1px solid #d8d8d8;margin-bottom:1.5rem;}
+    .ctb_pop_tyres .tyres_info {width:24rem;font-family:HyundaiTextReg,sans-serif;}
+    .ctb_pop_tyres .tyres_info a {font-family:HyundaiTextBold,sans-serif;color:#121212;margin-left:.5rem;}
+
+    .ctb_header_msg {height:auto;top:6rem;}
+    .ctb_header_msg_wrap {height:auto;padding:1rem 3rem 2rem 3rem;flex-direction:column;}
+    .ctb_header_msg .header_msg {line-height:3rem;padding:1.5rem 0;}
+    .ctb_header_msg .header_msg_btns {display:flex;width:100%;}
+    .ctb_header_msg .ctb_button {flex:1;width:100%;text-align:center;}
+
+    .ctb_dialog .ctb_dialog_wrap {max-width:90%;padding:3rem 2rem;}
+    .ctb_tab .ctb_tab_item {padding:1rem 0;flex:1;text-align:center;}
+    .ctb_finance_ctn {flex-direction:column;}
+    .ctb_finance_ctn .ctb_finance_range {padding:0;}
+    .ctb_finance_ctn .ctb_range_item .ctb_range_tt {float:none;width:100%;font-size:2rem;padding:1rem 0;}
+    .ctb_finance_ctn .ctb_range_item .ctb_range_input {float:none;width:100%;padding:0;}
+    .ctb_finance_ctn .ctb_range_item .ctb_range {float:none;margin-top:1rem;width:100%;}
+    .ctb_finance_head + .finance_price_head {display:block;}
+    .ctb_finance_ctn .ctb_finance_price > .finance_price_head {display:none;}
+    .ctb_finance_ctn .ctb_finance_price .finance_price_detail {margin-top:1.5rem;}
+    .ctb_finance_ctn .ctb_finance_price .price_detail_item {font-size:1.7rem;line-height:3rem;color:#121212;}
+    .ctb_dialog_foot {display:flex;flex-direction:column-reverse;}
+    .ctb_dialog_foot .ctb_button {width:100%;text-align:center;margin-top:1rem;margin-left:0;}
+    
+    .ctb_disclaimer_wrap .disc_ctn h4 {text-align:left;}
+    .ctb_disclaimer_wrap .disc_ctn p {padding-right:0;}
+    .ctb_disclaimer_wrap {padding:0 2rem;}
+    .ctb_disclaimer_wrap .disc_header {flex-direction: column;}
+    .ctb_disclaimer_wrap .disc_header .copylight {padding:1rem 0;}
+    .ctb_disclaimer_wrap .disc_header .disc_nav {padding:1rem 0;}
+
+    .mh_footer_wrap {padding:4rem 8%;}
+    .mh_footer_ctn {flex-direction: column;}
+    .mh_footer_logo {flex:1;}
+    .accordion_items {flex-direction: column;margin-top:3rem;border-top:2px solid hsla(0,0%,100%,.1);}
+    .accordion_items .accordion_item {padding-right:0;}
+    .accordion_content {display:none;background-color:hsla(0,0%,100%,.1);padding:0 3rem;}
+    .mh_footer_ctn:nth-child(2) {border-top:0 none;}
+    .mh_footer_copylight {margin-bottom:1rem;}
+    .mh_footer_links2 {margin:0 0 3rem 0;}
+    .mh_footer_links2 ul {display:block;text-align:left;}
+    .mh_footer_links2 li {display:inline-block;padding:0 1rem;}
+    .mh_footer_links2 li a {margin-left:0;}
+    .mh_footer_ctn p {margin-bottom:4rem;}
+    .accordion_header>div:before,
+    .accordion_items .accordion_header>div:after {display:block;}
+    .accordion_header.on + .accordion_content {display:block;}
+
+    .ctb_error {min-height:calc(100% - 60px);height:auto;}
+    .ctb_error_cont h1 {font-size:30px;line-height:35px;}
+    .ctb_error_cont .text {font-size:14px;line-height:19px;}
+    .ctb_error_cont .ctb_error_button_wrap {margin-top:30px;}
+    .ctb_error_cont .ctb_error_button_wrap .ctb_button {width:100%;padding:1.2rem 0;font-size:1.4rem;}
+
+    .ctb_range_item.deposit .rc-slider-mark-text {display: none;}
+    .ctb_range_item.deposit .rc-slider-mark-text:first-child {display: initial;}
+    .ctb_range_item.deposit .rc-slider-mark-text:last-child {display: initial;}
+
+    .ctb_footer_price_more {top:0;right: 0;left: 28.5rem;bottom: 0;}
+    .ctb_footer_right .ctb_footer_price_edit {position:absolute;}
+    .ctb_footer_right .ctb_footer_price {padding: 0 1rem 0 1rem;}
+    .ctb_footer_price_wrap {min-width: 245px;}
+}
+
+/* Mobile */
+@media only screen and (max-width:320px){
+
+
+    .ctb_header_wrap,
+    .ctb_ctn_wrap,
+    .mh_ctn_wrap,
+    .ctb_footer_wrap,
+    .mh_main_img {max-width:100% !important;}
+    .ctb_header .mh_nav ul {display:none;}
+    .ctb_header {height:6rem;}
+    .mh_footer .mh_footer_wrap,
+    .mh_footer .mh_footer_wrap img {max-width:100% !important;}
+    .mh_overview_img_text_box {margin-left:-8rem;}
+    .mh_main_img {padding-bottom:3rem;}
+    .mh_main_img_wrap {min-height:auto !important;}
+    .mh_main_img strong {left:2rem;font-size:4rem;bottom:1rem;}
+    .mh_myorder .myorder_step {zoom:0.6;}
+    .ctb_popup .ctb_pop_ctn_left {flex:0 0 25rem;}
+    .ctb_popup .ctb_pop_ctn_left .pop_nav {margin-top:10rem;}
+    .ctb_popup .ctb_pop_ctn_left .pop_nav_item {margin-left:5rem;}
+    .ctb_pop_mysecurity .ctn_mysecurity {float:none;width:100%;}
+    .ctb_pop_mysecurity .ctn_mysecurity.right {width:100%;}
+    .ctb_form_item.w50 {width:100%;}
+    .ctb_pop_option .option_right {padding:10rem 3rem 5rem 4rem;padding-right:4rem;}
+    .ctb_pop_pricing .pricing_right {padding:10rem 3rem 5rem 4rem;padding-right:4rem;}
+    .ctb_pop_pricing .pricing_left {width:100%;}
+    .ctb_pop_pricing .pricing_right {width:100%;}
+    .ctb_pop_question {padding:0 5rem 3rem 5rem;}
+    .mh_links {display:flex;flex-direction: column;align-items: center;}
+    .mh_links .btn_page_link {width:18rem;text-align:left;margin:1rem 0;}
+    .mh_ctn_wrap h3 {font-size:3rem;padding-bottom:1rem;}
+    .mh_ctn_float_wrap {padding-top:2rem;}
+    .mh_ctn_img_left {float:none;width:100%;text-align:center;}
+    .mh_ctn_img_left img {max-width:70%;}
+    .ctb_car_estimate {float:none;width:90%;margin:0 auto;}
+    .mh_overview_img_text_box {position:relative;bottom:auto;left:auto;width:90%;margin:-4rem auto 0 auto;padding:3rem;}
+    .mh_ctn_btm_btn .ctb_button {padding:2rem 4rem;}
+    .ctb_header .mh_user {display:none;}
+    .ctb_header .mh_burger {display:block;}
+    
+}   
