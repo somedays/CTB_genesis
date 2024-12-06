@@ -56,7 +56,7 @@ a:hover{color:#454545}
 
 
 
-.ctb_button {display:inline-block;border:1px solid #000;background-color:#fff;color:#000;line-height:1;padding:2rem 5rem;box-sizing:border-box;font-family:'genesis-head',sans-serif;font-size:1.6rem;transition:color .3s,background-color .3s;position:relative;cursor:pointer;}
+.ctb_button {display:inline-block;border:1px solid #000;background-color:#fff;color:#000;line-height:1;padding:1.5rem 5rem;box-sizing:border-box;font-family:'genesis-head',sans-serif;font-size:1.6rem;transition:color .3s,background-color .3s;position:relative;cursor:pointer;}
 .ctb_button:hover {color:#fff;background-color:#000;}
 .ctb_button.p2rem {padding:2rem;}
 .ctb_button.primary {border:1px solid #000000;background-color:#000000;color:#fff;}
@@ -137,9 +137,10 @@ a:hover{color:#454545}
 .ctb_header_msg .ctb_button {padding:1.5rem 3rem;cursor:pointer;}
 .ctb_header_msg .ctb_button + .ctb_button {margin-left:1rem;}
 
-.ctb_ctn_wrap {position:relative;width:100%;max-width:1440px!important;margin:0 auto!important;}
+.ctb_ctn_wrap {position:relative;width:100%;max-width:1280px!important;margin:0 auto!important;}
 .ctb_ctn_wrap.full {max-width:100%!important;}
 .ctb_ctn_wrap.with_left_info {padding:5rem;}
+.ctb_ctn_wrap.form_wrap {max-width:1080px!important;}
 .ctb_ctn_wrap.with_right_estimate {padding:5rem 6rem;}
 .ctb_ctn_wrap:after {content:"";display:block;clear:both;}
 .ctb_left_info {float:left;padding-right:5rem;width:350px;}
@@ -152,7 +153,8 @@ a:hover{color:#454545}
 .ctb_right_ctn {float:left;width:calc(100% - 350px);}
 
 .ctb_car_estimate {width:45rem;border:2px solid #000;border-radius:4px;float:right;}
-.ctb_car_estimate.no_border {border:0 none;}
+.ctb_car_estimate.no_border {border:0 none;width:35rem;}
+.ctb_car_estimate.no_border .ctb_car_estimate_wrap {padding:3rem;}
 .ctb_car_estimate_wrap {background-color:#fff;padding:4rem;}
 .ctb_car_estimate_wrap p {text-align: left;}
 .ctb_car_estimate h3 strong {display:block;font-family:'genesis-head',sans-serif;font-size:3rem;}
@@ -196,7 +198,7 @@ a:hover{color:#454545}
 .ctb_estimate_price_info .btn_gp .ctb_button.full {width:100%;}
 .ctb_estimate_price_info .btn_gp .ctb_button.mt0 {margin-top:0;}
 .ctb_estimate_price_info .btn_gp span {vertical-align:middle;padding-left:1rem;}
-.ctb_car_estimate_comment {margin-top:1rem;padding:2.5rem;background-color:#fff;}
+.ctb_car_estimate_comment {margin-top:1rem;padding:0 4rem 4rem 4rem;background-color:#fff;}
 .ctb_car_estimate_comment strong {display:block;font-family:'genesis-head',sans-serif;color:#1c1b1b;font-size:1.6rem;}
 .ctb_car_estimate_comment span {display:block;font-size:1.4rem;font-family:'genesis-text',sans-serif;padding-top:.5rem;}
 .ctb_estimate_price_info .price_item .icon-tooltip {display:inline-block;position:relative;background-color:transparent;border:none;outline:none;font-style:inherit;font-size:2rem;cursor:pointer;vertical-align:middle;}
@@ -332,7 +334,7 @@ a:hover{color:#454545}
 .ctb_headline_ctn h3 {text-align:center;padding:0 0 5rem 0;font-size:3.5rem;font-family:'genesis-head', sans-serif;}
 .ctb_headline_ctn ol {width:41rem;margin:0 auto;padding-left:4rem;}
 .ctb_headline_ctn ol li h4 {position:relative;font-size:2.5rem;font-family:'genesis-head', sans-serif;}
-.ctb_headline_ctn ol li h4:before {content:"";position:absolute;top:2px;left:-4rem;width:3rem;height:3rem;line-height:3rem;text-align:center;border:2px solid #A2A2A2;border-radius:50%;font-size:1.6rem;font-family:'genesis-head', sans-serif;color:#1d3d63;}
+.ctb_headline_ctn ol li h4:before {content:"";position:absolute;top:2px;left:-4rem;width:3rem;height:3rem;line-height:3rem;text-align:center;border:1px solid #000;font-size:1.6rem;font-family:'genesis-head', sans-serif;color:#000;}
 .ctb_headline_ctn ol li:nth-child(1) h4:before {content:"1";}
 .ctb_headline_ctn ol li:nth-child(2) h4:before {content:"2";}
 .ctb_headline_ctn ol li:nth-child(3) h4:before {content:"3";}
@@ -457,7 +459,7 @@ a:hover{color:#454545}
 @media only screen and (max-width:1024px) {.doty_popup {top: 120px;} .doty_popup .doty_img {width: 200px; height:90px;}}
 @media only screen and (max-width:320px) {.doty_popup {top: 120px;} .doty_popup .doty_img {width: 200px; height:90px;}}
 
-.ctb_dealer_info_item {display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.2);padding:2rem 0;cursor:pointer;}
+.ctb_dealer_info_item {display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.2);padding:2rem 3rem 3rem 3rem;cursor:pointer;}
 .ctb_dealer_info_item .ctb_info_dealer_location {display:inline-flex;flex:0 0 100px;justify-content:flex-start;flex-direction: column;font-size:24px;line-height:28px;font-family:'genesis-head';}
 .ctb_dealer_info_item .ctb_info_dealer_location strong {font-size:1.4rem;display:block;text-align:center;padding-top:6px;}
 .ctb_dealer_info_item .ctb_info_dealer_location span {font-size:1.2rem;display:block;text-align:center;font-family:'genesis-text';}
@@ -471,13 +473,13 @@ a:hover{color:#454545}
 
 /* Car Info */
 .ctb_car_info {float:left;width:calc(100% - 35rem);}
-.ctb_car_info.ctb_byv {width:calc(100% - 50rem);}
+.ctb_car_info.ctb_byv {width:calc(100% - 40rem);}
 .ctb_car_info:after {content:"";display:block;clear:both;}
 .ctb_car_info_gp {float:left;padding:0 0 50px 0;width:100%;}
 .ctb_car_info_gp.w50 {width:50%;}
 .ctb_car_info_tt,
 .ctb_car_info_gp h3 {display:flex;justify-content:space-between;margin-bottom:2rem;align-items:center;}
-.ctb_car_info_tt strong,
+.ctb_car_info_tt strong {font-size:4rem;font-family:'genesis-head-light';}
 .ctb_car_info_gp h3 strong {font-size:4rem;font-family:'genesis-head-light';}
 .ctb_car_info.ctb_byv .ctb_car_info_tt strong,
 .ctb_car_info.ctb_byv .ctb_car_info_gp h3 strong {font-size:2rem;}
@@ -508,11 +510,14 @@ a:hover{color:#454545}
 .ctb_car_info_acc_item {margin-top:2rem;display:flex;align-items:center;padding:2rem;border:1px solid #e5e5e5;border-radius:4px;}
 .ctb_car_info_acc_item .img_acc {flex: 0 0 8rem;}
 .ctb_car_info_acc_item .img_acc img {width:8rem;height:8rem;}
-.ctb_car_info_acc_item .info_acc_area {flex:1;display:flex;flex-direction:column;width: calc(100% - 100px);box-sizing: border-box;}
-.ctb_car_info_acc_item .info_acc_gp {display:flex;justify-content:space-between;}
-.ctb_car_info_acc_item .info_acc {display:flex;flex-direction:column;padding-left:1.5rem;width: calc(100% - 460px);color:#777;}
-.ctb_car_info_acc_item .info_acc strong {display:block;font-family:'genesis-text';font-size:1.6rem;padding: 0;line-height:16px;width: calc(100% - 15px);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-.ctb_car_info_acc_item .info_acc span {display:block;font-family:'genesis-text';font-size:1.3rem;max-width:450px;line-height:16px;}
+.ctb_car_info_acc_item .info_acc_area {flex:1;display:flex;flex-direction:column;box-sizing: border-box;height:8rem;width:calc(100% - 8rem)}
+.ctb_car_info_acc_item .info_acc_gp {display:flex;justify-content:space-between;flex-direction:column;flex:1;}
+.ctb_car_info_acc_item .info_acc_btm {display:flex;justify-content:space-between;align-items:flex-end;padding-left:1rem;}
+.ctb_car_info_acc_item .info_acc_btm .acc_icon_info {position:relative;cursor:pointer;color:#666;text-decoration:underline;font-size:1.4rem;}
+.ctb_car_info_acc_item .info_acc_btm .acc_icon_info:hover {color:#000;}
+.ctb_car_info_acc_item .info_acc {display:flex;flex-direction:column;padding-left:1.5rem;color:#777;}
+.ctb_car_info_acc_item .info_acc strong {display:block;font-family:'genesis-text';font-size:1.6rem;padding: 0;line-height:2rem;width: calc(100% - 15px);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.ctb_car_info_acc_item .info_acc span {display:block;font-family:'genesis-text';font-size:1.4rem;max-width:450px;line-height:2rem;}
 .ctb_car_info_acc_item .info_acc_desc {display:inline-flex;flex:1;}
 .ctb_car_info_acc_item .info_acc_desc span {display:block;font-family:'genesis-text';font-size:13px;line-height:16px;padding: 10px 0 0 2px;overflow:hidden;margin: 10px 12px 0 12px;white-space:nowrap;text-overflow: ellipsis;border-top: 1px solid #e5e5e5;width:100%;}
 .ctb_car_info_acc_item .price_acc {display:flex;align-items:center;justify-content: flex-end;}
@@ -527,16 +532,17 @@ a:hover{color:#454545}
 .ctb_car_info_acc_item .price_acc .number_count button:hover {background-color:#000000;color:#fff;}
 .ctb_car_info_acc_item .price_acc .number_count span {display:inline-block;height:32px;line-height:32px;font-size:1.4rem;font-family:'genesis-head';padding:0 1rem;vertical-align:middle;border:1px solid #000;border-radius:2px;min-width:5rem;text-align:center;}
 .ctb_car_info_acc_item .ctb_input_check span img {width: 20px;height: 20px;margin-top: 8px;margin-left: 8px;}
-.ctb_car_info_acc_item .price_acc .acc_remove {width:auto;height:3.2rem;line-height:3.2rem;padding:0 2rem;background-color:#000;color:#fff;font-size:1.4rem;border:0 none;margin-left:1rem;border-radius:2px;}
+.ctb_car_info_acc_item .price_acc .acc_remove {width:auto;height:3.2rem;line-height:3rem;padding:0 2rem;background-color:#000;color:#fff;font-size:1.4rem;border:1px solid #000;margin-left:1rem;border-radius:2px;cursor:pointer;transition:all .3s;}
+.ctb_car_info_acc_item .price_acc .acc_remove:hover {border:1px solid #000;background-color:#fff;color:#000;}
 
 .ctb_car_info_byv_item {display:flex;align-items:center;}
-.ctb_car_info_byv_item:only-child {border-bottom:1px solid #e5e5e5;padding-bottom:2rem;}
-.ctb_car_info_byv_item:last-child {border-bottom:1px solid #e5e5e5;padding-bottom:2rem;}
+.ctb_car_info_byv_item:last-child {border-bottom:1px solid #e5e5e5;padding-bottom:2rem;padding-top:1rem;}
+.ctb_car_info_byv_item:only-child {border-bottom:1px solid #e5e5e5;padding-bottom:2rem;padding-top:0;}
 .ctb_car_info_byv_item .img_item {flex:0 0 94px;}
 .ctb_car_info_byv_item .img_item img {max-width:100%;max-height:100%;}
 .ctb_car_info_byv_item .info_item {flex:1;color:#666;}
-.ctb_car_info_byv_item .info_item strong {display:block;font-family:'genesis-text';font-size:1.8rem;line-height:16px;font-weight:400;}
-.ctb_car_info_byv_item .info_item span {display:block;font-family:'genesis-text';font-size:1.6rem;line-height:16px;padding-top:.5rem;}
+.ctb_car_info_byv_item .info_item strong {display:block;font-family:'genesis-text';font-size:1.7rem;line-height:16px;font-weight:400;}
+.ctb_car_info_byv_item .info_item span {display:block;font-family:'genesis-text';font-size:1.5rem;line-height:16px;padding-top:.5rem;}
 .ctb_car_info_byv_item .price_item {display:flex;align-items:center;}
 .ctb_car_info_byv_item .price_item strong {display:inline-block;font-size:1.8rem;}
 .ctb_car_info_byv_item .price_item .btn_transh {border:0 none;background-color:transparent;cursor:pointer;padding:0;margin:0 1rem 0 0;}
@@ -557,16 +563,23 @@ a:hover{color:#454545}
 .ctb_car_fitting_acc_item .ctn_fitting_acc_top {display:flex;}
 .ctb_car_fitting_acc_item .ctb_fitting_img {flex:0 0 8rem;}
 .ctb_car_fitting_acc_item .ctb_fitting_img img {width:100%;max-height:100%;object-fit: cover;}
-.ctb_car_fitting_acc_item .ctb_fitting_info {display:flex;height:13rem;box-sizing:border-box;align-items:flex-end;;}
-.ctb_car_fitting_acc_item .info_acc {flex:1;box-sizing:border-box;padding-left:2rem;}
-.ctb_car_fitting_acc_item .info_acc strong {display:block;font-family:'genesis-text';font-size:1.6rem;line-height:2rem;}
-.ctb_car_fitting_acc_item .info_acc span {display:block;font-family:'genesis-text';font-size:1.4rem;line-height:2rem;}
-.ctb_car_fitting_acc_item .price_acc {flex:0 0 4rem;align-items:center;}
+.ctb_car_fitting_acc_item .ctb_fitting_info {display:flex;height:13rem;box-sizing:border-box;align-items:flex-end;flex-direction:column;justify-content:space-between;}
+.ctb_car_fitting_acc_item .ctb_fitting_info .price_acc {display:flex;justify-content:space-between;width:100%;}
+.ctb_car_fitting_acc_item .info_acc {flex:1;box-sizing:border-box;padding-left:1.5rem;}
+.ctb_car_fitting_acc_item .info_acc strong {display:block;font-family:'genesis-text';font-size:1.5rem;line-height:2rem;color:#666;}
+.ctb_car_fitting_acc_item .info_acc span {display:block;font-family:'genesis-text';font-size:1.4rem;line-height:2rem;color:#666;}
+.ctb_car_fitting_acc_item .option_acc {display:flex;flex-direction:column;padding-left:0;width:100%;padding:1rem 0;}
+.ctb_car_fitting_acc_item .option_acc strong {color:#AF6249;font-family:'genesis-head',sans-serif;font-size:1.4rem;}
+.ctb_car_fitting_acc_item .option_acc span {font-family:'genesis-text',sans-serif;font-size:1.4rem;color:#666;margin-left:0.8rem;position:relative;}
+.ctb_car_fitting_acc_item .option_acc span:before {content:"";width:3px;height:3px;border-radius:2px;background-color:#666;position:absolute;top:8px;left:-1rem;}
+.ctb_car_fitting_acc_item .price_acc {align-items:center;}
 .ctb_car_fitting_acc_item .price_acc strong {display:inline-block;margin-right:1.5rem;font-size:14px;}
-.ctb_car_fitting_acc_item .price_acc a {display:block;position:relative;width:40px;height:40px;line-height:40px;margin-bottom:1rem;text-align:center;background-color:#EFEFEF;color:#000000;transition:box-shadow .3s ease-in-out,fill .3s;box-shadow:inset 0 0 0 #000000;cursor:pointer;}
-.ctb_car_fitting_acc_item .price_acc a:hover {box-shadow:inset 5rem 0 0 #000000;color:#fff;}
+.ctb_car_fitting_acc_item .price_acc a {position:relative;cursor:pointer;color:#666;text-decoration:underline;font-size:1.4rem;}
+.ctb_car_fitting_acc_item .price_acc a:hover {color:#000;}
 .ctb_car_fitting_acc_item .price_acc a .icon_info {vertical-align:middle;top:50%;position:absolute;margin-top:-8px;left:50%;margin-left:-1px;fill:#000000}
 .ctb_car_fitting_acc_item .price_acc a:hover .icon_info {fill:#fff;}
+.ctb_car_fitting_acc_item .price_acc .acc_add {width:auto;height:3.2rem;line-height:3rem;padding:0 2rem;background-color:#000;color:#fff;font-size:1.4rem;border:1px solid #000;margin-left:1rem;border-radius:2px;cursor:pointer;transition:all .3s;}
+.ctb_car_fitting_acc_item .price_acc .acc_add:hover {border:1px solid #000;background-color:#fff;color:#000;}
 
 .ctb_car_fitting_acc_item .ctb_fitting_info .addtional-text {padding-top: 15px; position: relative;}
 .ctb_car_fitting_acc_item .ctb_fitting_info .addtional-desc {left: 0; position: absolute; display: inline-block; font-size: 1.1rem; color: #8e8e8e; top: 2px;}
@@ -639,23 +652,23 @@ a:hover{color:#454545}
 .c-rotation-3d .rotation-3d__360-circle{width:84%}
 .c-rotation-3d .rotation-3d__360-indicator-wrapper{position:absolute;left:50%;bottom:7.5%;-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0)}@media (min-width:768px){.c-rotation-3d .rotation-3d__360-indicator-wrapper{bottom:12.5%}}
 
+.form_wrap h3 {font-size:4rem;padding:4rem 0 2rem 0;font-family:'genesis-head-light',sans-serif;}
 .ctb_form_wrap {padding:0 0 50px 0;box-sizing:border-box;}
 /*terms_condition_wrap */
 .ctb_form_wrap > h3 {padding:3rem 0 3rem 2rem;}
 .ctb_form_wrap > h3 strong {display:block;font-size:5rem;font-family:'genesis-head',sans-serif;}
 .ctb_form_wrap > h3 span {display:block;font-size:1.6rem;font-family:'genesis-text',sans-serif;}
-.ctb_form {margin:0 auto 0 auto;}
-.ctb_form:after {content:"";display:block;clear:both;}
-.ctb_form h3 {float:left;width:100%;font-family:HyundaiHeadBold,sans-serif;margin:4rem 0 2rem 0;font-size:32px;line-height:30px;padding:0 20px;}
-.ctb_form h4 {font-family:'genesis-head',sans-serif;margin:3rem 0 1rem 0;font-size:1.8rem;line-height:30px;}
-.ctb_form_item {float:left;width:100%;box-sizing:border-box;padding:10px 20px 20px 20px;position:relative;}
+.ctb_form {margin:0 auto 0 auto;display:flex;flex-wrap:wrap;gap:3rem;}
+.ctb_form h3 {width:100%;font-family:'genesis-head-light',sans-serif;font-size:3rem;line-height:3rem;}
+.ctb_form h4 {font-family:'genesis-head',sans-serif;margin:2rem 0 1rem 0;font-size:1.8rem;line-height:30px;}
+.ctb_form_item {width:100%;box-sizing:border-box;position:relative;}
 .ctb_form_item.ctb_form_radio_gp {padding-top:5px;}
 .ctb_form_item .ctb_form_radio input[type="radio"] {display:none;}
 .ctb_form_item .ctb_form_radio {display:inline-block;cursor:pointer;}
-.ctb_form_item .ctb_form_radio span {display:inline-block;vertical-align:middle;padding-right:2rem;font-family:'genesis-head',sans-serif;}
-.ctb_form_item .ctb_form_radio span:before {content:"";display:inline-block;width:21px;height:21px;border:2px solid rgba(0,0,0,0.1);border-radius:50%;vertical-align:middle;margin-right:1rem;margin-top:-1px;}
+.ctb_form_item .ctb_form_radio span {display:inline-block;vertical-align:middle;padding-right:2rem;font-family:'genesis-text',sans-serif;}
+.ctb_form_item .ctb_form_radio span:before {content:"";display:inline-block;width:2rem;height:2rem;border:1px solid #A2A2A2;border-radius:50%;vertical-align:middle;margin-right:1rem;margin-top:-1px;}
 .ctb_form_item .ctb_form_radio input[type="radio"]:checked + span {color:#000000;}
-.ctb_form_item .ctb_form_radio input[type="radio"]:checked + span:before {background-color:#000000;box-shadow:inset 0 0 0 3px #fff;transition:background-color .3s,box-shadow .3s;}
+.ctb_form_item .ctb_form_radio input[type="radio"]:checked + span:before {background-color:#fff;box-shadow:inset 0 0 0 5px #000;border-color:#000;transition:background-color .3s,box-shadow .3s;}
 
 
 .ctb_form_item .ctn_location_list {position:absolute;top:53px;left:2rem;right:2rem;background-color:#fff;border:2px solid rgba(0,0,0,0.2);z-index:1;max-height:200px;overflow:auto;}
@@ -668,18 +681,20 @@ a:hover{color:#454545}
 .ctb_form_item .ctn_select_list li:hover {background-color:#f2f2f2;cursor:pointer;}
 
 
-.ctb_form_item.w50 {width:50%;}
-.ctb_form_item label {display:block;font-size:14px;font-family:'genesis-head',sans-serif;padding:14px 0 5px 0;}
+.ctb_form_item.w50 {width:calc(50% - 1.5rem);}
+.ctb_form_item label {display:block;font-size:14px;font-family:'genesis-text',sans-serif;padding:0;}
 .ctb_form_item input,
-.ctb_form_item select {border:2px solid rgba(0,0,0,0.1);padding:0 15px;background-color:transparent;box-sizing:border-box;width:100%;height:45px;font-size:14px;font-family:'genesis-head',sans-serif;outline:0;}
+.ctb_form_item select {border:0 none;border-bottom:1px solid #E5E5E5;padding:0;background-color:transparent;box-sizing:border-box;width:100%;height:45px;font-size:14px;font-family:'genesis-text',sans-serif;outline:0;}
 .ctb_form_item input:focus,
 .ctb_form_item select:focus {border-color:#000000;transition:border-color .5s;}
-.ctb_form_item input.readonly {color:#898787;border:2px solid rgba(0,0,0,0.1);}
-.ctb_form_item input.readonly:focus {border:2px solid rgba(0,0,0,0.1);cursor:default;}
-.ctb_form_item label.ctn_form_label {position:absolute;top:0.9rem;color:#767676;left:3.7rem;transition:all 0.3s;pointer-events:none;}
-.ctb_form_item label.ctn_form_label strong {color:#de3112;}
+.ctb_form_item input.readonly {color:#898787;border-color:#E5E5E5;}
+.ctb_form_item input.readonly:hover,
+.ctb_form_item input.readonly:focus,
+.ctb_form_item input:read-only:hover,
+.ctb_form_item input:read-only:focus {border-color:#E5E5E5;cursor:default;}
+.ctb_form_item label.ctn_form_label strong {color:#000;}
 .ctb_form_item label.ctb_form_radio {position:relative;}
-.ctb_form_item label.ctb_form_radio strong {color:#de3112;position:absolute;top:5px;right:5px;}
+.ctb_form_item label.ctb_form_radio strong {color:#000;position:absolute;top:5px;right:5px;}
 .ctb_form_item .mail_check {content:"";position:absolute;top:22px;right:35px;width:22px;height:22px;border:2px solid #000000;padding:0;border-radius:50%;line-height:24px;text-align:center;cursor:pointer;text-align:center;color:#000000;background-color:transparent;}
 .ctb_form_item .mail_check .icon-check {line-height:21px;}
 .ctb_form_item input:focus + label.ctn_form_label,
@@ -687,6 +702,8 @@ a:hover{color:#454545}
 .ctb_form_item select:focus + label.ctn_form_label,
 .ctb_form_item select.focus + label.ctn_form_label {font-size:13px;top:0;padding:2px 15px;background-color:#fff;margin-left:-15px;}
 .ctb_form_item.check_policy {padding-left:.5rem;padding-top:0;}
+.ctb_form_btn {text-align:center;padding:2rem 0;}
+.ctb_form_btn .ctb_button {min-width:24rem;}
 .bg_ctb_step .ctb_form_item input:focus + label.ctn_form_label,
 .bg_ctb_step .ctb_form_item input.focus + label.ctn_form_label,
 .bg_ctb_step .ctb_form_item select:focus + label.ctn_form_label,
@@ -698,7 +715,6 @@ a:hover{color:#454545}
 
 /*2023.09.11*/
 .ctb_form_item .ctb_form_radio span:before {border-radius: 50%; width:23px; height: 23px;}
-.ctb_form_item .ctb_form_radio input[type="radio"]:checked + span:before {background-color: #545454; border-color: #545454;}
 
 .ctb_form_item .ctb_form_radio span:before,
 .ctb_form_item textarea,
@@ -714,7 +730,7 @@ a:hover{color:#454545}
 .ctb_form_item.valid_err .ctb_form_radio span:before,
 .ctb_form_item .valid_err {border-color:#e24d31;}
 .ctb_form_item .valid_err_msg {color: #e24d31; position: absolute; padding-top: 2px; font-size: 14px;}
-.ctb_form_item input[readonly]:hover, .ctb_form_item input[disabled]:hover {border-color:#898989;}
+.ctb_form_item input[readonly]:hover, .ctb_form_item input[disabled]:hover {border-color:#e5e5e5;}
 /*2023.09.11*/
 
 /* modfy for editable filed */
@@ -741,11 +757,10 @@ a:hover{color:#454545}
 .ctb_option_info_wrap .option_info_ctn .option_btn {padding-top:2rem;}
 .ctb_option_info_wrap .option_info_ctn .option_btn .ctb_button {height:52px;line-height:50px;padding:0 4rem;}
 
+.ctb_delivery_option {display:flex;gap:3rem;}
+.ctb_delivery_option_item {flex:1;}
 
-.ctb_delivery_option_item {float:left;width:50%;}
-.ctb_delivery_option_item:nth-child(2n+1) {padding-right:2rem;}
-.ctb_delivery_option_item:nth-child(2n+2) {padding-left:2rem;}
-.ctb_form_item label.ctb_delivery_option_box {background-color:#fff;padding:3rem 2rem;box-sizing:border-box;cursor:pointer;}
+.ctb_form_item label.ctb_delivery_option_box {background-color:#fff;border:2px solid #e5e5e5;padding:3rem 2rem;box-sizing:border-box;cursor:pointer;border-radius:4px;}
 .ctb_delivery_option_box .ctb_delivery_op_tt {border-bottom:2px solid #ddd;display:flex;padding-bottom:2rem;}
 .ctb_delivery_option_box .ctb_delivery_op_tt .ctb_delivery_op_tt_left {flex:1;}
 .ctb_delivery_option_box .ctb_delivery_op_tt .ctb_delivery_op_tt_left strong {display:block;font-family:'genesis-head',sans-serif;font-size:2.5rem;}
@@ -767,13 +782,13 @@ a:hover{color:#454545}
 .ctb_form_item label.ctb_check_policy {display:flex;}
 .ctb_form_item.check_policy label.ctb_check_policy {display:flex;align-items: center;}
 .ctb_check_policy .ctb_input_check {flex:0 0 40px;}
-.ctb_check_policy .ctb_policy_text {flex:1;padding:0 0 0 2rem;}
+.ctb_check_policy .ctb_policy_text {flex:1;padding:0;}
 
 .ctb_form_item.terms_buttons {text-align:right;}
 .ctb_form_item.terms_buttons .ctb_button {padding-left:8rem;padding-right:8rem;}
 
 .ctb_byv_ctn_tt {display:flex;padding-bottom:5rem;justify-content:space-between;align-items:center;}
-.ctb_byv_ctn_tt h2 {font-size:3.6rem;font-family:'genesis-head',sans-serif;}
+.ctb_byv_ctn_tt h2 {font-size:3.6rem;font-family:'genesis-head-light',sans-serif;}
 .btn_page_link {position:relative;font-size:1.8rem;font-family:'genesis-head',sans-serif;margin-left:2rem;padding-left:1.6rem;}
 .btn_page_link:before {position:absolute;left:0;top:-2px;font-family:iconfont!important;font-style:normal;font-weight:600!important;vertical-align:middle;content:"\f10a";margin-right:.5rem;transition:font-size 0.1s;font-size:2rem;}
 .btn_page_link:hover:before {content:"\f10b";font-size:2.2rem;}
