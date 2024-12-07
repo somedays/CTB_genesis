@@ -153,9 +153,9 @@ a:hover{color:#454545}
 .ctb_right_ctn {float:left;width:calc(100% - 350px);}
 
 .ctb_car_estimate {width:45rem;border:2px solid #000;border-radius:4px;float:right;}
-.ctb_car_estimate.no_border {border:0 none;width:35rem;}
+.ctb_car_estimate.no_border {border:2px solid #000;width:35rem;}
 .ctb_car_estimate.no_border .ctb_car_estimate_wrap {padding:3rem;}
-.ctb_car_estimate_wrap {background-color:#fff;padding:4rem;}
+.ctb_car_estimate_wrap {padding:4rem;}
 .ctb_car_estimate_wrap p {text-align: left;}
 .ctb_car_estimate h3 strong {display:block;font-family:'genesis-head',sans-serif;font-size:3rem;}
 .ctb_car_estimate h3 span {display:block;font-family:'genesis-text',sans-serif;font-size:1.4rem;color:#666;}
