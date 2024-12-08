@@ -138,6 +138,7 @@ a:hover{color:#454545}
 .ctb_header_msg .ctb_button + .ctb_button {margin-left:1rem;}
 
 .ctb_ctn_wrap {position:relative;width:100%;max-width:1280px!important;margin:0 auto!important;}
+.ctb_ctn_wrap.inquery {max-width:1080px!important;padding:5rem 0;}
 .ctb_ctn_wrap.full {max-width:100%!important;}
 .ctb_ctn_wrap.with_left_info {padding:5rem;}
 .ctb_ctn_wrap.form_wrap {max-width:1080px!important;}
@@ -413,14 +414,22 @@ a:hover{color:#454545}
 }
 
 
+.ctb_dealer {max-width:1200px;margin:0 auto;position:relative;}
+.ctb_dealer h4 {font-size:3.2rem;padding-bottom:4rem;line-height:4rem;}
+
 /* Dealer Search */
-.ctb_dealer_map {position:relative;width:100%;max-width:1440px!important;margin:0 auto!important;height:calc(100vh - 16rem);z-index:91;background-color:gray;}
-.ctb_dealer_search {position:absolute;top:9rem;left:0;bottom:5rem;width:46rem;background-color:#fff;color:#000;z-index:92;}
+.ctb_dealer_map {position:relative;width:100%;max-width:1440px!important;margin:0 auto!important;height:calc(100vh - 16rem);z-index:1;background-color:gray;}
+.ctb_dealer_search {position:absolute;top: 12rem;left: 3rem;bottom: 2rem;width: 40rem;background-color:#fff;color:#000;z-index:92;}
+.ctb_dealer_search.inquery {top: 12rem;left: 3rem;bottom: 2rem;width: 40rem;z-index:2;}
+
+.ctb_inquiry_head {margin:0 auto;max-width:1080px;position:relative;}
+.ctb_inquiry_head h3 {font-size:4.8rem;padding-bottom:0;text-align:left;font-family:'genesis-head-light',sans-serif;}
+
 .ctb_dealer_info {position:absolute;top: 50%;left:1rem;width:44rem;background-color:#fff;color:#000;border:1px solid #000;border-radius:4px;z-index:2;transform:translateY(-50%);z-index:92;display: none;}
 .ctb_dealer_info.on {display:block;}
 
-.ctb_dealer_search_form {padding:2.5rem;}
-.ctb_dealer_search_title {font-size:2rem;line-height:4rem;font-family:'genesis-head';margin-bottom:2rem;}
+.ctb_dealer_search_form {padding:2.5rem 2.5rem 0 2.5rem;}
+.ctb_dealer_search_title {font-size:2rem;line-height:4rem;font-family:'genesis-head';margin-bottom:1rem;}
 .ctb_dealer_search_form_item {display:flex;}
 .ctb_dealer_search_form_item input {outline:0;border:0 none;border-bottom:1px solid #e5e5e5;font-size:16px;color:#000;height:4rem;line-height:4rem;box-sizing:border-box;width:calc(100% - 100px);font-family:'genesis-text',sans-serif;}
 .ctb_dealer_search_form_item input:hover,
@@ -470,6 +479,20 @@ a:hover{color:#454545}
 .ctb_info_dealer_info .ctb_info_dealer_item span {display:block;font-size:1.4rem;font-family:'genesis-text';color:#767676;}
 .ctb_info_dealer_info .ctb_info_dealer_item strong {display:block;font-size:1.4rem;font-family:'genesis-text';margin-bottom: 0.1rem;}
 
+.ctb_inquiry_ctn {margin:0 auto;}
+.ctb_inquiry_ctn .ctb_inquiry_sctn {padding:5rem 0;}
+.ctb_inquiry_ctn .ctb_inquiry_sctn 
+.ctb_inquiry_ctn .ctb_inquiry_sctn h4 {text-align:left;font-size:4.2rem;}
+.ctb_inquiry_ctn .ctb_inquiry_sctn h5 {font-family: 'genesis-head', sans-serif;color: #121212;padding-bottom: 2rem;text-align:left;font-size:3.2rem;}
+.ctb_inquiry_ctn .ctb_inquiry_sctn .ctb_ctn_text {text-align:left;font-size:1.6rem;font-family:'genesis-text',sans-serif;color:#666;}
+.ctb_inquiry_ctn label.ctb_check_policy {display:flex;align-items:center;margin-top:1.5rem;}
+.ctb_inquiry_ctn.check_policy label.ctb_check_policy {display:flex;align-items: center;}
+.ctb_inquiry_ctn .ctb_input_check {flex:0 0 30px;}
+.ctb_inquiry_ctn .ctb_policy_text {flex:1;padding:0 0 0 1rem;font-size:1.4rem;font-family:'genesis-text',sans-serif;}
+.ctb_inquiry_ctn .ctb_policy_text:only-child {padding:0;}
+.ctb_inquiry_ctn .ctb_policy_text a {color:#1b1b1b;text-decoration: underline;}
+.ctb_inquiry_btn {text-align:center;padding:3rem 0;}
+.ctb_inquiry_btn .ctb_button {min-width:300px;}
 
 /* Car Info */
 .ctb_car_info {float:left;width:calc(100% - 35rem);}
@@ -949,6 +972,9 @@ a:hover{color:#454545}
 .mh_faq dt {position:relative;margin:0;padding:1.8rem 5rem 1.8rem 2rem;border-top:2px solid #e5e5e5;font-family:'genesis-head',sans-serif;font-size:1.8rem;color:#000000;cursor:pointer;}
 .mh_faq dd {display:none;font-family:'genesis-text',sans-serif;margin:0;padding:1.5rem 3.5rem 3.5rem 3.5rem;background-color:#fff;font-size:1.4rem;line-height:2.4rem;}
 .mh_faq dd a {font-family:'genesis-head',sans-serif;text-decoration:underline;}
+.ctb_text_button.expand {margin-bottom:1.6rem;}
+.ctb_text_button.expand span:first-child {padding-right:4.5rem;}
+.ctb_text_button.expand:after {display:none;}
 .mh_faq dt .btn_expand:after,
 .mh_faq dt .btn_expand:before{content:"";display:block;position:absolute;background-color:#000000;height:2px;width:10px;transition:bottom .3s linear .3s,transform .3s linear;}
 .mh_faq dt .btn_expand:after,
