@@ -287,6 +287,25 @@ a:hover{color:#454545}
 .ctb_footer_right .ctb_button.primary {display:inline-block;padding:2rem 3rem;min-width:20rem;text-align:center;}
 .ctb_footer_right .ctb_button.disabled {padding:2rem 3rem;min-width:20rem;text-align:center;}
 
+
+.ctb-footer {background-color:#000;}
+.ctb-footer-links {max-width:1640px;display:flex;justify-content:space-between;align-items:center;margin:0 auto;padding:0 40px;}
+.ctb-footer-ul {display:flex;padding:32px 0;gap:16px;}
+.ctb-footer-ul .ctb-footer-links__item-link {color:#999;cursor:pointer;font-family:'genesis-text',sans-serif;font-size:14px;}
+.ctb-footer-ul .ctb-footer-links__item-link:hover {color:#fff;}
+.ctb-footer .ctb-lang-buttons {display:flex;align-items:center;}
+.ctb-footer .ctb-lang-buttons .lang-buttons_item {font-size:14px;font-family:'genesis-text',sans-serif;line-height:24px;min-width:80px;padding:8px 24px;background-color:#4d4d4d;color:#fff;}
+.ctb-footer .ctb-lang-buttons .lang-buttons_item.active {background-color:#fff;color:#000;}
+.ctb-footer-separator {background-color:#1a1a1a;height: 1px;margin: auto;width: 100%;}
+.ctb-footer-socials {max-width:1640px;display:flex;justify-content:space-between;align-items:center;margin:0 auto;padding:0 40px;height:96px;}
+.ctb-footer-socials .right {display:flex;flex-direction:column;justify-content:center;align-items:flex-end;column-gap:26px;}
+.ctb-footer-socials .right span {font-family:'genesis-text',sans-serif;font-size:14px;line-height:24px;color:#fff;margin-bottom:4px;}
+.ctb-footer-socials .right .icons-list {display:flex;column-gap:16px;align-items:center;flex-direction:row;}
+.ctb-footer-socials .right .icons-list a {padding:4px;}
+.ctb-footer-bottom {display:flex;align-items:center;justify-content:center;flex-direction:column;padding:0 40px;margin:48px auto 0 auto;}
+.ctb-footer-bottom .footer-logo img {width:128px;}
+.ctb-footer-bottom p {font-size:14px;line-height:24px;text-align:center;font-family:'genesis-text',sans-serif;color:#999;padding:0 60px;margin-bottom:48px;}
+
 .ctb_container {padding-top:8rem;}
 /*.ctb_header.myhome + .ctb_container {padding-top:0;} */
 .ctb_container:after {content:"";display:block;clear:both;}
