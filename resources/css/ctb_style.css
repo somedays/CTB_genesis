@@ -154,8 +154,8 @@ a:hover{color:#454545}
 .ctb_right_ctn {float:left;width:calc(100% - 350px);}
 
 .ctb_car_estimate {width:45rem;border:2px solid #000;border-radius:4px;float:right;}
-.ctb_car_estimate.no_border {border:2px solid #000;width:35rem;}
-.ctb_car_estimate.no_border .ctb_car_estimate_wrap {padding:3rem;}
+.ctb_car_estimate.no_border {border:0;width:35rem;}
+.ctb_car_estimate.no_border .ctb_car_estimate_wrap {padding:0;}
 .ctb_car_estimate_wrap {padding:4rem;}
 .ctb_car_estimate_wrap p {text-align: left;}
 .ctb_car_estimate h3 strong {display:block;font-family:'genesis-head',sans-serif;font-size:3rem;}
@@ -438,7 +438,7 @@ a:hover{color:#454545}
 
 /* Dealer Search */
 .ctb_dealer_map {position:relative;width:100%;max-width:1440px!important;margin:0 auto!important;height:calc(100vh - 16rem);z-index:1;background-color:gray;}
-.ctb_dealer_search {position:absolute;top: 12rem;left: 3rem;bottom: 2rem;width: 40rem;background-color:#fff;color:#000;z-index:92;}
+.ctb_dealer_search {position:absolute;top: 2rem;left: 3rem;bottom: 2rem;width: 40rem;background-color:#fff;color:#000;z-index:92;}
 .ctb_dealer_search.inquery {top: 12rem;left: 3rem;bottom: 2rem;width: 40rem;z-index:2;}
 
 .ctb_inquiry_head {margin:0 auto;max-width:1080px;position:relative;}
