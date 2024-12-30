@@ -590,23 +590,47 @@ a:hover{color:#454545}
 .ctb_car_info_byv_item .img_item {flex:0 0 94px;}
 .ctb_car_info_byv_item .img_item img {max-width:100%;max-height:100%;}
 .ctb_car_info_byv_item .info_item {flex:1;color:#666;}
-.ctb_car_info_byv_item .info_item strong {display:block;font-family:'genesis-text';font-size:1.7rem;font-weight:400;}
+.ctb_car_info_byv_item .info_item strong {display:block;font-family:'genesis-text';font-size:1.7rem;font-weight:400;line-height:3rem;}
 .ctb_car_info_byv_item .info_item span {display:block;font-family:'genesis-text';font-size:1.5rem;line-height:16px;padding-top:.5rem;}
 .ctb_car_info_byv_item .price_item {display:flex;align-items:center;}
 .ctb_car_info_byv_item .price_item strong {display:inline-block;font-size:1.8rem;}
 .ctb_car_info_byv_item .price_item .btn_transh {border:0 none;background-color:transparent;cursor:pointer;padding:0;margin:0 1rem 0 0;}
 .ctb_car_info_byv_item .price_item .btn_transh img {width:21px;height:21px;}
 .ctb_car_info_byv_item .time_item {display:flex;flex-direction:column;}
+.ctb_car_info_detail_item .ctb_car_info_byv_item:last-child {padding-top:0;border-bottom:0 none;}
+
+.ctb_car_info_service {padding:3rem 0;float:left;width:100%;}
+.ctb_car_info_service_item {padding:3rem 0 2rem 0;border-bottom:1px solid #E5E5E5;}
+.ctb_car_info_service_tt {font-family:'genesis-head-light',sans-serif;font-size:3rem;}
+.ctb_car_info_service_stt {font-family:'genesis-head',sans-serif;font-size:2rem;}
+.ctb_car_info_service_desc {font-family:'genesis-text',sans-serif;font-size:1.6rem;color:#707070;padding:1rem 0;}
+.ctb_car_info_service_desc p {padding:.6rem 0;}
+.ctb_car_info_service_desc .link {text-decoration: underline;font-size:1.4rem;cursor:pointer;display:inline-block;padding:.6rem 0;}
+.ctb_car_info_service_desc .link:hover {color:#000;}
 
 .ctb_car_info_btm_area {float:left;width:100%;}
 .ctb_car_info_btm_area:after {content:"";display:block;clear:both;}
 .ctb_car_tech_data h3 {display:flex;justify-content:space-between;margin-bottom:1rem;align-items:center;}
 .ctb_car_tech_data h3 strong {font-size:3.4rem;line-height:1.5;font-family:'genesis-head',sans-serif;}
 .ctb_car_tech_gp {display:flex;justify-content:space-around;align-items:center;padding-bottom:5rem;}
+.ctb_dialog .ctb_car_tech_gp {padding-top:3rem;}
 .ctb_car_tech_item .ctb_car_tech_info {display:flex;justify-content:center;align-items:center;}
-.ctb_car_tech_item .ctb_car_tech_info.two_info {justify-content:space-around;}
 .ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_icon {padding-right:1rem;}
-.ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_text {font-family:'genesis-text',sans-serif;font-size:1.6rem;line-height:2.7rem;}
+.ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_text {font-family:'genesis-head-light',sans-serif;font-size:1.8rem;}
+.ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_text span {font-family:'geneiss-text',sans-serif;font-size:1.3rem;padding-left:.3rem;}
+
+.ctb_service_info {padding:1rem 0 3rem 0;}
+.ctb_service_info_item {padding:2rem 0;}
+.ctb_service_info_tt {font-size:2.6rem;font-family:'genesis-head',sans-serif;}
+.ctb_service_info_list {padding:1rem 0;}
+.ctb_service_info_list li {line-height:2.6rem;font-size:1.6rem;color:#666;padding-left:1rem;position:relative;}
+.ctb_service_info_list li:before {content:"";display:block;position:absolute;top:-8px;left:0;margin-top:2rem;width:3px;height:3px;border-radius:2px;background-color:#666;}
+.ctb_service_info_txt {color:#000;font-size:1.6rem;font-family:'genesis-text',sans-serif;}
+.ctb_service_info_stxt {color:#666;font-size:1.5rem;}
+.ctb_service_info_gp {padding:1rem 0;display:flex;}
+.ctb_service_info_gp .ctb_service_info_img {flex:0 0 50%;}
+.ctb_service_info_gp .ctb_service_info_item {flex:0 0 50%;padding:0 0 0 2rem;}
+.ctb_service_info_gp .ctb_service_info_txt {padding:1rem 0;}
 
 .ctb_car_fitting_acc {display:flex;flex-wrap:wrap;gap:2rem;}
 .ctb_car_fitting_acc_item {width:calc((100% / 3) - 1.5rem);background-color:#fff;border:1px solid #e5e5e5;padding:2rem;border-radius:4px;}
@@ -662,10 +686,11 @@ a:hover{color:#454545}
 .icon_arrow:before{transform:rotate(45deg);right:calc(1rem + 6px)}
 .icon_arrow:after{transform:rotate(135deg);right:32px;right:1rem}
 
-.ctb_car_info_detail_item {position:relative;border-bottom:2px solid #e8e6e4;}
+.ctb_car_info_detail_item {position:relative;border-bottom:1px solid #e8e6e4;}
 .ctb_car_info_detail_item.bg_gray {background-color:#f5f5f5;}
-.ctb_car_info_detail_item:first-child {border-top:2px solid #e8e6e4;}
-.ctb_car_info_detail_item .detail_item_tt {position:relative;font-size:2rem;line-height:1.3;padding:2rem 4rem 2rem 2rem;font-family:'genesis-head';cursor:pointer;transition:background-color .3s;color:#000000;justify-content:space-between;align-items:center;display:flex;}
+.ctb_car_info_detail_item:first-child {border-top:1px solid #e8e6e4;}
+.ctb_car_info_detail .ctb_car_info_detail_item:first-child {border-top:0 none;}
+.ctb_car_info_detail_item .detail_item_tt {position:relative;font-size:2rem;line-height:1.3;padding:2rem 4rem 2rem 0;font-family:'genesis-head';cursor:pointer;transition:background-color .3s;color:#000000;justify-content:space-between;align-items:center;display:flex;}
 .ctb_car_info_detail_item .detail_item_ctn {height:0;overflow:hidden;transition:height .3s;box-sizing:border-box;}
 .ctb_car_info_detail_item .detail_item_tt.on + .detail_item_ctn {height:auto;overflow:auto;}
 
@@ -1364,12 +1389,10 @@ a:hover{color:#454545}
 .consent_area .icon-tooltip .icon-close {border: 0; background-color: #fff;}
 .consent_area .icon-tooltip:before {cursor: pointer;}
 
-
-
 .ctb_dialog {position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.3);z-index:90;display:none;}
 .ctb_dialog.finance .ctb_dialog_wrap {width:1280px;}
 .ctb_dialog.on {display:block;}
-.ctb_dialog .ctb_dialog_wrap {position:fixed;top:50%;left:50%;max-width:1280px;max-height:90vh;transform:translate(-50%,-50%);background-color:#fff;padding:4rem 5rem;overflow:auto;}
+.ctb_dialog .ctb_dialog_wrap {position:fixed;top:50%;left:50%;max-width:1280px;max-height:90vh;transform:translate(-50%,-50%);background-color:#fff;padding:4rem 5rem;overflow:auto;min-width:1000px;}
 .ctb_dialog .ctb_dialog_wrap.finance_simulator {padding:3rem; width: 90%;}
 .ctb_dialog .ctb_dialog_close {text-align:right;}
 .ctb_dialog_header {margin-top:-25px;}
@@ -1390,7 +1413,7 @@ a:hover{color:#454545}
 .ctb_finance_head + .finance_price_head {display:none;}
 .ctb_dialog .ctb_dialog_wrap.finance_simulator {padding:3rem; width:90%;}
 
-.ctb_dialog .ctb_car_info_gp {padding:5rem 0;}
+.ctb_dialog .ctb_car_info_gp {padding:3rem 0;}
 
 
 .ctb_finance_ctn {display:flex;}
