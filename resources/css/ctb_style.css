@@ -72,7 +72,7 @@ a:hover{color:#454545}
 .ctb_button.text:after {display:none;}
 
 /* Header */
-.ctb_header {background-color:#000;display:flex;justify-content:space-between;position:fixed;top:0;left:0;width:100%;height:8rem;box-sizing:border-box;border-bottom:1px solid rgba(0,0,0,.1);z-index:90;transition:background-color .3s,top .3s;}
+.ctb_header {background-color:#000;display:flex;justify-content:space-between;position:fixed;top:0;left:0;width:100%;height:8rem;box-sizing:border-box;border-bottom:1px solid rgba(0,0,0,.1);z-index:99;transition:background-color .3s,top .3s;}
 .ctb_header.myhome {border-bottom:0 none;}
 .ctb_header.myhome.fixed {background-color:#fff;border-bottom:1px solid rgba(0,0,0,.1);}
 .ctb_header.myhome.hide {top:-8rem;}
@@ -177,8 +177,8 @@ a:hover{color:#454545}
 .ctb_estimate_price_info .price_item .price_item_ctn {color:#5d5d5d;}
 .ctb_estimate_price_info .price_item.total_price .price_item_tt {color:#1c1b1b;font-size:1.6rem;font-family:'genesis-head',sans-serif;}
 .ctb_estimate_price_info .price_item.total_price .price_item_ctn {color:#1c1b1b;font-size:2rem;font-family:'genesis-head',sans-serif;}
-.ctb_estimate_price_info .price_item.total_price .price_item_ctn span {display:inline-block;vertical-align:middle;}
-.ctb_estimate_price_info .price_item.total_price .price_item_ctn sup {font-size:1.3rem;padding-left:1px;}
+.ctb_estimate_price_info .price_item.total_price .price_item_ctn > span {display:inline-block;vertical-align:middle;}
+.ctb_estimate_price_info .price_item.total_price .price_item_ctn > sup {font-size:1.3rem;padding-left:1px;}
 .ctb_estimate_price_info .price_gp .address_info span {display:block;font-size:1.4rem;font-family:'genesis-text',sans-serif;}
 .ctb_estimate_price_info .option_price li {font-size:1.4rem;font-family:'genesis-text',sans-serif;padding-left:.5rem;}
 .ctb_estimate_price_info .option_price li:before {content:"·";display:inline-block;padding-right:0.5rem;font-size:1.8rem;vertical-align:middle;}
@@ -215,13 +215,14 @@ a:hover{color:#454545}
 .ctb_estimate_price_info .list_item:before {content:"ㆍ";}
 .ctb_estimate_price_info .text_item {font-size:1.4rem;line-height:2.5rem;font-family:'genesis-text',sans-serif;}
 
-.ctb_estimate_price_info .payment_method {border-top:1px solid #ccc;padding-top:1.5rem;padding-bottom:0;}
+.ctb_estimate_price_info .payment_method {padding-top:3rem;padding-bottom:0;}
 .ctb_estimate_price_info .payment_method .payment_tab {display:flex;}
 .ctb_estimate_price_info .payment_method .tab_item {flex:1;text-align:center;margin-top:2rem;height:4rem;line-height:4rem;font-family:'genesis-head',sans-serif;font-size: 1.5rem;color:#BEBEBE;cursor:pointer;border-bottom:1px solid #BEBEBE;}
 .ctb_estimate_price_info .payment_method .tab_item:hover {color:#000;}
 .ctb_estimate_price_info .payment_method .tab_item.active {border-bottom:1px solid #000;color:#000;}
 .ctb_estimate_price_info .payment_method .payment_tab_ctn {padding-top:1.5rem;}
 .ctb_estimate_price_info .payment_method .loan_desc {font-size:1.3rem;font-family:'genesis-text',sans-serif;line-height:1.5rem;padding-bottom:1rem;}
+.ctb_estimate_price_info .payment_method .cash_desc {padding-top:10px; font-size: 1.4rem;}
 
 .ctb_estimate_price_info .loan_status_box {padding:1rem 0;}
 .ctb_estimate_price_info .loan_status {display:inline-block;border:1px solid #000;color:#000;border-radius:2px;font-size:1.5rem;font-family:'genesis-head',sans-serif;padding:.5rem 1rem .3rem 1rem;}
@@ -231,7 +232,8 @@ a:hover{color:#454545}
 .ctb_estimate_price_info .loan_status_desc {padding: 10px; font: inherit; font-size: 1.4rem;}
 
 .vehicle_desc_list {padding:3rem 0;}
-.vehicle_desc_list > div {font-size:1.4rem;font-family:'genesis-text',sans-serif;padding-left:1rem;position:relative;color:#666666;line-height:2.2rem;}
+.vehicle_desc_list > div {font-size:1.4rem;font-family:'genesis-text',sans-serif;padding-left:1rem;position:relative;color:#666666;line-height:2.2rem; padding-bottom: 30px;}
+.vehicle_desc_list > div:last-child {padding-bottom: 0;}
 .vehicle_desc_list > div:before {content:"·";display:block;padding-right:0.5rem;font-size:1.8rem;position:absolute;top:0;left:0;}
 
 .side_step {padding:2rem 0 0 0;}
@@ -260,7 +262,7 @@ a:hover{color:#454545}
 .side_step ol li.complete:nth-child(4) h4:before, 
 .side_step ol li.complete:nth-child(5) h4:before {font-family:iconfont!important;font-style:normal;font-weight:400!important;vertical-align:middle;content:"\f105"}
 
-.ctb_disclaimer {background-color:#e5e5e5;max-width:100%!important;padding:0;}
+.ctb_disclaimer {max-width:100%!important;padding:20px 0;}
 .ctb_disclaimer_wrap {width:100%;max-width:1440px;margin:0 auto;overflow:auto;padding:0 7rem;box-sizing:border-box;}
 .ctb_disclaimer_wrap .disc_header {display:flex;justify-content: space-between;align-items: center;padding:2rem 0 0 0;border-bottom:2px solid #ddd;}
 .ctb_disclaimer_wrap .disc_header .copylight {font-family: 'genesis-text',sans-serif;font-size: 14px;padding:2rem 2rem 2rem 0;}
@@ -296,7 +298,6 @@ a:hover{color:#454545}
 .ctb_footer_right .ctb_button {padding:2rem;margin-left:2rem;}
 .ctb_footer_right .ctb_button.primary {display:inline-block;padding:2rem 3rem;min-width:20rem;text-align:center;}
 .ctb_footer_right .ctb_button.disabled {padding:2rem 3rem;min-width:20rem;text-align:center;}
-
 
 .ctb-footer {background-color:#000;}
 .ctb-footer-links {max-width:1640px;display:flex;justify-content:space-between;align-items:center;margin:0 auto;padding:0 40px;}
@@ -392,11 +393,11 @@ a:hover{color:#454545}
 .ctb_popup {position:fixed;top:0;left:0;right:0;bottom:0;background-color:#f5f5f5;z-index:90;display:none;}
 .ctb_popup.bg_white {background-color:#fff;}
 .ctb_popup.on {display:block;}
-.ctb_popup .ctb_popup_close {display:block;position:absolute;top:4rem;right:4rem;z-index:99;border:0 none;font-size:2rem;background:transparent;cursor:pointer;color:#1c1b1b;}
+.ctb_popup .ctb_popup_close {display:block;position:absolute;top: 12rem;right: 3rem;z-index:99;border:0 none;font-size:2rem;background:transparent;cursor:pointer;color:#1c1b1b;}
 .ctb_popup .ctb_popup_close:hover {opacity:.6;}
 .ctb_popup .ctb_popup_close:active {opacity:.8;}
 .ctb_popup .ctb_popup_content {padding:5rem 10rem;overflow:auto;height:100%;}
-.ctb_popup .ctb_pop_wrap {margin:0 auto;max-width:1100px;display:flex;}
+.ctb_popup .ctb_pop_wrap {margin:0 auto;max-width:1100px;display:flex;margin-top: 100px;}
 .ctb_popup .ctb_pop_wrap.full {max-width:100%;display:flex;}
 .ctb_popup .ctb_pop_ctn_left {flex:0 0 35rem;background-color:#fff;height:100vh;text-align:center;box-sizing:border-box;}
 .ctb_popup .ctb_pop_ctn_left .left_logo {padding-top:10rem;text-align:center;color:#000000;font-size:2rem;}
@@ -442,7 +443,6 @@ a:hover{color:#454545}
     .ctb_pop_confirm .confirm_btns .ctb_button.primary {border-color:#000000;}
 }
 
-
 .ctb_dealer {max-width:1200px;margin:0 auto;position:relative;}
 .ctb_dealer h4 {font-size:3.2rem;padding-bottom:4rem;line-height:4rem;}
 
@@ -450,8 +450,9 @@ a:hover{color:#454545}
 .ctb_dealer_map {position:relative;width:100%;max-width:1440px!important;margin:0 auto!important;height:calc(100vh - 16rem);z-index:1;background-color:gray;}
 .ctb_dealer_search {position:absolute;top: 2rem;left: 3rem;bottom: 2rem;width: 40rem;background-color:#fff;color:#000;z-index:92;border-radius:8px;}
 .ctb_dealer_search.inquery {top: 12rem;left: 3rem;bottom: 2rem;width: 40rem;z-index:2;}
+.ctb_dealer_search.fleet_req {top:10rem;}
 
-.ctb_inquiry_head {margin:0 auto;max-width:1080px;position:relative;}
+.ctb_inquiry_head {margin:0 auto;max-width:1080px;position:relative; padding-top:50px;}
 .ctb_inquiry_head h3 {font-size:4.8rem;padding-bottom:0;text-align:left;font-family:'genesis-head-light',sans-serif;}
 
 .ctb_dealer_info {position:absolute;top: 50%;left:1rem;width:44rem;background-color:#fff;color:#000;border:1px solid #000;border-radius:4px;z-index:2;transform:translateY(-50%);z-index:92;display: none;}
@@ -523,11 +524,14 @@ a:hover{color:#454545}
 .ctb_inquiry_btn {text-align:center;padding:3rem 0;}
 .ctb_inquiry_btn .ctb_button {min-width:300px;}
 
+.ctb_check_inline {display:flex; margin-top:1.5rem;}
+.ctb_check_inline .ctb_input_check {flex:0 0 30px;}
+
 /* Car Info */
 .ctb_car_info {float:left;width:calc(100% - 35rem);}
 .ctb_car_info.ctb_byv {width:calc(100% - 40rem);}
 .ctb_car_info:after {content:"";display:block;clear:both;}
-.ctb_car_info_gp {float:left;padding:0 0 50px 0;width:100%;}
+.ctb_car_info_gp {float:left;padding:0 0 25px 0;width:100%;}
 .ctb_car_info_gp.w50 {width:50%;}
 .ctb_car_info_tt,
 .ctb_car_info_gp h3 {display:flex;justify-content:space-between;margin-bottom:2rem;align-items:center;}
@@ -586,6 +590,9 @@ a:hover{color:#454545}
 .ctb_car_info_acc_item .ctb_input_check span img {width: 20px;height: 20px;margin-top: 8px;margin-left: 8px;}
 .ctb_car_info_acc_item .price_acc .acc_remove {width:auto;height:3.2rem;line-height:3rem;padding:0 2rem;background-color:#000;color:#fff;font-size:1.4rem;border:1px solid #000;margin-left:1rem;border-radius:2px;cursor:pointer;transition:all .3s;}
 .ctb_car_info_acc_item .price_acc .acc_remove:hover {border:1px solid #000;background-color:#fff;color:#000;}
+.ctb_car_info_acc.total .price_item{font-size: 2.2rem;text-align: right;font-weight: bold;}
+.ctb_car_info_acc.multiple .ctb_car_info_byv_item {margin: 15px 0;}
+.ctb_car_info_acc.multiple .ctb_car_info_byv_item:last-child {padding-top:0;margin-bottom: 0;}
 
 .ctb_car_info_byv_item {display:flex;align-items:center;}
 .ctb_car_info_byv_item.flex_start {align-items:flex-start;}
@@ -593,7 +600,7 @@ a:hover{color:#454545}
 .ctb_car_info_byv_item:only-child {border-bottom:1px solid #e5e5e5;padding-bottom:2rem;padding-top:0;}
 .ctb_car_info_byv_item .img_item {flex:0 0 94px;}
 .ctb_car_info_byv_item .img_item img {max-width:100%;max-height:100%;}
-.ctb_car_info_byv_item .info_item {flex:1;color:#666;}
+.ctb_car_info_byv_item .info_item {flex:1;color:#666;line-height: 3rem;}
 .ctb_car_info_byv_item .info_item strong {display:block;font-family:'genesis-text';font-size:1.7rem;font-weight:400;line-height:3rem;}
 .ctb_car_info_byv_item .info_item span {display:block;font-family:'genesis-text';font-size:1.5rem;line-height:16px;padding-top:.5rem;}
 .ctb_car_info_byv_item .price_item {display:flex;align-items:center;}
@@ -602,7 +609,6 @@ a:hover{color:#454545}
 .ctb_car_info_byv_item .price_item .btn_transh img {width:21px;height:21px;}
 .ctb_car_info_byv_item .time_item {display:flex;flex-direction:column;}
 .ctb_car_info_detail_item .ctb_car_info_byv_item:last-child {padding-top:0;border-bottom:0 none;}
-
 .ctb_car_info_service {padding:3rem 0;float:left;width:100%;}
 .ctb_car_info_service_item {padding:3rem 0 2rem 0;border-bottom:1px solid #E5E5E5;}
 .ctb_car_info_service_tt {font-family:'genesis-head-light',sans-serif;font-size:3rem;}
@@ -619,7 +625,7 @@ a:hover{color:#454545}
 .ctb_car_tech_gp {display:flex;justify-content:space-around;align-items:center;padding-bottom:5rem;}
 .ctb_dialog .ctb_car_tech_gp {padding-top:3rem;}
 .ctb_car_tech_item .ctb_car_tech_info {display:flex;justify-content:center;align-items:center;}
-.ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_icon {padding-right:1rem;}
+.ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_icon {padding-right:1rem;line-height: 1.2rem;}
 .ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_text {font-family:'genesis-head-light',sans-serif;font-size:1.8rem;}
 .ctb_car_tech_item .ctb_car_tech_info .ctb_car_tech_text span {font-family:'geneiss-text',sans-serif;font-size:1.3rem;padding-left:.3rem;}
 
@@ -638,10 +644,10 @@ a:hover{color:#454545}
 
 .ctb_car_fitting_acc {display:flex;flex-wrap:wrap;gap:2rem;}
 .ctb_car_fitting_acc_item {width:calc((100% / 3) - 1.5rem);background-color:#fff;border:1px solid #e5e5e5;padding:2rem;border-radius:4px;}
-.ctb_car_fitting_acc_item .ctn_fitting_acc_top {display:flex;}
+.ctb_car_fitting_acc_item .ctn_fitting_acc_top {display:flex;min-height: 11rem;}
 .ctb_car_fitting_acc_item .ctb_fitting_img {flex:0 0 8rem;}
 .ctb_car_fitting_acc_item .ctb_fitting_img img {width:100%;max-height:100%;object-fit: cover;}
-.ctb_car_fitting_acc_item .ctb_fitting_info {display:flex;height:13rem;box-sizing:border-box;align-items:flex-end;flex-direction:column;justify-content:space-between;}
+.ctb_car_fitting_acc_item .ctb_fitting_info {display:flex;min-height: 5rem;box-sizing:border-box;align-items:flex-end;flex-direction:column;justify-content:space-between;}
 .ctb_car_fitting_acc_item .ctb_fitting_info .price_acc {display:flex;justify-content:space-between;width:100%;}
 .ctb_car_fitting_acc_item .info_acc {flex:1;box-sizing:border-box;padding-left:1.5rem;}
 .ctb_car_fitting_acc_item .info_acc strong {display:block;font-family:'genesis-text';font-size:1.5rem;line-height:2rem;color:#666;}
@@ -677,7 +683,7 @@ a:hover{color:#454545}
 /*2023.09.11*/
 
 .ctb_text_button{display:inline-flex;align-items:center;position:relative;padding:0;background-color:transparent;border:none;outline:none;font-style:inherit;cursor:pointer;margin-top:1.6rem;}
-.ctb_text_button span {font-family:'genesis-text',sans-serif;font-size:1.8rem;display:inline-block;text-align:right;position:relative;color:#000000;}
+.ctb_text_button span {font-family:'genesis-text',sans-serif;font-size:1.7rem;display:inline-block;text-align:right;position:relative;color:#000000;}
 .ctb_text_button:hover span {color:#000;}
 .ctb_text_button:after {content:"\f101";display:inline-block;font-size:1.2rem;font-family:'iconfont';font-weight:500;padding-left:.7rem;}
 .icon_arrow:after,
@@ -731,12 +737,24 @@ a:hover{color:#454545}
 .ctb_car_care_detail_item .detail_item_ctn_row ul {font-size: 1.5rem;}
 .ctb_car_care_detail_item .detail_item_ctn_row li {padding-bottom: 5px;}
 
+.ctb_car_care_info {padding: 40px 0 !important;}
+.ctb_car_care_detail_item {position:relative;border-bottom:2px solid #e8e6e4;}
+.ctb_car_care_detail_item.bg_gray {background-color:#f5f5f5;}
+.ctb_car_care_detail_item:first-child {border-top:2px solid #e8e6e4;}
+.ctb_car_care_detail_item .detail_item_tt {position:relative;font-size: 1.5rem;line-height:1.3;padding:2rem 4rem 2rem 2rem;font-family:'genesis-head';cursor:pointer;transition:background-color .3s;color:#000000;justify-content:space-between;align-items:center;display:flex;}
+.ctb_car_care_detail_item .detail_item_ctn {height:0;overflow:hidden;transition:height .3s;box-sizing:border-box;}
+.ctb_car_care_detail_item .detail_item_tt.on + .detail_item_ctn {height:auto;overflow:auto;}
+.ctb_car_care_detail_item .detail_item_ctn_row {padding:0 4rem 1rem 2rem;box-sizing:border-box; color:#999}
+.ctb_car_care_detail_item .detail_item_ctn_row p {font-size: 1.5rem;}
+.ctb_car_care_detail_item .detail_item_ctn_row p.price {padding-bottom: 20px;text-align: right;}
+.ctb_car_care_detail_item .detail_item_ctn_row ul {list-style: disc;padding-left: 20px;font-size: 1.5rem;}
+.ctb_car_care_detail_item .detail_item_ctn_row li {padding-bottom: 5px;}
+
 .ctb_car_spec_info {clear:both;display:flex;justify-content:space-between;}
 .ctb_car_spec_info .ctb_car_spec_item {background-color:#fff;width:172px;text-align:center;}
 .ctb_car_spec_info .ctb_car_spec_item .spec_info {padding:5px 0;}
 .ctb_car_spec_info .ctb_car_spec_item .spec_info span {display:block;font-family:'genesis-text',sans-serif;font-size:1.4rem;padding:5px 0;}
 .ctb_car_spec_info .ctb_car_spec_item .spec_info strong {display:block;font-family:'genesis-head',sans-serif;font-size:1.4rem;color:#000000;padding:5px 0;}
-
 
 .view360_box {margin:5% 15%;position:relative;}
 .view360_tt {font-family:'genesis-head',sans-serif;}
@@ -752,7 +770,7 @@ a:hover{color:#454545}
 .c-rotation-3d .rotation-3d__360-circle{width:84%}
 .c-rotation-3d .rotation-3d__360-indicator-wrapper{position:absolute;left:50%;bottom:7.5%;-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0)}@media (min-width:768px){.c-rotation-3d .rotation-3d__360-indicator-wrapper{bottom:12.5%}}
 
-.form_wrap h3 {font-size:4rem;padding:4rem 0 2rem 0;font-family:'genesis-head-light',sans-serif;}
+.form_wrap h3 {font-size:4rem;padding:6rem 0 5rem 0;font-family:'genesis-head-light',sans-serif;}
 .ctb_form_wrap {padding:0 0 50px 0;box-sizing:border-box;}
 /*terms_condition_wrap */
 .ctb_form_wrap > h3 {padding:3rem 0 3rem 2rem;}
@@ -770,7 +788,6 @@ a:hover{color:#454545}
 .ctb_form_item .ctb_form_radio input[type="radio"]:checked + span {color:#000000;}
 .ctb_form_item .ctb_form_radio input[type="radio"]:checked + span:before {background-color:#fff;box-shadow:inset 0 0 0 5px #000;border-color:#000;transition:background-color .3s,box-shadow .3s;}
 
-
 .ctb_form_item .ctn_location_list {position:absolute;top:53px;left:2rem;right:2rem;background-color:#fff;border:2px solid rgba(0,0,0,0.2);z-index:1;max-height:200px;overflow:auto;}
 .ctb_form_item .ctn_location_list li {padding:1rem;font-family:'genesis-head',sans-serif;font-size:1.4rem;color:#555;}
 .ctb_form_item .ctn_location_list li:hover {background-color:#f2f2f2;cursor:pointer;}
@@ -782,7 +799,7 @@ a:hover{color:#454545}
 
 
 .ctb_form_item.w50 {width:calc(50% - 1.5rem);}
-.ctb_form_item label {display:block;font-size:14px;font-family:'genesis-text',sans-serif;padding:0;}
+.ctb_form_item label {display:block;font-size:14px;font-family:'genesis-text',sans-serif;padding:0 0 5px 0;}
 .ctb_form_item input,
 .ctb_form_item select {border:0 none;border-bottom:1px solid #E5E5E5;padding:0;background-color:transparent;box-sizing:border-box;width:100%;height:45px;font-size:14px;font-family:'genesis-text',sans-serif;outline:0;}
 .ctb_form_item input:focus,
@@ -829,7 +846,7 @@ a:hover{color:#454545}
 
 .ctb_form_item.valid_err .ctb_form_radio span:before,
 .ctb_form_item .valid_err {border-color:#e24d31;}
-.ctb_form_item .valid_err_msg {color: #e24d31; position: absolute; padding-top: 2px; font-size: 14px;}
+.ctb_form_item .valid_err_msg {color: #e24d31;position: absolute;padding-top: 2px;font-size: 14px;bottom: -22px;}
 .ctb_form_item input[readonly]:hover, .ctb_form_item input[disabled]:hover {border-color:#e5e5e5;}
 /*2023.09.11*/
 
@@ -859,8 +876,7 @@ a:hover{color:#454545}
 
 .ctb_delivery_option {display:flex;gap:3rem;}
 .ctb_delivery_option_item {flex:1;}
-
-.ctb_form_item label.ctb_delivery_option_box {background-color:#fff;border:2px solid #e5e5e5;padding:3rem 2rem;box-sizing:border-box;cursor:pointer;border-radius:4px;}
+.ctb_form_item label.ctb_delivery_option_box {background-color:#fff;border:2px solid #e5e5e5;padding:3rem 2rem;box-sizing:border-box;cursor:pointer;border-radius:4px;min-height: 300px;}
 .ctb_delivery_option_box .ctb_delivery_op_tt {border-bottom:2px solid #ddd;display:flex;padding-bottom:2rem;}
 .ctb_delivery_option_box .ctb_delivery_op_tt .ctb_delivery_op_tt_left {flex:1;}
 .ctb_delivery_option_box .ctb_delivery_op_tt .ctb_delivery_op_tt_left strong {display:block;font-family:'genesis-head',sans-serif;font-size:2.5rem;}
@@ -882,7 +898,7 @@ a:hover{color:#454545}
 .ctb_form_item label.ctb_check_policy {display:flex;}
 .ctb_form_item.check_policy label.ctb_check_policy {display:flex;align-items: center;}
 .ctb_check_policy .ctb_input_check {flex:0 0 40px;}
-.ctb_check_policy .ctb_policy_text {flex:1;padding:0;}
+.ctb_check_policy .ctb_policy_text {flex:1;}
 
 .ctb_form_item.terms_buttons {text-align:right;}
 .ctb_form_item.terms_buttons .ctb_button {padding-left:8rem;padding-right:8rem;}
@@ -905,6 +921,7 @@ a:hover{color:#454545}
 .ctb_byv_img .ctb_byv_car_tt .ctb_personal_info span {font-family:'genesis-text', sans-serif;padding-left:0;}
 .ctb_byv_img .ctb_byv_car_tt .ctb_personal_info span > strong {display:inline-block;font-size:1.6rem;font-family:'genesis-head', sans-serif;line-height:2rem;padding:0;}
 .ctb_byv_img .ctb_byv_car_img {padding:2rem 0;}
+.ctb_byv_img .ctb_byv_car_img img {max-width: 80%;}
 
 .ctb_byv_car_step_wrap {width:47rem;text-align:center;margin:0 auto;}
 .ctb_byv_car_step_wrap h4 {font-family:'genesis-text', sans-serif;}
@@ -994,6 +1011,7 @@ a:hover{color:#454545}
 .mh_ctn_btm_btn .ctb_button {display:inline-block;margin-top:5rem;padding:2rem 8rem;}
 
 .mh_ctn_img_left {width:calc(100% - 45rem);position:relative;}
+.mh_ctn_img_left img {max-width: 70%;}
 
 .mh_ctn_campaign {background-color:#000000;color:#fff;font-family:'genesis-head', sans-serif;font-size:1.8rem;position:absolute;top:0;left:20rem;padding:1rem 2rem;text-align:left;line-height:2.4rem;}
 .mh_ctn_campaign + img {margin-top:10rem;}
@@ -1006,14 +1024,16 @@ a:hover{color:#454545}
 .mh_ctn_wrap .ess_date_info li span,
 .mh_ctn_wrap .ess_date_info li strong {display:inline-block;vertical-align:middle;}
 .mh_ctn_wrap .ess_date_info li strong {font-size:1.4rem;font-family:'genesis-head',sans-serif;padding-left:.5rem;}
-.mh_ctn_wrap .ctb_car_estimate h3 {color:#1c1b1b;padding-bottom:2rem;border-bottom:1px solid #e5e5e5;}
+.mh_ctn_wrap .ctb_car_estimate h3 {color:#1c1b1b;padding-bottom:0;}
 .mh_ctn_wrap .ctb_car_estimate_wrap {text-align:left;}
 .mh_ctn_wrap .ctb_estimate_price_info .price_gp.total_price {padding-bottom:1.5rem;}
 .mh_ctn_wrap .ctb_estimate_price_info .price_gp.bottom_border {border-bottom:1px solid #ccc;}
-.mh_ctn_wrap .ctb_estimate_price_info .price_gp.top_border {border-top:1px solid #ccc;margin-top:1.5rem;padding-top:1rem;text-align:right;}
-.mh_ctn_wrap .ctb_estimate_price_info .price_gp {border-bottom:0 none;padding-bottom:0;}
+.mh_ctn_wrap .ctb_estimate_price_info .price_gp.top_border {border-top:1px solid #ccc;margin-top:1.5rem;text-align:right;}
 .mh_ctn_wrap .ctb_car_estimate_comment {background-color:#f7f7f7;text-align:left;}
 .mh_ctn_float_wrap .mh_ctn_btns {text-align:center;}
+
+.ctb_ctn_wrap .ctb_estimate_price_info .price_gp.bottom_border {border-bottom:1px solid #ccc;}
+.ctb_ctn_wrap .ctb_estimate_price_info .price_gp.top_border {border-top:1px solid #ccc;margin-top:1.5rem;text-align:right;}
 
 .mh_side_dealer_info {margin-top:1rem;text-align:left;border-top:1px solid #e5e5e5;}
 .dealer_info_item {padding:0 4rem 1rem 4rem;}
@@ -1049,9 +1069,6 @@ a:hover{color:#454545}
 .mh_faq dt {position:relative;margin:0;padding:1.8rem 5rem 1.8rem 2rem;border-top:2px solid #e5e5e5;font-family:'genesis-head',sans-serif;font-size:1.8rem;color:#000000;cursor:pointer;}
 .mh_faq dd {display:none;font-family:'genesis-text',sans-serif;margin:0;padding:1.5rem 3.5rem 3.5rem 3.5rem;background-color:#fff;font-size:1.4rem;line-height:2.4rem;}
 .mh_faq dd a {font-family:'genesis-head',sans-serif;text-decoration:underline;}
-.ctb_text_button.expand {margin-bottom:1.6rem;}
-.ctb_text_button.expand span:first-child {padding-right:4.5rem;}
-.ctb_text_button.expand:after {display:none;}
 .mh_faq dt .btn_expand:after,
 .mh_faq dt .btn_expand:before{content:"";display:block;position:absolute;background-color:#000000;height:2px;width:10px;transition:bottom .3s linear .3s,transform .3s linear;}
 .mh_faq dt .btn_expand:after,
@@ -1063,6 +1080,12 @@ a:hover{color:#454545}
 .mh_faq dt.on + dd {display:block;}
 .mh_faq dt.on .btn_expand:before{transform:rotate(-45deg)!important}
 .mh_faq dt.on .btn_expand:after{transform:rotate(225deg)!important}
+
+.ctb_text_button.expand {margin-bottom:1.6rem;}
+.ctb_text_button.expand span:first-child {padding-right:4.5rem;}
+.ctb_text_button.expand:after {display:none;}
+.ctb_text_button.bottom {margin-top:2rem;margin-bottom: 0;padding-right: 10px;}
+.ctb_text_button.al-right {display: inline-block; width: 100%; text-align: right;}
 
 .mh_footer {background-color:#323232;text-align:center;color:#fff;}
 .mh_footer_wrap {max-width:1440px!important;margin:0 auto!important;padding:4rem 10rem;box-sizing:border-box;}
@@ -1393,20 +1416,32 @@ a:hover{color:#454545}
 .consent_area .icon-tooltip .icon-close {border: 0; background-color: #fff;}
 .consent_area .icon-tooltip:before {cursor: pointer;}
 
+.ctb_dialog_foot {text-align:right; margin-top: 20px;}
+.ctb_dialog_foot .ctb_button {padding:2rem 8rem;margin-left:2rem;}
+.ctb_range.deposit .rc-slider-mark-placement-top {top: -45px; position: absolute; left: -10px;}
+.ctb_finance_ctn .ctb_finance_price {min-width:300px;}
+
 .ctb_dialog {position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.3);z-index:90;display:none;}
 .ctb_dialog.finance .ctb_dialog_wrap {width:1280px;}
 .ctb_dialog.on {display:block;}
-.ctb_dialog .ctb_dialog_wrap {position:fixed;top:50%;left:50%;max-width:1280px;max-height:90vh;transform:translate(-50%,-50%);background-color:#fff;padding:4rem 5rem;overflow:auto;min-width:1000px;}
+.ctb_dialog .ctb_dialog_wrap {position:fixed;top:50%;left:50%;max-width:1280px;max-height:calc(90vh - 100px);transform:translate(-50%,-50%);background-color:#fff;padding:4rem 5rem;overflow:auto;min-width:1000px;}
 .ctb_dialog .ctb_dialog_wrap.finance_simulator {padding:3rem; width: 90%;}
 .ctb_dialog .ctb_dialog_close {text-align:right;}
 .ctb_dialog_header {margin-top:-25px;}
 .ctb_dialog_header span {font-family: "genesis-head-light"; font-size: 3rem;color: #000; position: relative;}
 .ctb_dialog_header strong {display:block;font-family: "genesis-head"; font-size: 2rem;color: #000;}
+.ctb_dialog .ctb_dialog_wrap.finance_simulator {width:100%;}
 
 .ctb_tab {display:flex;align-items:center;}
 .ctb_tab .ctb_tab_item {flex:1;display:inline-flex;align-items:center;cursor:pointer;justify-content:center;padding:1.4rem 0;margin-bottom:-2px;font-size:1.6rem;color:#999999;font-family:'genesis-head',sans-serif;cursor:pointer;border-bottom:1px solid #E5E5E5;}
-.ctb_tab .ctb_tab_item:hover {color:#000;}
+
+.ctb_tab {display:flex;align-items:center;}
+.ctb_tab .ctb_tab_item {flex:1;display:inline-flex;align-items:center;cursor:pointer;justify-content:center;padding:1.4rem 0;margin-bottom:-2px;font-size:1.6rem;color:#999999;font-family:'genesis-head',sans-serif;cursor:pointer;border-bottom:1px solid #E5E5E5;}
 .ctb_tab .ctb_tab_item.active {border-color:#000;color:#000;}
+.ctb_tab .ctb_tab_item.active:hover {color:#000;}
+.ctb_tab.type2 {margin:1rem 0;gap:1rem;}
+.ctb_tab.type2 .ctb_tab_item {border:1px solid #000;padding:1rem 0;}
+.ctb_tab.type2 .ctb_tab_item.active {background-color:#000;color:#fff;}
 .ctb_tab .ctb_tab_item.active:hover {color:#000;}
 .ctb_tab.type2 {margin:1rem 0;gap:1rem;}
 .ctb_tab.type2 .ctb_tab_item {border:1px solid #000;padding:1rem 0;}
@@ -1415,14 +1450,12 @@ a:hover{color:#454545}
 .ctb_finance_head .ctb_finance_head_tt {font-size:2rem;font-family:'genesis-head',sans-serif;padding:1rem 0;}
 .ctb_finance_head .ctb_finance_head_txt {font-size:1.6rem;font-family:'genesis-text',sans-serif;}
 .ctb_finance_head + .finance_price_head {display:none;}
-.ctb_dialog .ctb_dialog_wrap.finance_simulator {padding:3rem; width:90%;}
-
+.ctb_dialog .ctb_dialog_wrap.finance_simulator {padding:3rem; width: 90%;}
 .ctb_dialog .ctb_car_info_gp {padding:3rem 0;}
-
 
 .ctb_finance_ctn {display:flex;}
 .ctb_finance_ctn .ctb_finance_range {flex:1;padding:0 2rem 0 0;}
-.ctb_finance_ctn .ctb_range_item {padding-top:2.8rem;}
+.ctb_finance_ctn .ctb_range_item {padding-top:4.8rem;}
 .ctb_finance_ctn .ctb_range_item:first-child {padding-top:0;}
 .ctb_finance_ctn .ctb_range_item:after {content:"";display:block;clear:both;}
 .ctb_finance_ctn .ctb_range_item .ctb_range_tt {float:left;width:calc(100% - 170px);font-size:1.6rem;padding-bottom:1.3rem;font-family:'genesis-head',sans-serif;}
@@ -1430,6 +1463,7 @@ a:hover{color:#454545}
 .ctb_finance_ctn .ctb_range_item .ctb_range_input {float:right;width:170px;position:relative;padding:0 0 0 3rem;}
 .ctb_finance_ctn .ctb_range_item .ctb_range_input label {background-color:#fff;font-size:1.4rem;color:#000;padding:0;}
 .ctb_finance_ctn .ctb_range_item .ctb_range_input input,
+
 .ctb_finance_ctn .ctb_range_item .ctb_range_input select {height:58px;border:0 none;border-bottom:1px solid #000;width:100%;font-size:1.6rem;padding:0 1rem;font-family:'genesis-head',sans-serif;}
 .ctb_finance_ctn .ctb_range_item .ctb_range_input input:focus,
 .ctb_finance_ctn .ctb_range_item .ctb_range_input select:focus {outline:none;}
@@ -1441,24 +1475,131 @@ a:hover{color:#454545}
 .ctb_finance_ctn .finance_price_head strong {font-size:2.4rem;display:block;line-height:3rem;font-family:'genesis-head',sans-serif;}
 .ctb_finance_terms {padding:2.2rem 0;}
 .ctb_finance_terms .finance_terms_tt {font-size:1.6rem;padding-bottom:1rem;font-family:'genesis-head',sans-serif;}
-.ctb_finance_terms .finance_terms_txt {font-size:1.2rem;padding-bottom:2rem;font-family:'genesis-text',sans-serif;color:#767676;}
+.ctb_finance_terms .finance_terms_txt {font-size:1.2rem;padding-bottom:10px;font-family:'genesis-text',sans-serif;color:#767676;}
 .ctb_finance_ctn .ctb_finance_price {min-width:400px;}
 
-.ctb_dialog_foot {text-align:center;}
-.ctb_dialog_foot .ctb_button {padding:2rem 8rem;}
-.ctb_dialog_foot .ctb_button + .ctb_button {margin-left:2rem;}
-.ctb_range.deposit .rc-slider-mark-placement-top {top: -45px; position: absolute; left: -10px;}
-.ctb_finance_ctn .ctb_finance_price {min-width:300px;}
+.ctb_finance_ctn .ctb_finance_price {min-width:400px;}
+.ctb_finance_disclaimer {border-top: solid 1px #ddd;padding: 10px 0;color: #767676;font-size: 1.3rem;margin-top: 20px;}
+.ctb_finance_disclaimer p, .finance_terms_txt p {padding-bottom: 5px;}
+
+.ctb_select {position:relative;}
+.ctb_select:after {content:"\f102";display:block;font-size:1.2rem;font-family:'iconfont';font-weight:600;padding-left:.7rem;position:absolute;top:16px;right:0;}
+.ctb_select > input[type="text"]{border:0 none;border-bottom:1px solid #E5E5E5;padding:0;background-color:transparent;box-sizing:border-box;width:100%;height:45px;font-size:16px;font-family:'genesis-text',sans-serif;outline:0;}
+.ctb_select > input:read-only,
+.ctb_select > input:read-only:hover {border-color:#000!important;}
+.ctb_select .ctb_select_list {display:none;position:absolute;top:45px;left:0;right:0;background-color:#fff;z-index:1;box-shadow:0 3px 15px rgba(0,0,0,10%)}
+.ctb_select:hover .ctb_select_list {display:block;max-height:264px;overflow:auto;}
+.ctb_select .ctb_select_list .ctb_select_item {border-top:1px solid #E5E5E5;font-size:15px;line-height:35px;padding:0 1rem;color:#999;cursor:pointer;}
+.ctb_select .ctb_select_list .ctb_select_item:hover {color:#000;}
+
+.ctb_form_item .ctb_form_tel {display:flex;}
+.ctb_form_item .ctb_form_tel .ctb_select {flex:0 0 160px;margin-right:1.6rem;}
+.ctb_form_item .ctb_form_tel .ctb_select + input {flex:1;}
 
 /* Slider */
-.rc-slider-rail, .rc-slider-track {height: 12px;}				
-.rc-slider-handle {width: 22px; height: 22px;}					
+.rc-slider-rail, .rc-slider-track {height: 12px;}
+.rc-slider-handle {width: 22px;height: 22px;background: url('../img/slider_arrow.png') no-repeat; background-size: 17px; background-position-y: 3px; background-position-x: 2px; background-color: #fff;}					
 .rc-slider-dot {bottom: -10px; width: 15px; height: 15px; margin-top: -5px;}
 .rc-slider-track {background-color: #000000;}
-.rc-slider-mark-text {padding-top: 2px; font-size: 16px; font-family: ''genesis-text'';} /*HyundaiTextMedium*/
+.rc-slider-mark-text {padding-top: 2px; font-size: 16px; font-family: 'genesis-text';}
 /* End of Slider */
 
 #hlive-minichat-root {display: none;}
+
+/* Genesis */
+.icon-genesis-logo-mobile {padding-right: 10px;}
+.icon-genesis-logo-mobile:before {content: ''; background: url(../img/genesis-logo.png) no-repeat; background-size: contain; position: relative; width: 50px; height: 15px; display: inline-block;}
+.icon-genesis-logo-desktop:before {content: ''; background: url(../img/genesis-logo-black.png) no-repeat; background-size: cover; position: relative; width: 140px; height: 33px; display: inline-block;}
+.ctb_dealer_search_item:hover .icon-genesis-logo-mobile:before,
+.ctb_dealer_search_item.active .icon-genesis-logo-mobile:before {background: url(../img/genesis-logo-black.png) no-repeat; background-size: contain;}
+
+/* Docusign */
+.ctb_docusign_info {padding-top: 30px;}
+.ctb_docusign_info .docusign_id {color: #787878;padding: 10px 5px;font-size: 1.4rem;}
+
+/* Loading Bar */
+.ctb_loaderbar {display:none;position: fixed;top: 0;right: 0;bottom: 0;left: 0;background: rgb(0 0 0 / 80%); z-index:999;}
+.ctb_loaderbar.on {display:flex;}
+.ctb_loaderbar.no_bg {background:transparent;}
+
+.small_loading {display: inline-block; height: fit-content; min-height: 32px; width:99%;}
+.small_loading .ctb_loaderbar {position:relative; background: none; display:inline-block;height: 100%; width: 99%;}
+.small_loading .loaderbar {position:relative;}
+.small_loading .loaderbar span {padding-left:0;}
+
+
+.loaderbar {
+    position: absolute;
+    top: 50%;
+    transform:translate(0,-50%);
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.loaderbar>span {
+    display: block;
+    width: 4px;
+    width: .6rem;
+    height: 20px;
+    height: 4rem;
+    background-color: #996449;
+    position: relative;
+    -webkit-animation: grow 1s ease-in-out infinite both;
+    animation: grow 1s ease-in-out infinite both
+}
+
+.loaderbar>span:not(:first-child) {
+    margin-left: .4rem
+}
+
+.loaderbar>span:nth-child(2) {
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s
+}
+
+.loaderbar>span:nth-child(3) {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s
+}
+
+.loaderbar>span:nth-child(4) {
+    -webkit-animation-delay: .45s;
+    animation-delay: .45s
+}
+
+@-webkit-keyframes grow {
+    0%,to {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 0
+    }
+
+    50% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1
+    }
+}
+
+@keyframes grow {
+    0%,to {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 0
+    }
+
+    50% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1
+    }
+}
 
 /* Tablet */
 @media only screen and (max-width:1024px){
@@ -1737,8 +1878,9 @@ a:hover{color:#454545}
     .ctb_finance_ctn .ctb_finance_price > .finance_price_head {display:none;}
     .ctb_finance_ctn .ctb_finance_price .finance_price_detail {margin-top:1.5rem;}
     .ctb_finance_ctn .ctb_finance_price .price_detail_item {font-size:1.7rem;line-height:3rem;color:#000000;}
-    .ctb_dialog_foot {display:flex;flex-direction:column-reverse;}
-    .ctb_dialog_foot .ctb_button {width:100%;text-align:center;margin-top:1rem;margin-left:0;}
+    .ctb_dialog_foot {text-align:center;}
+    .ctb_dialog_foot .ctb_button {padding:2rem 8rem;}
+    .ctb_dialog_foot .ctb_button + .ctb_button {margin-left:2rem;}
     
     .ctb_disclaimer_wrap .disc_ctn h4 {text-align:left;}
     .ctb_disclaimer_wrap .disc_ctn p {padding-right:0;}
