@@ -140,6 +140,8 @@ a:hover{color:#454545}
 .ctb_ctn_wrap {position:relative;width:100%;max-width:1280px!important;margin:0 auto!important;}
 .ctb_ctn_wrap.inquery {max-width:1080px!important;padding:10rem 0;}
 .ctb_ctn_wrap.full {max-width:100%!important;}
+.ctb_ctn_wrap h3 {font-size:4.8rem;font-family:'genesis-head', sans-serif;color:#121212;}
+.ctb_ctn_wrap h4 {font-size:2rem;font-family:'genesis-head', sans-serif;color:#121212;}
 .ctb_ctn_wrap.with_left_info {padding:5rem;}
 .ctb_ctn_wrap.form_wrap {max-width:1080px!important;}
 .ctb_ctn_wrap.with_right_estimate {padding:5rem 6rem;}
@@ -444,7 +446,7 @@ a:hover{color:#454545}
 }
 
 .ctb_dealer {max-width:1200px;margin:0 auto;position:relative;}
-.ctb_dealer h4 {font-size:3.2rem;padding-bottom:4rem;line-height:4rem;}
+.ctb_dealer h4 {font-size:4.2rem;padding-bottom:4rem;line-height:4rem;font-family:'genesis-head-light',sans-serif;}
 
 /* Dealer Search */
 .ctb_dealer_map {position:relative;width:100%;max-width:1440px!important;margin:0 auto!important;height:calc(100vh - 16rem);z-index:1;background-color:gray;}
@@ -460,6 +462,7 @@ a:hover{color:#454545}
 
 .ctb_dealer_search_form {padding:2.5rem 2.5rem 0 2.5rem;}
 .ctb_dealer_search_title {font-size:2rem;line-height:4rem;font-family:'genesis-head';margin-bottom:1rem;}
+.ctb_ctn_wrap .ctb_dealer_search_title {line-height:45px;font-family:'genesis-head';color:#000;text-align:left;font-size:2rem;}
 .ctb_dealer_search_form_item {display:flex;}
 .ctb_dealer_search_form_item input {outline:0;border:0 none;border-bottom:1px solid #e5e5e5;font-size:16px;color:#000;height:4rem;line-height:4rem;box-sizing:border-box;width:calc(100% - 100px);font-family:'genesis-text',sans-serif;}
 .ctb_dealer_search_form_item input:hover,
@@ -513,7 +516,7 @@ a:hover{color:#454545}
 .ctb_inquiry_ctn .ctb_inquiry_sctn {padding:5rem 0;}
 .ctb_inquiry_ctn .ctb_inquiry_sctn 
 .ctb_inquiry_ctn .ctb_inquiry_sctn h4 {text-align:left;font-size:4.2rem;}
-.ctb_inquiry_ctn .ctb_inquiry_sctn h5 {font-family: 'genesis-head', sans-serif;color: #121212;padding-bottom: 2rem;text-align:left;font-size:3.2rem;}
+.ctb_inquiry_ctn .ctb_inquiry_sctn h5 {font-family: 'genesis-head', sans-serif;color: #121212;padding-bottom: 2rem;text-align:left;font-size:2rem;}
 .ctb_inquiry_ctn .ctb_inquiry_sctn .ctb_ctn_text {text-align:left;font-size:1.6rem;font-family:'genesis-text',sans-serif;color:#666;}
 .ctb_inquiry_ctn label.ctb_check_policy {display:flex;align-items:center;margin-top:1.5rem;}
 .ctb_inquiry_ctn.check_policy label.ctb_check_policy {display:flex;align-items: center;}
@@ -670,7 +673,7 @@ a:hover{color:#454545}
 
 .ctb_car_fitting_acc .price_acc .ctb_input_check {margin-left:0;}
 
-.ctb_input_check {width:20px;height:20px;cursor:pointer;margin-left:1.5rem;background-color:#fff;}
+.ctb_input_check {width:20px;height:20px;cursor:pointer;margin-left:0;background-color:#fff;}
 .ctb_input_check input {display:none;}
 .ctb_input_check span {display:flex;position:relative;width:20px;height:20px;box-sizing:border-box;border:1px solid #000000;align-items:center;justify-content:center;}
 .ctb_input_check span img {display:none;}
@@ -897,7 +900,7 @@ a:hover{color:#454545}
 
 .ctb_form_item label.ctb_check_policy {display:flex;}
 .ctb_form_item.check_policy label.ctb_check_policy {display:flex;align-items: center;}
-.ctb_check_policy .ctb_input_check {flex:0 0 40px;}
+.ctb_check_policy .ctb_input_check {flex:0 0 20px;}
 .ctb_check_policy .ctb_policy_text {flex:1;}
 
 .ctb_form_item.terms_buttons {text-align:right;}
