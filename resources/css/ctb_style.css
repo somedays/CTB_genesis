@@ -539,7 +539,7 @@ a:hover{color:#454545}
 .ctb_car_info_tt,
 .ctb_car_info_gp h3 {display:flex;justify-content:space-between;margin-bottom:2rem;align-items:center;}
 .ctb_car_info_tt strong {font-size:4rem;font-family:'genesis-head-light';}
-.ctb_car_info_gp h3 strong {font-size:4rem;font-family:'genesis-head';}
+.ctb_car_info_gp h3 strong {font-size:4rem;font-family:'genesis-head-light';}
 .ctb_car_info.ctb_byv .ctb_car_info_tt strong,
 .ctb_car_info.ctb_byv .ctb_car_info_gp h3 strong {font-size:2rem;}
 .ctb_car_info_gp h3 strong small {display:block;font-size:1.5rem;font-family:'genesis-text', sans-serif;line-height:1;}
@@ -1006,7 +1006,7 @@ a:hover{color:#454545}
 .icon-tooltip .ctb_tooltip.top {top:auto;bottom:30px;}
 .icon-tooltip .ctb_tooltip.right {right:auto;left:0;}
 .icon-tooltip .ctb_tooltip.active {display:block;}
-.icon-tooltip .ctb_tooltip .icon-close {position:absolute;top:1rem;right:1rem;font-size:1.3rem;color:#1c1b1b;font-family:'genesis-text', sans-serif;cursor:pointer;}
+.icon-tooltip .ctb_tooltip .icon-close {position:absolute;top:1rem;right:1rem;font-size:1.3rem;color:#1c1b1b;font-family:'genesis-text', sans-serif;cursor:pointer;border: 0;background: none;}
 .icon-tooltip .ctb_tooltip .ctb_tooltip_msg {font-size:1.1rem;line-height:1.7rem;width:300px;text-align:left;cursor:text;max-height:170px;overflow:auto;}
 
 
@@ -1418,6 +1418,10 @@ a:hover{color:#454545}
 .consent_area .ctb_policy .ctb_input_check span .icon_check {top: -6px; left: -6px;}
 .consent_area .icon-tooltip .icon-close {border: 0; background-color: #fff;}
 .consent_area .icon-tooltip:before {cursor: pointer;}
+
+.ctb_tooltip.full_page {position:fixed; top:30%; left:calc(50% - 240px); width:500px; z-index:20; max-height:calc(70% - 50px); overflow-y:auto; max-width:calc(100% - 40px); margin:0 20px; z-index: 100;}
+.ctb_tooltip.full_page .ctb_tooltip_msg {width: 100%; max-height: 100%; padding: 5px 0; font-size: 1.3rem;}
+.ctb_page:has(.ctb_tooltip.full_page.active)::before{content:''; position:fixed; width:100%; height:100%; background-color:#505050; left:0; top:0; z-index:100; opacity:0.5;}
 
 .ctb_dialog_foot {text-align:right; margin-top: 20px;}
 .ctb_dialog_foot .ctb_button {padding:2rem 8rem;margin-left:2rem;}
