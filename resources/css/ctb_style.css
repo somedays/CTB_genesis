@@ -909,7 +909,7 @@ a:hover{color:#454545}
 .ctb_byv_ctn_tt {display:flex;padding-bottom:5rem;justify-content:space-between;align-items:center;}
 .ctb_byv_ctn_tt h2 {font-size:3.6rem;font-family:'genesis-head-light',sans-serif;}
 .btn_page_link {position:relative;font-size:1.8rem;font-family:'genesis-head',sans-serif;margin-left:2rem;padding-left:1.6rem;}
-.btn_page_link:before {position:absolute;left:0;top:-2px;font-family:iconfont!important;font-style:normal;font-weight:600!important;vertical-align:middle;content:"\f10a";margin-right:.5rem;transition:font-size 0.1s;font-size:2rem;}
+.btn_page_link:before {position:absolute;left:0;top:3px;font-family:iconfont!important;font-style:normal;font-weight:600!important;vertical-align:middle;content:"\f10a";margin-right:.5rem;transition:font-size 0.1s;font-size:2rem;}
 .btn_page_link:hover:before {content:"\f10b";font-size:2.2rem;}
 
 /* 20230501 */
