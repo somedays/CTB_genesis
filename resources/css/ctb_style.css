@@ -634,16 +634,19 @@ a:hover{color:#454545}
 
 .ctb_service_info {padding:1rem 0 3rem 0;}
 .ctb_service_info_item {padding:2rem 0;}
-.ctb_service_info_tt {font-size:2.6rem;font-family:'genesis-head',sans-serif;}
-.ctb_service_info_list {padding:1rem 0;}
-.ctb_service_info_list li {line-height:2.6rem;font-size:1.6rem;color:#666;padding-left:1rem;position:relative;}
+.ctb_service_info_item.top_line {margin-top:6rem;padding-top:6rem;border-top:1px solid #E5E5E5;}
+.ctb_service_info_tt {font-size:2.4rem;line-height:3.2rem;font-family:'genesis-head',sans-serif;}
+.ctb_service_info_list {padding:2rem 0;}
+.ctb_service_info_list li {line-height:2.8rem;font-size:1.8rem;color:#666;padding-left:1rem;position:relative;}
 .ctb_service_info_list li:before {content:"";display:block;position:absolute;top:-8px;left:0;margin-top:2rem;width:3px;height:3px;border-radius:2px;background-color:#666;}
-.ctb_service_info_txt {color:#000;font-size:1.6rem;font-family:'genesis-text',sans-serif;}
-.ctb_service_info_stxt {color:#666;font-size:1.5rem;}
-.ctb_service_info_gp {padding:1rem 0;display:flex;}
+.ctb_service_info_txt {color:#000;font-size:1.8rem;line-height:2.8rem;font-family:'genesis-text',sans-serif;}
+.ctb_service_info_stxt {color:#666;font-size:1.6rem;line-height:2.4rem;}
+.ctb_service_info_gp {padding:2.5rem 0;display:flex;}
 .ctb_service_info_gp .ctb_service_info_img {flex:0 0 50%;}
 .ctb_service_info_gp .ctb_service_info_item {flex:0 0 50%;padding:0 0 0 2rem;}
-.ctb_service_info_gp .ctb_service_info_txt {padding:1rem 0;}
+.ctb_service_info_gp .ctb_service_info_txt {padding:2rem 0;}
+.ctb_service_btn {margin-top:6rem;padding-top:6rem;border-top:1px solid #e5e5e5;text-align:center;}
+.ctb_service_btn .ctb_button {min-width:24rem;font-family:'genesis-text',sans-serif;font-size:1.8rem;line-height:3.2rem;}
 
 .ctb_car_fitting_acc {display:flex;flex-wrap:wrap;gap:2rem;}
 .ctb_car_fitting_acc_item {width:calc((100% / 3) - 1.5rem);background-color:#fff;border:1px solid #e5e5e5;padding:2rem;border-radius:4px;}
@@ -1432,6 +1435,7 @@ a:hover{color:#454545}
 .ctb_dialog.finance .ctb_dialog_wrap {width:1280px;}
 .ctb_dialog.on {display:block;}
 .ctb_dialog .ctb_dialog_wrap {position:fixed;top:50%;left:50%;max-width:1280px;max-height:calc(90vh - 100px);transform:translate(-50%,-50%);background-color:#fff;padding:4rem 5rem;overflow:auto;min-width:1000px;}
+.ctb_dialog.w1320 .ctb_dialog_wrap {max-width:90%;width:1320px;}
 .ctb_dialog .ctb_dialog_wrap.finance_simulator {padding:3rem; width: 90%;}
 .ctb_dialog .ctb_dialog_close {text-align:right;}
 .ctb_dialog_header {margin-top:-25px;}
@@ -1637,6 +1641,13 @@ a:hover{color:#454545}
     .ctb_pop_pricing .pricing_right {width:60%;}
     .ctb_header .ctb_logo a {width:16rem;}
     .mh_footer {}
+    .ctb_service_info_gp {flex-direction:column;}
+    .ctb-footer-ul {flex-direction:column;}
+    .ctb-footer .ctb-lang-buttons {flex-direction:column;}
+    .ctb-footer .ctb-lang-buttons .lang-buttons_item {line-height:45px;}
+    .ctb_dialog.w1320 .ctb_dialog_wrap {max-width:100%;min-width:auto;}
+    .ctb_dialog.w1320 .ctb_dialog_wrap {transform:translate(0,0);top:6rem;left:0;right:0;bottom:0;max-height:none;}
+    .ctb_service_info_gp .ctb_service_info_item {padding:2rem 0 0 0;}
 
 }
 
