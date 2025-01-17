@@ -234,9 +234,11 @@ a:hover{color:#454545}
 .ctb_estimate_price_info .loan_status_desc {padding: 10px; font: inherit; font-size: 1.4rem;}
 
 .vehicle_desc_list {padding:3rem 0;}
-.vehicle_desc_list > div {font-size:1.4rem;font-family:'genesis-text',sans-serif;padding-left:1rem;position:relative;color:#666666;line-height:2.2rem; padding-bottom: 30px;}
+.vehicle_desc_list > div {font-size:1.4rem;font-family:'genesis-text',sans-serif;padding-left:1rem;position:relative;color:#666666;line-height:2.2rem; padding-bottom: 15px;}
 .vehicle_desc_list > div:last-child {padding-bottom: 0;}
 .vehicle_desc_list > div:before {content:"·";display:block;padding-right:0.5rem;font-size:1.8rem;position:absolute;top:0;left:0;}
+.vehicle_desc_list .label_img {max-width: 350px; padding:0;}
+.vehicle_desc_list .label_img:before {content:none;}
 
 .side_step {padding:2rem 0 0 0;}
 .side_step ol {margin:0 auto;padding-left:4rem;}
@@ -913,7 +915,7 @@ a:hover{color:#454545}
 .ctb_byv_ctn_tt {display:flex;padding-bottom:5rem;justify-content:space-between;align-items:center;}
 .ctb_byv_ctn_tt h2 {font-size:3.6rem;font-family:'genesis-head-light',sans-serif;}
 .btn_page_link {position:relative;font-size:1.8rem;font-family:'genesis-head',sans-serif;margin-left:2rem;padding-left:1.6rem;}
-.btn_page_link:before {position:absolute;left:0;top:3px;font-family:iconfont!important;font-style:normal;font-weight:600!important;vertical-align:middle;content:"\f10a";margin-right:.5rem;transition:font-size 0.1s;font-size:2rem;}
+.btn_page_link:before {position:absolute;left:0;top:-4px;font-family:iconfont!important;font-style:normal;font-weight:600!important;vertical-align:middle;content:"\f10a";margin-right:.5rem;transition:font-size 0.1s;font-size:2rem;}
 .btn_page_link:hover:before {content:"\f10b";font-size:2.2rem;}
 
 /* 20230501 */
