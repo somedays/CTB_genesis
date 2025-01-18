@@ -163,9 +163,8 @@ a:hover{color:#454545}
 .ctb_car_estimate h3 strong {display:block;font-family:'genesis-head',sans-serif;font-size:3rem;}
 .ctb_car_estimate h3 span {display:block;font-family:'genesis-text',sans-serif;font-size:1.4rem;}
 .ctb_car_estimate .ctb_car_estimate_summary {font-family:'genesis-head-light';color: #000;font-size: 2rem;padding: 0 0 10px 0;}
-.ctb_car_estimate_subbtns {margin:1rem 0 0 0;}
+.ctb_car_estimate_subbtns {margin:1rem 0 0 0;display: flex;gap: 1rem;flex-wrap: wrap;}
 .ctb_car_estimate .sub_button {border:0 none;background-color:transparent;padding:0;margin:0;font-family:'genesis-head',sans-serif;display:inline-flex;align-items:center;cursor:pointer;}
-.ctb_car_estimate .sub_button + .sub_button {margin-left:1rem;}
 .ctb_car_estimate .sub_button img {margin-right:0.5rem;}
 .ctb_car_estimate .sub_button span {line-height:24px;}
 .ctb_estimate_price_info {padding-top:1.5rem;}
